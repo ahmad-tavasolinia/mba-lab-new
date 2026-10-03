@@ -1,0 +1,85 @@
+backend:
+  name: github
+  repo: ahmad-tavasolinia/mba-lab      # your GitHub username/repo
+  branch: main
+  base_url: https://YOUR-OAUTH-PROXY.vercel.app   # replace after Step 2 below
+  auth_endpoint: auth
+
+# Where uploaded images (like your About-page photo) get stored
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "lab"
+    label: "MBA Lab Entries"
+    folder: "content/lab"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Code", name: "code", widget: "string", hint: "e.g. MBA·STRAT·03" }
+      - { label: "Phase", name: "phase", widget: "string" }
+      - label: "Topics"
+        name: "topics"
+        widget: "select"
+        multiple: true
+        options:
+          [
+            "strategy", "finance", "economics", "entrepreneurship",
+            "leadership", "organizational-behavior", "innovation",
+            "artificial-intelligence", "technology", "business-philosophy",
+            "marketing",
+          ]
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Central Question", name: "centralQuestion", widget: "string" }
+      - { label: "Key Ideas", name: "keyIdeas", widget: "list" }
+      - { label: "Connections (slugs of related entries)", name: "connections", widget: "list", required: false }
+      - { label: "Open Questions", name: "openQuestions", widget: "list", required: false }
+      - { label: "Final Perspective", name: "finalPerspective", widget: "text" }
+      - { label: "Sources (slugs)", name: "sources", widget: "list", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "essays"
+    label: "Essays"
+    folder: "content/essays"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "Topics"
+        name: "topics"
+        widget: "select"
+        multiple: true
+        options:
+          [
+            "strategy", "finance", "economics", "entrepreneurship",
+            "leadership", "organizational-behavior", "innovation",
+            "artificial-intelligence", "technology", "business-philosophy",
+            "marketing",
+          ]
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "sources"
+    label: "Courses & Sources"
+    folder: "content/sources"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Institution", name: "institution", widget: "string" }
+      - { label: "Course", name: "course", widget: "string" }
+      - { label: "Instructor", name: "instructor", widget: "string", required: false }
+      - label: "Subject"
+        name: "subject"
+        widget: "select"
+        options:
+          [
+            "strategy", "finance", "economics", "entrepreneurship",
+            "leadership", "organizational-behavior", "innovation",
+            "artificial-intelligence", "technology", "business-philosophy",
+            "marketing",
+          ]
+      - { label: "Why you studied it", name: "why", widget: "text" }
+      - { label: "Outputs (slugs of lab entries it inspired)", name: "outputs", widget: "list", required: false }
