@@ -1,7 +1,7 @@
 import type { CategorySlug, PhaseSlug, TopicSlug } from './types';
 
 export const faTopics: Record<TopicSlug, { name: string; description: string }> = {
-  strategy: { name: 'راهبرد', description: 'مزیت رقابتی چگونه ساخته، حفظ و از دست می‌رود؛ و این مسیر دربارهٔ ماهیت رقابت چه می‌گوید.' },
+  strategy: { name: 'استراتژی', description: 'مزیت رقابتی چگونه ساخته، حفظ و از دست می‌رود؛ و این مسیر دربارهٔ ماهیت رقابت چه می‌گوید.' },
   finance: { name: 'مالی', description: 'سازوکار و روان‌شناسی سرمایه: قیمت‌گذاری، تخصیص و برداشت‌های نادرست از آن.' },
   marketing: { name: 'بازاریابی', description: 'ارزش چگونه به مشتری معرفی می‌شود، جایگاه می‌گیرد و در ذهن او خواستنی می‌شود.' },
   entrepreneurship: { name: 'کارآفرینی', description: 'ساختن در دل عدم‌قطعیت؛ از دیدن و آزمودن فرصت تا تبدیل آن به یک سازمان.' },

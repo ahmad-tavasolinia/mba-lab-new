@@ -25,8 +25,8 @@ export default function Footer() {
       <div className="site-footer-inner">
         <div className="site-footer-top">
           <p className="site-footer-brand">
-            {isPersian ? 'کارگاه مدیریت کسب و کار' : 'MBA Lab'}
-            <span>{isPersian ? 'روایتی مستقل از مسیر یادگیری.' : 'is an independent record of study.'}</span>
+            {isPersian ? 'کارگاه مدیریت کسب و کار ' : 'MBA Lab'}
+            <span lang={isPersian ? 'fa' : 'en'}>{isPersian ? 'روایتی مستقل از مسیر یادگیری.' : 'is an independent record of study.'}</span>
           </p>
           <nav className="site-footer-links" aria-label={isPersian ? 'پیوندهای پایانی' : 'Footer navigation'}>
             {links.map((link, index) => (

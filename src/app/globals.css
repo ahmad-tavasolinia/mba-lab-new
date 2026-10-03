@@ -1587,63 +1587,43 @@ html[data-theme="light"] .lab-library-more:hover {
   color: white;
 }
 
-.site-nav .fa-header-language-switch {
-  flex: 0 0 auto;
-}
-
-.site-nav .fa-header-language-switch a {
-  padding: 8px 0;
-  font-family: var(--font-persian), Arial, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.fa-mobile-language-switch {
-  display: none;
-}
-
-.site-nav .fa-mobile-language-switch a {
-  border: 0;
-  font-family: var(--font-persian), Tahoma, sans-serif;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-/* Keep the language selector in the homepage header, beside the final nav item. */
-.home-copy > .home-language-switch,
-.fa-header-language-switch,
-.fa-mobile-language-switch {
-  display: none !important;
-}
-
 .home-header-language-switch {
-  position: absolute;
-  top: 50%;
-  right: clamp(8px, 1vw, 16px);
-  gap: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.03em;
-  transform: translateY(-50%);
-}
-
-.site-header[dir="rtl"] .home-header-language-switch {
+  position: static;
+  top: auto;
   right: auto;
-  left: clamp(8px, 1vw, 16px);
+  flex: 0 0 auto;
+  gap: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  transform: none;
 }
 
 .site-nav .home-header-language-switch a {
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.03em;
+  padding: 8px 0;
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: none;
+}
+
+.site-header[lang="fa"] .home-header-language-switch {
+  font-family: var(--font-persian), Tahoma, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.site-header[lang="fa"] .home-header-language-switch a {
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0;
   text-transform: none;
 }
 
 .home-language-switch [lang="fa"] {
   font-family: var(--font-persian), Tahoma, sans-serif;
+  font-size: inherit;
   letter-spacing: 0;
+  text-transform: none;
 }
 
 .home-language-switch [aria-current="page"] {
@@ -1959,7 +1939,12 @@ html[data-theme="light"] .lab-library-more:hover {
 .fa-original-content { padding: 24px; border: 1px solid var(--site-rule); background: rgba(18, 35, 48, 0.28); }
 .fa-disclaimer { margin-top: 28px; color: var(--site-muted); font-size: 12px; line-height: 2; }
 
-.site-footer[dir="rtl"] .site-footer-brand span { margin-left: 0; margin-right: 8px; }
+.site-footer[dir="rtl"] .site-footer-brand,
+.site-footer[dir="rtl"] .site-footer-brand span {
+  font-family: var(--font-persian), Tahoma, sans-serif;
+  letter-spacing: 0;
+}
+.site-footer[dir="rtl"] .site-footer-brand span { margin-left: 0; margin-right: 0; }
 .site-footer[dir="rtl"] .site-footer-meta { flex-direction: column; align-items: flex-start; }
 
 @media (max-width: 760px) {

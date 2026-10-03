@@ -16,19 +16,21 @@ const navItems = [
 
 const persianLanguageName = '\u0641\u0627\u0631\u0633\u06cc';
 
-function HomeLanguageSwitch({ isPersian, className }: { isPersian: boolean; className: string }) {
+function HomeLanguageSwitch({ isPersian, className, routePath }: { isPersian: boolean; className: string; routePath: string }) {
+  const localPath = routePath === '/' ? '' : routePath;
+
   return (
-    <div className={`home-language-switch ${className}`} dir="ltr" role="group" aria-label="Choose language">
+    <div className={`home-language-switch ${className}`} dir="ltr" role="group" aria-label={isPersian ? 'انتخاب زبان' : 'Choose language'}>
       {isPersian ? (
-        <Link href="/" lang="en" aria-label="Switch to English">EN</Link>
+        <Link href={localPath || '/'} lang="en" aria-label="Switch to English">EN</Link>
       ) : (
         <span lang="en" aria-current="page">EN</span>
       )}
       <span aria-hidden="true">/</span>
       {isPersian ? (
-        <span lang="fa" aria-current="page">{persianLanguageName}</span>
+        <span dir="rtl" lang="fa" aria-current="page">{persianLanguageName}</span>
       ) : (
-        <Link href="/fa" lang="fa" aria-label="Switch to Persian">{persianLanguageName}</Link>
+        <Link href={`/fa${localPath}`} dir="rtl" lang="fa" aria-label="Switch to Persian">{persianLanguageName}</Link>
       )}
     </div>
   );
@@ -38,7 +40,7 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const isPersian = pathname === '/fa' || pathname?.startsWith('/fa/');
-  const routePath = isPersian ? pathname?.replace(/^\/fa(?=\/|$)/, '') || '/' : pathname;
+  const routePath = (isPersian ? pathname?.replace(/^\/fa(?=\/|$)/, '') : pathname) || '/';
   const isHome = routePath === '/';
   const pathSegments = routePath?.split('/').filter(Boolean) ?? [];
   const routeParent = pathSegments[pathSegments.length - 2];
@@ -74,13 +76,6 @@ export default function Header() {
         <nav className="site-nav" aria-label="Site navigation">
           {localizedNavItems.map((item) => (
             <Fragment key={item.href}>
-              {isPersian && isHome && item.baseHref === '/contact' && (
-                <div className="fa-language-switch fa-header-language-switch" dir="ltr" aria-label="Language">
-                  <Link href="/" lang="en">English</Link>
-                  <span aria-hidden="true">/</span>
-                  <span lang="fa" aria-current="page">فارسی</span>
-                </div>
-              )}
               <Link
                 href={item.href}
                 aria-current={isActive(item.baseHref) ? 'page' : undefined}
@@ -89,7 +84,7 @@ export default function Header() {
               </Link>
             </Fragment>
           ))}
-          {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-header-language-switch" />}
+          <HomeLanguageSwitch isPersian={isPersian} className="home-header-language-switch" routePath={routePath} />
         </nav>
         {isReaderPage && <ThemeToggle />}
       </div>
@@ -106,7 +101,7 @@ export default function Header() {
           <span />
           <span />
         </button>
-        {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" />}
+        <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" routePath={routePath} />
       </div>
 
       {open && (
