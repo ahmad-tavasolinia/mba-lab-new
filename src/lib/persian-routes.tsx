@@ -42,7 +42,7 @@ function FaHome() {
         <section className="home-copy" aria-labelledby="fa-home-title">
           
           <h1 id="fa-home-title">از اندیشه تا تجربه</h1>
-          <p className="home-description">مجموعه‌ای مستقل از مطالعات، تحلیل‌ها و پروژه‌ها؛ تلاشی برای درک عمیق‌تر دنیای کسب‌وکار.</p>
+          <p className="home-description">مجموعه‌ای مستقل از مطالعات، تحلیل‌ها و پروژه‌ها<br />تلاشی برای درک عمیق‌تر دنیای کسب‌وکار</p>
           <Link href="/fa/mba-lab" className="home-cta"><span>ورود به کارگاه کسب و کار</span><span className="home-arrow" aria-hidden="true">←</span></Link>
         </section>
         <div className="home-journey">

@@ -91,21 +91,23 @@ export default function Header() {
           ))}
           {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-header-language-switch" />}
         </nav>
-        {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" />}
         {isReaderPage && <ThemeToggle />}
       </div>
 
-      <button
-        type="button"
-        className={open ? 'site-menu-button is-open' : 'site-menu-button'}
-        aria-label={isPersian ? (open ? 'بستن فهرست' : 'باز کردن فهرست') : (open ? 'Close navigation' : 'Open navigation')}
-        aria-expanded={open}
-        aria-controls="site-mobile-nav"
-        onClick={() => setOpen((value) => !value)}
-      >
-        <span />
-        <span />
-      </button>
+      <div className="site-menu-control">
+        <button
+          type="button"
+          className={open ? 'site-menu-button is-open' : 'site-menu-button'}
+          aria-label={isPersian ? (open ? 'بستن فهرست' : 'باز کردن فهرست') : (open ? 'Close navigation' : 'Open navigation')}
+          aria-expanded={open}
+          aria-controls="site-mobile-nav"
+          onClick={() => setOpen((value) => !value)}
+        >
+          <span />
+          <span />
+        </button>
+        {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" />}
+      </div>
 
       {open && (
         <nav id="site-mobile-nav" className="site-mobile-nav" aria-label={isPersian ? 'پیمایش' : 'Mobile navigation'}>
@@ -119,13 +121,6 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          {isPersian && isHome && (
-            <div className="fa-language-switch fa-mobile-language-switch" dir="ltr" aria-label="Language">
-              <Link href="/" lang="en">English</Link>
-              <span aria-hidden="true">/</span>
-              <span lang="fa" aria-current="page">فارسی</span>
-            </div>
-          )}
         </nav>
       )}
     </header>
