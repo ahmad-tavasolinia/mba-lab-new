@@ -8,6 +8,7 @@ import { topics } from '@/lib/topics';
 import { faCategories, faEntrySummary, faEntryTitle, faEssaySummaries, faEssayTitles, faPhases, faSourceNames, faTopics } from '@/lib/persian';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const persianLabRouteSlug = (slug: string) => slug.toLowerCase().replace(/'/g, '');
 
 export function getPersianMetadata(path: string[]): Metadata {
   return { title: path.length ? 'آزمایشگاه MBA' : 'آزمایشگاه MBA، احمد توسلی‌نیا', description: 'یادگیری، پژوهش و ساختن در کسب‌وکار؛ به روایت احمد توسلی‌نیا.' };
@@ -15,7 +16,7 @@ export function getPersianMetadata(path: string[]): Metadata {
 
 function FaEntryLink({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
   return (
-    <Link href={`/fa/mba-lab/${entry.slug}`} className="fa-entry-card">
+    <Link href={`/fa/mba-lab/${persianLabRouteSlug(entry.slug)}`} className="fa-entry-card">
       <span className="fa-meta"><bdi dir="ltr">{entry.code}</bdi><span>{new Date(entry.date).toLocaleDateString('fa-IR')}</span></span>
       <h3>{faEntryTitle(entry.slug, entry.title)}</h3>
       <p>{faEntrySummary(entry.slug, entry.summary)}</p>
