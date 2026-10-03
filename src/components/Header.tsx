@@ -51,7 +51,7 @@ export default function Header() {
     ...item,
     baseHref: item.href,
     href: isPersian ? `/fa${item.href === '/' ? '' : item.href}` : item.href,
-    label: isPersian ? ['خانه', 'آزمایشگاه', 'موضوع‌ها', 'کتابخانه', 'درباره', 'تماس'][index] : item.label,
+    label: isPersian ? ['خانه', 'کارگاه', 'موضوع‌ها', 'کتابخانه', 'درباره', 'تماس'][index] : item.label,
   }));
 
   useEffect(() => {
@@ -65,9 +65,9 @@ export default function Header() {
 
   return (
     <header lang={isPersian ? 'fa' : 'en'} dir={isPersian ? 'rtl' : 'ltr'} className={isHome ? 'site-header site-header-home' : 'site-header'}>
-      <Link href={isPersian ? '/fa' : '/'} className="site-brand" aria-label={isPersian ? 'آزمایشگاه MBA، احمد توسلی‌نیا' : 'MBA Lab by Ahmad Tavasolinia'}>
-        <span dir="ltr" className="site-brand-name">MBA Lab</span>
-        <span dir="ltr" className="site-brand-byline">Ahmad Tavasolinia</span>
+      <Link href={isPersian ? '/fa' : '/'} className="site-brand" aria-label={isPersian ? 'کارگاه مدیریت کسب و کار، احمد توسلی نیا' : 'MBA Lab by Ahmad Tavasolinia'}>
+        <span dir={isPersian ? 'rtl' : 'ltr'} className="site-brand-name">{isPersian ? 'کارگاه مدیریت کسب و کار' : 'MBA Lab'}</span>
+        <span dir={isPersian ? 'rtl' : 'ltr'} className="site-brand-byline">{isPersian ? 'احمد توسلی نیا' : 'Ahmad Tavasolinia'}</span>
       </Link>
 
       <div className="site-header-actions">

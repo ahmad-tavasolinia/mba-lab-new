@@ -11,7 +11,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const persianLabRouteSlug = (slug: string) => slug.toLowerCase().replace(/'/g, '');
 
 export function getPersianMetadata(path: string[]): Metadata {
-  return { title: path.length ? 'آزمایشگاه MBA' : 'آزمایشگاه MBA، احمد توسلی‌نیا', description: 'یادگیری، پژوهش و ساختن در کسب‌وکار؛ به روایت احمد توسلی‌نیا.' };
+  return { title: path.length ? 'کارگاه مدیریت کسب‌وکار' : 'کارگاه مدیریت کسب‌وکار، احمد توسلی‌نیا', description: 'یادگیری، پژوهش و ساختن در کسب‌وکار؛ به روایت احمد توسلی‌نیا.' };
 }
 
 function FaEntryLink({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
@@ -41,9 +41,9 @@ function FaHome() {
         <div className="home-hero-background" aria-hidden="true" />
         <section className="home-copy" aria-labelledby="fa-home-title">
           
-          <h1 id="fa-home-title">ساختن فصل بعد،<br />آگاهانه و سنجیده.</h1>
-          <p className="home-description">ایده‌ها را می‌کاوم، می‌آزمایم و به پروژه تبدیل می‌کنم؛<br />برای سفری معنادار در دنیای مدیریت و کسب‌وکار.</p>
-          <Link href="/fa/mba-lab" className="home-cta"><span>ورود به آزمایشگاه</span><span className="home-arrow" aria-hidden="true">←</span></Link>
+          <h1 id="fa-home-title">از اندیشه تا تجربه</h1>
+          <p className="home-description">مجموعه‌ای مستقل از مطالعات، تحلیل‌ها و پروژه‌ها؛ تلاشی برای درک عمیق‌تر دنیای کسب‌وکار.</p>
+          <Link href="/fa/mba-lab" className="home-cta"><span>ورود به کارگاه کسب و کار</span><span className="home-arrow" aria-hidden="true">←</span></Link>
         </section>
         <div className="home-journey">
           <p className="journey-title">مسیر یادگیری</p>
@@ -61,7 +61,7 @@ function FaHome() {
 }
 
 function FaTopicIndex({ entries }: { entries: Awaited<ReturnType<typeof getAllLabEntries>> }) {
-  return <PageFrame hero="topics" eyebrow="جست‌وجو بر اساس موضوع" title="موضوع‌ها" intro="ایده‌های این آزمایشگاه در مرز یک رشته متوقف نمی‌شوند. یک موضوع را دنبال کنید و پیوندهایش را میان موردها، جستارها و منابع ببینید.">
+  return <PageFrame hero="topics" eyebrow="جست‌وجو بر اساس موضوع" title="موضوع‌ها" intro="ایده‌های این کارگاه در مرز یک رشته متوقف نمی‌شوند. یک موضوع را دنبال کنید و پیوندهایش را میان موردها، جستارها و منابع ببینید.">
     <div className="fa-card-grid">{topics.map((topic, i) => <Link key={topic.slug} href={`/fa/topics/${topic.slug}`} className="fa-topic-card"><span className="fa-meta">{String(i + 1).padStart(2, '0')} <bdi dir="ltr">{topic.code}</bdi></span><h2>{faTopics[topic.slug].name}</h2><p>{faTopics[topic.slug].description}</p><small>{entries.filter((e) => e.topics.includes(topic.slug)).length.toLocaleString('fa-IR')} یادداشت</small></Link>)}</div>
   </PageFrame>;
 }
@@ -84,17 +84,17 @@ async function FaPage({ path }: { path: string[] }) {
 
   const entries = await getAllLabEntries();
   if (route === 'topics') return <FaTopicIndex entries={entries} />;
-  if (route === 'mba-lab') return <PageFrame hero="lab" eyebrow="دفتر آزمایشگاه" title="آزمایشگاه MBA" intro="فضایی برای اندیشیدن به مسئله‌های کسب‌وکار، آزمودن ایده‌ها، ساختن پروژه‌ها و آموختن از کسانی که تجربهٔ ساختن دارند."><div className="fa-card-grid">{categories.map((category) => { const count = entries.filter((e) => e.category === category.slug).length; return <Link key={category.slug} href={`/fa/mba-lab/category/${category.slug}`} className="fa-topic-card"><span className="fa-meta">{category.code} · {count.toLocaleString('fa-IR')} یادداشت</span><h2>{faCategories[category.slug].name}</h2><p>{faCategories[category.slug].description}</p></Link>; })}</div><h2 className="fa-section-title">سه مرحلهٔ مسیر MBA</h2><div className="fa-card-grid">{phases.map((phase) => <Link key={phase.slug} href={`/fa/mba-lab/phase/${phase.slug}`} className="fa-topic-card"><h2>{faPhases[phase.slug].name}</h2><p>{faPhases[phase.slug].description}</p></Link>)}</div></PageFrame>;
+  if (route === 'mba-lab') return <PageFrame hero="lab" eyebrow="دفتر کارگاه" title="کارگاه مدیریت کسب و کار" intro="فضایی برای اندیشیدن به مسئله‌های کسب‌وکار، آزمودن ایده‌ها، ساختن پروژه‌ها و آموختن از کسانی که تجربهٔ ساختن دارند."><div className="fa-card-grid">{categories.map((category) => { const count = entries.filter((e) => e.category === category.slug).length; return <Link key={category.slug} href={`/fa/mba-lab/category/${category.slug}`} className="fa-topic-card"><span className="fa-meta">{category.code} · {count.toLocaleString('fa-IR')} یادداشت</span><h2>{faCategories[category.slug].name}</h2><p>{faCategories[category.slug].description}</p></Link>; })}</div></PageFrame>;
 
-  if (route === 'about') return <PageFrame eyebrow="دربارهٔ من" title="احمد توسلی‌نیا"><div className="fa-prose"><p className="fa-lead">به مسئله‌هایی علاقه دارم که پاسخ ساده‌ای ندارند.</p><p>کار و یادگیری من در پیوند میان کسب‌وکار، راهبرد، بازار، فناوری، هوش مصنوعی و کارآفرینی قرار دارد. به مسئله‌هایی جذب می‌شوم که اطلاعات ناقص است، منابع محدودند و بااین‌حال باید تصمیم گرفت.</p><p>این آزمایشگاه را ساختم تا مسیر یادگیری‌ام را عمومی کنم: ایده‌ها را بخوانم، فرض‌ها را بیازمایم، با عددها روبه‌رو شوم و ببینم آیا تحلیل در برابر واقعیت دوام می‌آورد یا نه.</p><p>به‌جای جمع‌کردن دانسته‌ها، می‌خواهم از آن‌ها استفاده کنم؛ با نوشتن، تحلیل‌کردن، ساختن و آزمودن ایده‌ها.</p><p>این روزها به‌ویژه به اثر هوش مصنوعی بر اقتصاد کسب‌وکارها، تغییر بازارها و مزیت رقابتی، و شیوهٔ خلق و تصاحب ارزش در محیط‌های متغیر فکر می‌کنم.</p></div><ul className="fa-interest-list"><li>کسب‌وکار و کارآفرینی</li><li>راهبرد و تحلیل کسب‌وکار</li><li>هوش مصنوعی</li><li>فناوری و بازارها</li></ul></PageFrame>;
+  if (route === 'about') return <PageFrame eyebrow="دربارهٔ من" title="احمد توسلی‌نیا"><div className="fa-prose"><p className="fa-lead">به مسئله‌هایی علاقه دارم که پاسخ ساده‌ای ندارند.</p><p>کار و یادگیری من در پیوند میان کسب‌وکار، راهبرد، بازار، فناوری، هوش مصنوعی و کارآفرینی قرار دارد. به مسئله‌هایی جذب می‌شوم که اطلاعات ناقص است، منابع محدودند و بااین‌حال باید تصمیم گرفت.</p><p>این کارگاه را ساختم تا مسیر یادگیری‌ام را عمومی کنم: ایده‌ها را بخوانم، فرض‌ها را بیازمایم، با عددها روبه‌رو شوم و ببینم آیا تحلیل در برابر واقعیت دوام می‌آورد یا نه.</p><p>به‌جای جمع‌کردن دانسته‌ها، می‌خواهم از آن‌ها استفاده کنم؛ با نوشتن، تحلیل‌کردن، ساختن و آزمودن ایده‌ها.</p><p>این روزها به‌ویژه به اثر هوش مصنوعی بر اقتصاد کسب‌وکارها، تغییر بازارها و مزیت رقابتی، و شیوهٔ خلق و تصاحب ارزش در محیط‌های متغیر فکر می‌کنم.</p></div><ul className="fa-interest-list"><li>کسب‌وکار و کارآفرینی</li><li>راهبرد و تحلیل کسب‌وکار</li><li>هوش مصنوعی</li><li>فناوری و بازارها</li></ul></PageFrame>;
 
-  if (route === 'contact') return <PageFrame eyebrow="در تماس باشیم" title="تماس" intro="اگر چیزی در آزمایشگاه پرسشی در ذهن‌تان ایجاد کرده، با آن مخالفید یا پیوند تازه‌ای به نظرتان می‌رسد، خوشحال می‌شوم بشنوم."><div className="fa-contact-grid"><section><span className="fa-eyebrow">ایمیل</span><a dir="ltr" href="mailto:amd.tavasolinia@gmail.com">amd.tavasolinia@gmail.com</a></section><section><span className="fa-eyebrow">در شبکه‌های دیگر</span><a dir="ltr" href="https://www.linkedin.com/in/ahmad-tavasolinia-0a4903202/">LinkedIn</a></section></div></PageFrame>;
+  if (route === 'contact') return <PageFrame eyebrow="در تماس باشیم" title="تماس" intro="اگر چیزی در کارگاه پرسشی در ذهن‌تان ایجاد کرده، با آن مخالفید یا پیوند تازه‌ای به نظرتان می‌رسد، خوشحال می‌شوم بشنوم."><div className="fa-contact-grid"><section><span className="fa-eyebrow">ایمیل</span><a dir="ltr" href="mailto:amd.tavasolinia@gmail.com">amd.tavasolinia@gmail.com</a></section><section><span className="fa-eyebrow">در شبکه‌های دیگر</span><a dir="ltr" href="https://www.linkedin.com/in/ahmad-tavasolinia-0a4903202/">LinkedIn</a></section></div></PageFrame>;
 
-  if (route === 'cv') return <PageFrame eyebrow="سوابق تحصیلی و حرفه‌ای" title="رزومه"><p className="fa-prose">نسخهٔ انگلیسی رزومه برای بارگیری در دسترس است.</p><a className="fa-action" href={`${basePath}/cv.pdf`}>بارگیری فایل PDF</a><h2 className="fa-section-title">پروژهٔ مستقل</h2><div className="fa-prose"><h3>بنیان‌گذار و نویسندهٔ آزمایشگاه MBA</h3><p>پروژه‌ای مستقل برای بررسی کسب‌وکار، راهبرد، مالی، فناوری و مدیریت؛ با پیوند میان منابع دانشگاهی، مسئله‌های واقعی و تحلیل شخصی.</p><h3>تحصیلات</h3><p>مطالعهٔ مستقل در سطح تحصیلات تکمیلی: راهبرد، مالی، اقتصاد، رفتار سازمانی و پیوند هوش مصنوعی با کسب‌وکار.</p><h3>مهارت‌ها</h3><p>راهبرد، تحلیل مالی، نگارش کسب‌وکار، هوش مصنوعی و فناوری، رهبری، پژوهش و ترکیب ایده‌ها، SQL و Power BI.</p></div></PageFrame>;
+  if (route === 'cv') return <PageFrame eyebrow="سوابق تحصیلی و حرفه‌ای" title="رزومه"><p className="fa-prose">نسخهٔ انگلیسی رزومه برای بارگیری در دسترس است.</p><a className="fa-action" href={`${basePath}/cv.pdf`}>بارگیری فایل PDF</a><h2 className="fa-section-title">پروژهٔ مستقل</h2><div className="fa-prose"><h3>بنیان‌گذار و نویسندهٔ کارگاه مدیریت کسب‌وکار</h3><p>پروژه‌ای مستقل برای بررسی کسب‌وکار، راهبرد، مالی، فناوری و مدیریت؛ با پیوند میان منابع دانشگاهی، مسئله‌های واقعی و تحلیل شخصی.</p><h3>تحصیلات</h3><p>مطالعهٔ مستقل در سطح تحصیلات تکمیلی: راهبرد، مالی، اقتصاد، رفتار سازمانی و پیوند هوش مصنوعی با کسب‌وکار.</p><h3>مهارت‌ها</h3><p>راهبرد، تحلیل مالی، نگارش کسب‌وکار، هوش مصنوعی و فناوری، رهبری، پژوهش و ترکیب ایده‌ها، SQL و Power BI.</p></div></PageFrame>;
 
   if (route === 'courses') {
     const sources = getAllSources();
-    return <PageFrame eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد."><div className="fa-entry-list">{sources.map((source) => { const faSource = faSourceNames[source.slug]; return <article className="fa-entry-card" key={source.slug}><span className="fa-meta">{source.institution}</span><h2>{faSource?.course ?? source.course}</h2><p>{source.instructor && <>{source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p><p>{faSource?.why ?? source.why}</p><a href={source.courseUrl} target="_blank" rel="noreferrer">رفتن به منبع اصلی ←</a></article>; })}</div><p className="fa-disclaimer">منابع دانشگاهی برای شفافیت ذکر شده‌اند؛ هیچ‌یک از دانشگاه‌های نام‌برده این آزمایشگاه را بررسی یا تأیید نکرده‌اند.</p></PageFrame>;
+    return <PageFrame eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد."><div className="fa-entry-list">{sources.map((source) => { const faSource = faSourceNames[source.slug]; return <article className="fa-entry-card" key={source.slug}><span className="fa-meta">{source.institution}</span><h2>{faSource?.course ?? source.course}</h2><p>{source.instructor && <>{source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p><p>{faSource?.why ?? source.why}</p><a href={source.courseUrl} target="_blank" rel="noreferrer">رفتن به منبع اصلی ←</a></article>; })}</div><p className="fa-disclaimer">منابع دانشگاهی برای شفافیت ذکر شده‌اند؛ هیچ‌یک از دانشگاه‌های نام‌برده این کارگاه را بررسی یا تأیید نکرده‌اند.</p></PageFrame>;
   }
 
   if (route === 'essays') {
@@ -113,7 +113,7 @@ async function FaPage({ path }: { path: string[] }) {
     const category = categories.find((item) => item.slug === path[2]);
     if (!category) notFound();
     const matching = entries.filter((entry) => entry.category === category.slug);
-    return <PageFrame eyebrow="آزمایشگاه MBA" title={faCategories[category.slug].name} intro={faCategories[category.slug].description}><div className="fa-entry-list">{matching.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}</div></PageFrame>;
+    return <PageFrame eyebrow="کارگاه مدیریت کسب‌وکار" title={faCategories[category.slug].name} intro={faCategories[category.slug].description}><div className="fa-entry-list">{matching.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}</div></PageFrame>;
   }
 
   if (path[0] === 'mba-lab' && path[1] === 'phase' && path.length === 3) {
