@@ -88,8 +88,8 @@ export default function Header() {
         {isReaderPage && <ThemeToggle />}
       </div>
 
-      <div className={isPersian ? 'site-menu-control is-persian' : 'site-menu-control'}>
-        <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" routePath={routePath} />
+      <div className={`site-menu-control${isPersian ? ' is-persian' : ''}${isHome ? ' has-mobile-language' : ''}`}>
+        {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" routePath={routePath} />}
         <button
           type="button"
           className={open ? 'site-menu-button is-open' : 'site-menu-button'}
