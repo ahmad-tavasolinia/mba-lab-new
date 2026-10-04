@@ -1067,9 +1067,11 @@ main {
     left: auto;
     z-index: 55;
     display: flex;
-    width: 48px;
-    flex-direction: column-reverse;
+    width: 96px;
+    height: 48px;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     gap: 0;
     overflow: hidden;
     padding: 0;
@@ -1082,6 +1084,7 @@ main {
   .site-menu-control.is-persian.has-mobile-theme {
     right: auto;
     left: 22px;
+    direction: rtl;
   }
 
   .site-menu-control.has-mobile-theme .reader-theme-toggle {
@@ -1089,7 +1092,7 @@ main {
     width: 34px;
     height: 30px;
     flex: 0 0 auto;
-    margin: 5px 0 7px;
+    margin: 0 5px;
     padding: 0;
     border-color: rgba(198, 216, 228, 0.42);
     border-radius: 999px;
@@ -1174,6 +1177,18 @@ main {
     left: 22px;
   }
 
+  .site-menu-control.has-mobile-theme,
+  .site-menu-control.is-persian.has-mobile-theme {
+    width: 96px;
+    height: 48px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .site-menu-control.is-persian.has-mobile-theme {
+    direction: rtl;
+  }
+
   .site-menu-control:not(.has-mobile-language):not(.has-mobile-theme) {
     width: 44px;
     height: 44px;
@@ -1187,6 +1202,10 @@ main {
     width: 44px;
     height: 44px;
     border-color: rgba(216, 231, 241, 0.48);
+  }
+
+  .site-menu-control.has-mobile-theme .reader-theme-toggle {
+    margin: 0 5px;
   }
 
   .site-menu-control .home-mobile-header-language-switch {
