@@ -1056,6 +1056,10 @@ main {
     direction: ltr;
   }
 
+  .site-menu-control.is-persian {
+    direction: rtl;
+  }
+
   .site-nav {
     display: none;
   }
