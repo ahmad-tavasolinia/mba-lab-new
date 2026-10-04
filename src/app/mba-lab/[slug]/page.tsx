@@ -5,6 +5,8 @@ import { getAllLabEntries, getLabEntry, getLabSlugs, getAllSources } from '@/lib
 import { getPhase } from '@/lib/phases';
 import { Container, Eyebrow, TopicChip, CodeChip, formatDate } from '@/components/ui';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export async function generateStaticParams() {
   return getLabSlugs().map((slug) => ({ slug }));
 }
@@ -99,14 +101,14 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
               {screenshots.map((shot) => (
                 <figure key={shot.src} className="min-w-0">
                   <a
-                    href={shot.src}
+                    href={`${basePath}${shot.src}`}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Open ${shot.alt} at full size`}
                     className="group block overflow-hidden border border-rule bg-black/20 dark:border-dark-rule"
                   >
                     <img
-                      src={shot.src}
+                      src={`${basePath}${shot.src}`}
                       alt={shot.alt}
                       className="block h-32 w-full object-cover transition-opacity group-hover:opacity-80"
                     />
@@ -130,7 +132,7 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
               formulas, calculations, and underlying transaction data.
             </p>
             <a
-              href={entry.download.href}
+              href={`${basePath}${entry.download.href}`}
               download
               className="mt-4 inline-flex items-center gap-4 border-b border-gold pb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-ink hover:text-gold dark:text-dark-ink"
             >

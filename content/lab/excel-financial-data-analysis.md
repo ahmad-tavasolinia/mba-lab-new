@@ -29,21 +29,21 @@ practice:
   - "Basic arithmetic and cell references"
   - "Charts for financial data visualization"
 screenshots:
-  - src: "/mba-lab/projects/financial-data-analysis/monthly-spending-by-category.png"
+  - src: "/projects/financial-data-analysis/monthly-spending-by-category.png"
     alt: "Excel chart showing monthly spending by category"
     caption: "Monthly Spending by Category, comparing expense totals across categories."
-  - src: "/mba-lab/projects/financial-data-analysis/income-and-expenses.png"
+  - src: "/projects/financial-data-analysis/income-and-expenses.png"
     alt: "Excel chart comparing total income and total expenses"
     caption: "Income and Expenses, a visual comparison of total income and total expenses."
-  - src: "/mba-lab/projects/financial-data-analysis/summary.png"
+  - src: "/projects/financial-data-analysis/summary.png"
     alt: "Excel summary table with financial calculations"
     caption: "Summary, the calculated financial measures produced from the transaction table."
-  - src: "/mba-lab/projects/financial-data-analysis/transactions.png"
+  - src: "/projects/financial-data-analysis/transactions.png"
     alt: "Excel transaction table"
     caption: "Transaction Database, the structured table used as the underlying dataset."
 download:
   label: "Download the Excel file"
-  href: "/mba-lab/projects/financial-data-analysis/financial-data-analysis.xlsx"
+  href: "/projects/financial-data-analysis/financial-data-analysis.xlsx"
 ---
 
 I built this project as a small transaction-level financial model in Excel. The workbook starts with a structured transaction table and turns it into a financial summary covering income, expenses, net balance, spending by category, transaction counts, average expense, and the largest expense. The goal was to practice moving from raw financial data to calculations and then to a clearer view of financial performance.
