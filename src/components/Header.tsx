@@ -22,15 +22,14 @@ function HomeLanguageSwitch({ isPersian, className, routePath }: { isPersian: bo
   return (
     <div className={`home-language-switch ${className}`} dir="ltr" role="group" aria-label={isPersian ? 'انتخاب زبان' : 'Choose language'}>
       {isPersian ? (
-        <Link href={localPath || '/'} lang="en" aria-label="Switch to English">EN</Link>
+        <Link className="language-switch-option" href={localPath || '/'} lang="en" aria-label="Switch to English">EN</Link>
       ) : (
-        <span lang="en" aria-current="page">EN</span>
+        <span className="language-switch-option" lang="en" aria-current="page">EN</span>
       )}
-      <span aria-hidden="true">/</span>
       {isPersian ? (
-        <span dir="rtl" lang="fa" aria-current="page">{persianLanguageName}</span>
+        <span className="language-switch-option" dir="rtl" lang="fa" aria-current="page">{persianLanguageName}</span>
       ) : (
-        <Link href={`/fa${localPath}`} dir="rtl" lang="fa" aria-label="Switch to Persian">{persianLanguageName}</Link>
+        <Link className="language-switch-option" href={`/fa${localPath}`} dir="rtl" lang="fa" aria-label="Switch to Persian">{persianLanguageName}</Link>
       )}
     </div>
   );

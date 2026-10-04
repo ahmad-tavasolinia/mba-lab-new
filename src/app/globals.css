@@ -179,6 +179,22 @@ main {
   color: var(--site-accent);
 }
 
+.site-nav > a[aria-current="page"] {
+  font-weight: 400;
+}
+
+.site-nav > a[aria-current="page"]::after {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  background: rgba(220, 232, 241, 0.88);
+  box-shadow: 0 0 7px rgba(220, 232, 241, 0.5);
+  content: "";
+  pointer-events: none;
+}
+
 .site-header[lang="fa"] .site-nav a,
 .site-header[lang="fa"] .site-mobile-nav a {
   font-family: var(--font-persian), Tahoma, sans-serif;
@@ -1571,9 +1587,15 @@ html[data-theme="light"] .lab-library-more:hover {
 }
 
 .home-language-switch {
-  position: absolute;
-  top: -44px;
-  right: 0;
+  position: static;
+  width: 104px;
+  height: 30px;
+  align-items: stretch;
+  gap: 0;
+  padding: 2px;
+  border: 1px solid rgba(198, 216, 228, 0.46);
+  border-radius: 999px;
+  background: rgba(3, 11, 18, 0.25);
 }
 
 .home-language-switch a,
@@ -1588,52 +1610,69 @@ html[data-theme="light"] .lab-library-more:hover {
 }
 
 .home-header-language-switch {
-  position: static;
-  top: auto;
-  right: auto;
   flex: 0 0 auto;
-  gap: 8px;
+  gap: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   letter-spacing: 0.08em;
-  transform: none;
 }
 
-.site-nav .home-header-language-switch a {
-  padding: 8px 0;
+.language-switch-option {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: rgba(232, 240, 245, 0.74);
   font-size: inherit;
-  letter-spacing: inherit;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+  text-decoration: none;
   text-transform: none;
+  white-space: nowrap;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.site-nav .home-header-language-switch .language-switch-option {
+  padding: 0 8px;
+  font-size: inherit;
+  letter-spacing: 0;
 }
 
 .site-header[lang="fa"] .home-header-language-switch {
-  font-family: var(--font-persian), Tahoma, sans-serif;
   font-size: 15px;
-  letter-spacing: 0;
 }
 
-.site-header[lang="fa"] .home-header-language-switch a {
-  font-family: inherit;
-  font-size: inherit;
-  letter-spacing: 0;
-  text-transform: none;
+.language-switch-option[lang="en"] {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.home-language-switch [lang="fa"] {
+.home-language-switch .language-switch-option[lang="fa"] {
   font-family: var(--font-persian), Tahoma, sans-serif;
-  font-size: inherit;
   letter-spacing: 0;
-  text-transform: none;
 }
 
-.home-language-switch [aria-current="page"] {
+.site-header[lang="fa"] .home-language-switch .language-switch-option[lang="en"] {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.language-switch-option[aria-current="page"] {
+  border-color: rgba(220, 232, 241, 0.92);
+  background: linear-gradient(135deg, rgba(238, 246, 251, 0.14), rgba(190, 211, 226, 0.04));
+  box-shadow: 0 0 7px rgba(220, 232, 241, 0.32), inset 0 0 5px rgba(220, 232, 241, 0.08);
   color: var(--site-text);
+  font-size: inherit;
+  font-weight: 400;
 }
 
 .home-mobile-header-language-switch {
   display: none;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 @media (max-width: 1050px) {
@@ -1641,21 +1680,11 @@ html[data-theme="light"] .lab-library-more:hover {
     position: static;
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 0;
+    width: 92px;
+    height: 27px;
     color: rgba(232, 240, 245, 0.86);
-    top: auto;
-    right: auto;
-    transform: none;
-  }
-
-  .home-mobile-header-language-switch a {
-    padding: 0;
-    border: 0;
-    color: inherit;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.03em;
-    text-transform: none;
+    font-size: 11px;
   }
 }
 
@@ -1963,6 +1992,5 @@ html[data-theme="light"] .lab-library-more:hover {
   .fa-heading-copy { width: calc(100% - 40px); padding: 92px 0 42px; }
   .fa-visual-heading { min-height: 340px; }
   .fa-page-body { width: calc(100% - 40px); padding: 30px 0 52px; }
-  .home-language-switch { top: -36px; }
 }
 
