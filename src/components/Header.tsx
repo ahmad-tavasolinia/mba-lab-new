@@ -89,6 +89,7 @@ export default function Header() {
       </div>
 
       <div className="site-menu-control">
+        <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" routePath={routePath} />
         <button
           type="button"
           className={open ? 'site-menu-button is-open' : 'site-menu-button'}
@@ -100,7 +101,6 @@ export default function Header() {
           <span />
           <span />
         </button>
-        <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" routePath={routePath} />
       </div>
 
       {open && (
