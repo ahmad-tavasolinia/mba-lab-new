@@ -1050,9 +1050,9 @@ main {
   .site-menu-control {
     display: flex;
     flex: 0 0 auto;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
   }
 
   .site-nav {
@@ -1587,7 +1587,9 @@ html[data-theme="light"] .lab-library-more:hover {
 }
 
 .home-language-switch {
-  position: static;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   width: 104px;
   height: 30px;
   align-items: stretch;
@@ -1597,6 +1599,23 @@ html[data-theme="light"] .lab-library-more:hover {
   border-radius: 999px;
   background: rgba(3, 11, 18, 0.25);
 }
+
+.home-language-switch::before {
+  position: absolute;
+  z-index: 0;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  width: calc(50% - 3px);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(238, 246, 251, 0.2), rgba(190, 211, 226, 0.08));
+  box-shadow: 0 0 9px rgba(220, 232, 241, 0.32), inset 0 0 5px rgba(220, 232, 241, 0.14);
+  content: "";
+  pointer-events: none;
+  transition: transform 220ms ease;
+}
+
+.home-language-switch.is-persian::before { transform: translateX(100%); }
 
 .home-language-switch a,
 .fa-language-switch a {
@@ -1618,14 +1637,14 @@ html[data-theme="light"] .lab-library-more:hover {
 }
 
 .language-switch-option {
+  position: relative;
+  z-index: 1;
   display: flex;
   min-width: 0;
   flex: 1 1 0;
   align-items: center;
   justify-content: center;
   padding: 0 8px;
-  border: 1px solid transparent;
-  border-radius: 999px;
   color: rgba(232, 240, 245, 0.74);
   font-size: inherit;
   font-weight: 400;
@@ -1634,7 +1653,7 @@ html[data-theme="light"] .lab-library-more:hover {
   text-decoration: none;
   text-transform: none;
   white-space: nowrap;
-  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+  transition: color 160ms ease;
 }
 
 .site-nav .home-header-language-switch .language-switch-option {
@@ -1661,9 +1680,6 @@ html[data-theme="light"] .lab-library-more:hover {
 }
 
 .language-switch-option[aria-current="page"] {
-  border-color: rgba(220, 232, 241, 0.92);
-  background: linear-gradient(135deg, rgba(238, 246, 251, 0.14), rgba(190, 211, 226, 0.04));
-  box-shadow: 0 0 7px rgba(220, 232, 241, 0.32), inset 0 0 5px rgba(220, 232, 241, 0.08);
   color: var(--site-text);
   font-size: inherit;
   font-weight: 400;
@@ -2055,6 +2071,13 @@ html[data-theme="light"] .lab-library-more:hover {
 }
 
 .fa-reading-meta { margin-top: 18px; }
+.fa-reading-tag-row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 18px; }
+.fa-reading-code,
+.fa-phase-topic { min-height: 30px; padding: 5px 12px; border: 1px solid var(--site-rule); border-radius: 999px; color: var(--site-accent); font-size: 12px; line-height: 1.5; }
+.fa-reading-code { display: inline-flex; align-items: center; }
+.fa-phase-topic { background: rgba(184, 207, 222, 0.07); text-decoration: none; }
+.fa-phase-topic:hover { border-color: var(--site-accent); color: var(--site-text); }
+.fa-reading-topics { margin-top: 16px; }
 .fa-original-note { margin: 30px 0 14px; color: var(--site-accent); font-size: 14px; line-height: 2; }
 .fa-original-content { padding: 24px; border: 1px solid var(--site-rule); background: rgba(18, 35, 48, 0.28); }
 .fa-disclaimer { margin-top: 28px; color: var(--site-muted); font-size: 12px; line-height: 2; }

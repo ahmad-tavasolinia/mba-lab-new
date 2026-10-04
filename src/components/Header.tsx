@@ -20,7 +20,7 @@ function HomeLanguageSwitch({ isPersian, className, routePath }: { isPersian: bo
   const localPath = routePath === '/' ? '' : routePath;
 
   return (
-    <div className={`home-language-switch ${className}`} dir="ltr" role="group" aria-label={isPersian ? 'انتخاب زبان' : 'Choose language'}>
+    <div className={`home-language-switch ${isPersian ? 'is-persian' : 'is-english'} ${className}`} dir="ltr" role="group" aria-label={isPersian ? 'انتخاب زبان' : 'Choose language'}>
       {isPersian ? (
         <Link className="language-switch-option" href={localPath || '/'} lang="en" aria-label="Switch to English">EN</Link>
       ) : (

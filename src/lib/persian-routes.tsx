@@ -68,8 +68,8 @@ function FaTopicIndex({ entries }: { entries: Awaited<ReturnType<typeof getAllLa
   </PageFrame>;
 }
 
-function PageFrame({ eyebrow, title, intro, children, hero }: { eyebrow?: string; title: string; intro?: string; children: React.ReactNode; hero?: 'lab' | 'topics' }) {
-  return <div className="fa-site" lang="fa" dir="rtl"><section className={`fa-page-heading${hero ? ` fa-visual-heading fa-visual-${hero}` : ''}`}>{hero && <div className={`fa-visual-art fa-art-${hero}`} aria-hidden="true" />}{hero && <div className="fa-visual-shade" aria-hidden="true" />}<div className="fa-heading-copy"><span className="fa-eyebrow">{eyebrow}</span><h1>{title}</h1>{intro && <p>{intro}</p>}</div></section><section className="fa-page-body">{children}</section></div>;
+function PageFrame({ eyebrow, title, intro, children, hero, headerBeforeTitle, headerAfterIntro }: { eyebrow?: string; title: string; intro?: string; children: React.ReactNode; hero?: 'lab' | 'topics'; headerBeforeTitle?: React.ReactNode; headerAfterIntro?: React.ReactNode }) {
+  return <div className="fa-site" lang="fa" dir="rtl"><section className={`fa-page-heading${hero ? ` fa-visual-heading fa-visual-${hero}` : ''}`}>{hero && <div className={`fa-visual-art fa-art-${hero}`} aria-hidden="true" />}{hero && <div className="fa-visual-shade" aria-hidden="true" />}<div className="fa-heading-copy"><span className="fa-eyebrow">{eyebrow}</span>{headerBeforeTitle}<h1>{title}</h1>{intro && <p>{intro}</p>}{headerAfterIntro}</div></section><section className="fa-page-body">{children}</section></div>;
 }
 
 function PersianSourceFlow() {
@@ -211,12 +211,68 @@ async function FaPage({ path }: { path: string[] }) {
 
   if (path[0] === 'mba-lab' && path.length === 2 && getLabSlugs().includes(path[1])) {
     const entry = await getLabEntry(path[1]);
-    return <PageFrame eyebrow={`${faCategories[entry.category].name} · ${new Date(entry.date).toLocaleDateString('fa-IR')}`} title={faEntryTitle(entry.slug, entry.title)} intro={faEntrySummary(entry.slug, entry.summary)}><div className="fa-meta fa-reading-meta"><bdi dir="ltr">{entry.code} · {entry.readingTime}</bdi><span>موضوع: {entry.topics.map((topic) => faTopics[topic]?.name ?? topic).join('، ')}</span></div><p className="fa-original-note">متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p><div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} /></PageFrame>;
+    return (
+      <PageFrame
+        eyebrow={faCategories[entry.category].name}
+        title={faEntryTitle(entry.slug, entry.title)}
+        intro={faEntrySummary(entry.slug, entry.summary)}
+        headerBeforeTitle={(
+          <div className="fa-reading-tag-row">
+            <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
+            <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">
+              {faPhases[entry.journeyPhase].title}
+            </Link>
+          </div>
+        )}
+        headerAfterIntro={(
+          <>
+            <div className="fa-meta fa-reading-meta">
+              <time>{new Date(entry.date).toLocaleDateString('fa-IR')}</time>
+              <bdi dir="ltr">{entry.readingTime}</bdi>
+            </div>
+            <div className="fa-entry-topics fa-reading-topics" aria-label="موضوع‌ها">
+              {entry.topics.map((topic) => (
+                <Link key={topic} href={`/fa/topics/${topic}`} className="fa-entry-topic">
+                  {faTopics[topic]?.name ?? topic}
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
+      >
+        <p className="fa-original-note">متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p>
+        <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+      </PageFrame>
+    );
   }
 
   if (path[0] === 'essays' && path.length === 2 && getEssaySlugs().includes(path[1])) {
     const essay = await getEssay(path[1]);
-    return <PageFrame eyebrow={`جستار · ${new Date(essay.date).toLocaleDateString('fa-IR')}`} title={faEssayTitles[essay.slug] ?? essay.title} intro={faEssaySummaries[essay.slug] ?? essay.summary}><p className="fa-original-note">متن کامل این جستار فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p><div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: essay.contentHtml }} /></PageFrame>;
+    return (
+      <PageFrame
+        eyebrow="جستار"
+        title={faEssayTitles[essay.slug] ?? essay.title}
+        intro={faEssaySummaries[essay.slug] ?? essay.summary}
+        headerAfterIntro={(
+          <>
+            <div className="fa-meta fa-reading-meta">
+              <time>{new Date(essay.date).toLocaleDateString('fa-IR')}</time>
+              <bdi dir="ltr">{essay.readingTime}</bdi>
+            </div>
+            <div className="fa-entry-topics fa-reading-topics" aria-label="موضوع‌ها">
+              {essay.topics.map((topic) => (
+                <Link key={topic} href={`/fa/topics/${topic}`} className="fa-entry-topic">
+                  {faTopics[topic]?.name ?? topic}
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
+      >
+        <p className="fa-original-note">متن کامل این جستار فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p>
+        <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: essay.contentHtml }} />
+      </PageFrame>
+    );
   }
 
   if (path[0] === 'courses' && path.length === 2 && getSourceSlugs().includes(path[1])) {
