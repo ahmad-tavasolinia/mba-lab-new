@@ -1,28 +1,15 @@
 import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
-import { Montserrat, Vazirmatn } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-const navFont = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  display: 'swap',
-  variable: '--font-nav',
-});
-
-const persianFont = Vazirmatn({
-  subsets: ['arabic', 'latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-  variable: '--font-persian',
-});
 
 const fontVariables = {
   display: 'Georgia, \"Times New Roman\", serif',
   body: 'Arial, Helvetica, sans-serif',
   mono: '\"IBM Plex Mono\", \"Courier New\", monospace',
+  nav: '\"Montserrat\", \"Avenir Next\", \"Segoe UI\", Arial, sans-serif',
+  persian: '\"Vazirmatn\", Tahoma, \"Segoe UI\", \"Noto Sans Arabic\", sans-serif',
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -52,12 +39,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={'dark ' + navFont.variable + ' ' + persianFont.variable}
+      className="dark"
       data-theme="dark"
       style={{
         '--font-display': fontVariables.display,
         '--font-body': fontVariables.body,
         '--font-mono': fontVariables.mono,
+        '--font-nav': fontVariables.nav,
+        '--font-persian': fontVariables.persian,
         '--asset-home': 'url("' + basePath + '/images/home-lab-bg.png")',
         '--asset-lab': 'url("' + basePath + '/mba-lab/lab-room-reference.png")',
         '--asset-topics': 'url("' + basePath + '/topcis/topics-room-reference.png")',
