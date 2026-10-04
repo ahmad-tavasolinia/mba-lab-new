@@ -1,10 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getAllEssays, getAllLabEntries, getAllSources, getEssay, getEssaySlugs, getLabEntry, getLabSlugs, getSource, getSourceSlugs } from '@/lib/content';
 import { categories } from '@/lib/categories';
 import { phases } from '@/lib/phases';
 import { topics } from '@/lib/topics';
+import PersianLabLibrary from '@/components/PersianLabLibrary';
 import { faCategories, faEntrySummary, faEntryTitle, faEssaySummaries, faEssayTitles, faPhases, faSourceNames, faTopics } from '@/lib/persian';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -70,6 +72,20 @@ function PageFrame({ eyebrow, title, intro, children, hero }: { eyebrow?: string
   return <div className="fa-site" lang="fa" dir="rtl"><section className={`fa-page-heading${hero ? ` fa-visual-heading fa-visual-${hero}` : ''}`}>{hero && <div className={`fa-visual-art fa-art-${hero}`} aria-hidden="true" />}{hero && <div className="fa-visual-shade" aria-hidden="true" />}<div className="fa-heading-copy"><span className="fa-eyebrow">{eyebrow}</span><h1>{title}</h1>{intro && <p>{intro}</p>}</div></section><section className="fa-page-body">{children}</section></div>;
 }
 
+function PersianSourceFlow() {
+  const steps = ['منبع', 'مطالعه', 'ترکیب مستقل', 'خروجی منتشرشده'];
+  return (
+    <div className="fa-source-flow" aria-label="روند تبدیل منبع به خروجی">
+      {steps.map((step, index) => (
+        <span className="fa-source-flow-step" key={step}>
+          <span className={index === steps.length - 1 ? 'fa-source-flow-chip is-final' : 'fa-source-flow-chip'}>{step}</span>
+          {index < steps.length - 1 && <span className="fa-source-flow-arrow" aria-hidden="true">←</span>}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function FaCategoryBlocks({ entries }: { entries: Awaited<ReturnType<typeof getAllLabEntries>> }) {
   return <div className="fa-category-list">{categories.map((category) => {
     const items = entries.filter((entry) => entry.category === category.slug);
@@ -86,7 +102,39 @@ async function FaPage({ path }: { path: string[] }) {
   if (route === 'topics') return <FaTopicIndex entries={entries} />;
   if (route === 'mba-lab') return <PageFrame hero="lab" eyebrow="دفتر کارگاه" title="کارگاه مدیریت کسب و کار" intro="فضایی برای اندیشیدن به مسئله‌های کسب‌وکار، آزمودن ایده‌ها، ساختن پروژه‌ها و آموختن از کسانی که تجربهٔ ساختن دارند."><div className="fa-card-grid">{categories.map((category) => { const count = entries.filter((e) => e.category === category.slug).length; return <Link key={category.slug} href={`/fa/mba-lab/category/${category.slug}`} className="fa-topic-card"><span className="fa-meta">{category.code} · {count.toLocaleString('fa-IR')} یادداشت</span><h2>{faCategories[category.slug].name}</h2><p>{faCategories[category.slug].description}</p></Link>; })}</div></PageFrame>;
 
-  if (route === 'about') return <PageFrame eyebrow="دربارهٔ من" title="احمد توسلی‌نیا"><div className="fa-prose"><p className="fa-lead">به مسئله‌هایی علاقه دارم که پاسخ ساده‌ای ندارند.</p><p>کار و یادگیری من در پیوند میان کسب‌وکار، راهبرد، بازار، فناوری، هوش مصنوعی و کارآفرینی قرار دارد. به مسئله‌هایی جذب می‌شوم که اطلاعات ناقص است، منابع محدودند و بااین‌حال باید تصمیم گرفت.</p><p>این کارگاه را ساختم تا مسیر یادگیری‌ام را عمومی کنم: ایده‌ها را بخوانم، فرض‌ها را بیازمایم، با عددها روبه‌رو شوم و ببینم آیا تحلیل در برابر واقعیت دوام می‌آورد یا نه.</p><p>به‌جای جمع‌کردن دانسته‌ها، می‌خواهم از آن‌ها استفاده کنم؛ با نوشتن، تحلیل‌کردن، ساختن و آزمودن ایده‌ها.</p><p>این روزها به‌ویژه به اثر هوش مصنوعی بر اقتصاد کسب‌وکارها، تغییر بازارها و مزیت رقابتی، و شیوهٔ خلق و تصاحب ارزش در محیط‌های متغیر فکر می‌کنم.</p></div><ul className="fa-interest-list"><li>کسب‌وکار و کارآفرینی</li><li>راهبرد و تحلیل کسب‌وکار</li><li>هوش مصنوعی</li><li>فناوری و بازارها</li></ul></PageFrame>;
+  if (route === 'about') return (
+    <PageFrame eyebrow="دربارهٔ من" title="احمد توسلی‌نیا">
+      <div className="fa-about-layout">
+        <div>
+          <div className="fa-prose">
+            <p className="fa-lead">به مسئله‌هایی علاقه دارم که پاسخ ساده‌ای ندارند.</p>
+            <p>کار و یادگیری من در پیوند میان کسب‌وکار، راهبرد، بازار، فناوری، هوش مصنوعی و کارآفرینی قرار دارد. به مسئله‌هایی جذب می‌شوم که اطلاعات ناقص است، منابع محدودند و بااین‌حال باید تصمیم گرفت.</p>
+            <p>این کارگاه را ساختم تا مسیر یادگیری‌ام را عمومی کنم: ایده‌ها را بخوانم، فرض‌ها را بیازمایم، با عددها روبه‌رو شوم و ببینم آیا تحلیل در برابر واقعیت دوام می‌آورد یا نه.</p>
+            <p>به‌جای جمع‌کردن دانسته‌ها، می‌خواهم از آن‌ها استفاده کنم؛ با نوشتن، تحلیل‌کردن، ساختن و آزمودن ایده‌ها.</p>
+            <p>این روزها به‌ویژه به اثر هوش مصنوعی بر اقتصاد کسب‌وکارها، تغییر بازارها و مزیت رقابتی، و شیوهٔ خلق و تصاحب ارزش در محیط‌های متغیر فکر می‌کنم.</p>
+          </div>
+          <ul className="fa-interest-list">
+            <li>کسب‌وکار و کارآفرینی</li>
+            <li>استراتژی و تحلیل کسب‌وکار</li>
+            <li>هوش مصنوعی</li>
+            <li>فناوری و بازارها</li>
+          </ul>
+        </div>
+        <aside className="fa-about-aside">
+          <Image
+            src={`${basePath}/me.jpg`}
+            alt="احمد توسلی‌نیا"
+            width={200}
+            height={200}
+            className="fa-about-photo"
+            priority
+          />
+          <Link href="/fa/cv" className="fa-action fa-about-action">مشاهدهٔ رزومه</Link>
+          <Link href="/fa/mba-lab" className="fa-action fa-about-action fa-about-secondary">رفتن به کارگاه</Link>
+        </aside>
+      </div>
+    </PageFrame>
+  );
 
   if (route === 'contact') return <PageFrame eyebrow="در تماس باشیم" title="تماس" intro="اگر چیزی در کارگاه پرسشی در ذهن‌تان ایجاد کرده، با آن مخالفید یا پیوند تازه‌ای به نظرتان می‌رسد، خوشحال می‌شوم بشنوم."><div className="fa-contact-grid"><section><span className="fa-eyebrow">ایمیل</span><a dir="ltr" href="mailto:amd.tavasolinia@gmail.com">amd.tavasolinia@gmail.com</a></section><section><span className="fa-eyebrow">در شبکه‌های دیگر</span><a dir="ltr" href="https://www.linkedin.com/in/ahmad-tavasolinia-0a4903202/">LinkedIn</a></section></div></PageFrame>;
 
@@ -94,7 +142,33 @@ async function FaPage({ path }: { path: string[] }) {
 
   if (route === 'courses') {
     const sources = getAllSources();
-    return <PageFrame eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد."><div className="fa-entry-list">{sources.map((source) => { const faSource = faSourceNames[source.slug]; return <article className="fa-entry-card" key={source.slug}><span className="fa-meta">{source.institution}</span><h2>{faSource?.course ?? source.course}</h2><p>{source.instructor && <>{source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p><p>{faSource?.why ?? source.why}</p><a href={source.courseUrl} target="_blank" rel="noreferrer">رفتن به منبع اصلی ←</a></article>; })}</div><p className="fa-disclaimer">منابع دانشگاهی برای شفافیت ذکر شده‌اند؛ هیچ‌یک از دانشگاه‌های نام‌برده این کارگاه را بررسی یا تأیید نکرده‌اند.</p></PageFrame>;
+    const labEntries = entries;
+    return (
+      <PageFrame eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد.">
+        <PersianSourceFlow />
+        <div className="fa-entry-list fa-source-list">
+          {sources.map((source) => {
+            const faSource = faSourceNames[source.slug];
+            const outputCount = labEntries.filter((entry) => source.outputs.includes(entry.slug)).length;
+            return (
+              <article className="fa-entry-card fa-source-card" key={source.slug}>
+                <span className="fa-meta">{source.institution}</span>
+                <h2><Link href={`/fa/courses/${source.slug}`}>{faSource?.course ?? source.course}</Link></h2>
+                <p>{source.instructor && <>{source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p>
+                <p>{faSource?.why ?? source.why}</p>
+                <div className="fa-source-actions">
+                  <Link href={`/fa/courses/${source.slug}`} className="fa-inline-link">
+                    {outputCount.toLocaleString('fa-IR')} یادداشت مرتبط · دیدن خروجی‌ها ←
+                  </Link>
+                  {source.courseUrl && <a className="fa-inline-link" href={source.courseUrl} target="_blank" rel="noreferrer">رفتن به منبع اصلی ←</a>}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <p className="fa-disclaimer">منابع دانشگاهی برای شفافیت ذکر شده‌اند؛ هیچ‌یک از دانشگاه‌های نام‌برده این کارگاه را بررسی یا تأیید نکرده‌اند.</p>
+      </PageFrame>
+    );
   }
 
   if (route === 'essays') {
@@ -113,7 +187,19 @@ async function FaPage({ path }: { path: string[] }) {
     const category = categories.find((item) => item.slug === path[2]);
     if (!category) notFound();
     const matching = entries.filter((entry) => entry.category === category.slug);
-    return <PageFrame eyebrow="کارگاه مدیریت کسب‌وکار" title={faCategories[category.slug].name} intro={faCategories[category.slug].description}><div className="fa-entry-list">{matching.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}</div></PageFrame>;
+    const topicOptions = topics
+      .filter((topic) => matching.some((entry) => entry.topics.includes(topic.slug)))
+      .map((topic) => ({ slug: topic.slug, name: faTopics[topic.slug]?.name ?? topic.name }));
+    const libraryItems = matching.map((entry) => ({
+      href: `/fa/mba-lab/${persianLabRouteSlug(entry.slug)}`,
+      code: entry.code,
+      date: new Date(entry.date).toLocaleDateString('fa-IR'),
+      title: faEntryTitle(entry.slug, entry.title),
+      summary: faEntrySummary(entry.slug, entry.summary),
+      searchText: `${entry.title} ${entry.summary} ${entry.centralQuestion}`,
+      topics: entry.topics.map((slug) => ({ slug, name: faTopics[slug]?.name ?? slug })),
+    }));
+    return <PageFrame eyebrow="کارگاه مدیریت کسب‌وکار" title={faCategories[category.slug].name} intro={faCategories[category.slug].description}><PersianLabLibrary items={libraryItems} topicOptions={topicOptions} /></PageFrame>;
   }
 
   if (path[0] === 'mba-lab' && path[1] === 'phase' && path.length === 3) {
@@ -137,7 +223,21 @@ async function FaPage({ path }: { path: string[] }) {
     const source = getSource(path[1]);
     const faSource = faSourceNames[source.slug];
     const outputEntries = entries.filter((entry) => source.outputs.includes(entry.slug));
-    return <PageFrame eyebrow={source.institution} title={faSource?.course ?? source.course} intro={faSource?.why ?? source.why}><p className="fa-prose">مدرس: {source.instructor ?? '—'} · موضوع: {faTopics[source.subject]?.name ?? source.subject}</p>{source.courseUrl && <a className="fa-action" href={source.courseUrl} target="_blank" rel="noreferrer">مشاهدهٔ دوره در وب‌سایت اصلی ←</a>}<h2 className="fa-section-title">یادداشت‌های مرتبط</h2><div className="fa-entry-list">{outputEntries.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}</div></PageFrame>;
+    return (
+      <PageFrame eyebrow={source.institution} title={faSource?.course ?? source.course} intro={faSource?.why ?? source.why}>
+        <p className="fa-prose">مدرس: {source.instructor ?? '—'} · موضوع: {faTopics[source.subject]?.name ?? source.subject}</p>
+        {source.courseUrl && <a className="fa-action" href={source.courseUrl} target="_blank" rel="noreferrer">مشاهدهٔ دوره در وب‌سایت اصلی ←</a>}
+        <h2 className="fa-section-title">فرآیند مطالعه</h2>
+        <PersianSourceFlow />
+        <h2 className="fa-section-title fa-related-title">یادداشت‌های مرتبط</h2>
+        {outputEntries.length ? (
+          <div className="fa-entry-list">{outputEntries.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}</div>
+        ) : (
+          <p className="fa-library-empty">هنوز یادداشتی بر پایهٔ این منبع منتشر نشده است.</p>
+        )}
+        <p className="fa-disclaimer">این صفحه برای شفافیت، منبع دانشگاهی را معرفی می‌کند. تحلیل و نتیجه‌گیری‌ها متعلق به نویسنده‌اند و این دانشگاه کارگاه را بررسی یا تأیید نکرده است.</p>
+      </PageFrame>
+    );
   }
 
   notFound();
