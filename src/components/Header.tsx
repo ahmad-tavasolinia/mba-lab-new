@@ -44,7 +44,7 @@ export default function Header() {
   const pathSegments = routePath?.split('/').filter(Boolean) ?? [];
   const routeParent = pathSegments[pathSegments.length - 2];
   const routeSlug = pathSegments[pathSegments.length - 1];
-  const isReaderPage = !isPersian && (
+  const isReaderPage = (
     routeParent === 'essays' ||
     (routeParent === 'mba-lab' && routeSlug !== 'mba-lab'));
 
@@ -85,10 +85,10 @@ export default function Header() {
           ))}
           <HomeLanguageSwitch isPersian={isPersian} className="home-header-language-switch" routePath={routePath} />
         </nav>
-        {isReaderPage && <ThemeToggle />}
       </div>
 
-      <div className={`site-menu-control${isPersian ? ' is-persian' : ''}${isHome ? ' has-mobile-language' : ''}`}>
+      <div className={`site-menu-control${isPersian ? ' is-persian' : ''}${isHome ? ' has-mobile-language' : ''}${isReaderPage ? ' has-mobile-theme' : ''}`}>
+        {isReaderPage && <ThemeToggle />}
         {isHome && <HomeLanguageSwitch isPersian={isPersian} className="home-mobile-header-language-switch" routePath={routePath} />}
         <button
           type="button"
