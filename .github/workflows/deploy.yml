@@ -46,7 +46,7 @@ jobs:
         # other name) is served from "/<repo-name>", so basePath is set to that.
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ steps.basepath.outputs.value }}
+          NEXT_PUBLIC_BASE_PATH: ""
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
