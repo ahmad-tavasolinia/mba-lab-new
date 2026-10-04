@@ -64,6 +64,7 @@ a {
   z-index: 0;
   pointer-events: none;
   background:
+    radial-gradient(ellipse at 12% 0%, rgba(50, 88, 116, 0.2), transparent 42%),
     radial-gradient(ellipse at 95% 70%, rgba(29, 62, 88, 0.18), transparent 38%);
 }
 
@@ -1395,6 +1396,7 @@ html[data-theme="light"] body {
 
 html[data-theme="light"] .site-bg {
   background:
+    radial-gradient(ellipse at 12% 0%, rgba(134, 174, 199, 0.18), transparent 44%),
     radial-gradient(ellipse at 95% 70%, rgba(177, 205, 222, 0.22), transparent 40%);
 }
 
@@ -1692,7 +1694,7 @@ html[data-theme="light"] .lab-library-more:hover {
 
 @media (max-width: 1050px) {
   .home-mobile-header-language-switch {
-    position: static;
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0;
