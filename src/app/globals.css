@@ -1107,6 +1107,70 @@ main {
     padding: 0 22px;
   }
 
+  .site-menu-control,
+  .site-menu-control.is-persian {
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    left: auto;
+    z-index: 55;
+    display: flex;
+    width: 48px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid rgba(198, 216, 228, 0.46);
+    border-radius: 999px;
+    background: rgba(3, 11, 18, 0.25);
+    direction: ltr;
+  }
+
+  .site-menu-control.is-persian {
+    right: auto;
+    left: 22px;
+  }
+
+  .site-menu-control .site-menu-button {
+    width: 44px;
+    height: 44px;
+    border-color: rgba(216, 231, 241, 0.48);
+  }
+
+  .site-menu-control .home-mobile-header-language-switch {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    flex: 0 0 64px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 2px 4px;
+    border: 0;
+    border-radius: 0 0 999px 999px;
+    background: transparent;
+    font-size: 11px;
+  }
+
+  .site-menu-control .home-mobile-header-language-switch::before {
+    top: 4px;
+    bottom: auto;
+    left: 50%;
+    width: calc(100% - 8px);
+    height: 24px;
+    transform: translateX(-50%);
+  }
+
+  .site-menu-control .home-mobile-header-language-switch.is-persian::before {
+    transform: translate(-50%, 30px);
+  }
+
+  .site-menu-control .home-mobile-header-language-switch .language-switch-option {
+    padding: 0;
+  }
+
   .site-brand {
     align-items: flex-start;
     flex-direction: column;
