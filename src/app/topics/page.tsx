@@ -6,6 +6,9 @@ import { getAllLabEntries } from '@/lib/content';
 export const metadata: Metadata = {
   title: 'Topics',
   description: 'Explore MBA Lab by the ideas that connect it.',
+  alternates: {
+    canonical: '/topics/',
+  },
 };
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
