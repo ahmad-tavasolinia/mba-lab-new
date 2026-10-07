@@ -7,7 +7,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/mba-lab', label: 'The Lab' },
+  { href: '/mba-lab', label: 'MBA Lab' },
   { href: '/topics', label: 'Topics' },
   { href: '/courses', label: 'Library' },
   { href: '/about', label: 'About' },

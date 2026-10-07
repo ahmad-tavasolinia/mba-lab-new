@@ -1,12 +1,15 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllLabEntries } from '@/lib/content';
 import { categories } from '@/lib/categories';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'MBA Lab',
+  documentTitle: 'MBA Lab Notebook | Ahmad Tavasolinia',
+  socialTitle: 'MBA Lab | Ahmad Tavasolinia',
   description: 'A personal laboratory for exploring the ideas behind business.',
-};
+  path: '/mba-lab/',
+});
 
 export default async function MbaLabPage() {
   const entries = await getAllLabEntries();
@@ -17,7 +20,7 @@ export default async function MbaLabPage() {
         <div className="lab-room-image" aria-hidden="true" />
         <div className="lab-room-shade" aria-hidden="true" />
         <div className="lab-hero-copy">
-          <span className="lab-eyebrow">The Lab Notebook</span>
+          <span className="lab-eyebrow">MBA Lab Notebook</span>
           <h1>MBA Lab</h1>
           <p className="lab-tagline">Ideas. Research. Projects. A new chapter.</p>
           <span className="lab-gold-rule" />

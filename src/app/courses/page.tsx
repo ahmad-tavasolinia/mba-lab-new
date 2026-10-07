@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllSources, getAllLabEntries } from '@/lib/content';
 import { getTopic } from '@/lib/topics';
 import { Container, Eyebrow } from '@/components/ui';
 import SourceFlow from '@/components/SourceFlow';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Courses & Sources',
+export const metadata = createPageMetadata({
+  title: 'Library',
   description: 'The academic sources behind MBA Lab, and what emerged from studying them.',
-};
+  path: '/courses/',
+});
 
 export default async function CoursesPage() {
   const sources = getAllSources();
@@ -20,7 +21,7 @@ export default async function CoursesPage() {
         <Container className="py-10 md:py-12">
           <Eyebrow>Where the ideas come from</Eyebrow>
           <h1 className="mt-3 max-w-3xl font-serif text-5xl font-medium tracking-tight text-ink dark:text-dark-ink md:text-6xl">
-            Courses &amp; Sources
+            Library
           </h1>
           <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-ink/70 dark:text-dark-soft">
             This is not a list of certificates. It's a record of what I studied and, more

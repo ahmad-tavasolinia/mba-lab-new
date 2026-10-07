@@ -13,7 +13,7 @@ mba-lab/
 ├── content/              ← Your writing lives here, as Markdown files
 │   ├── lab/              ← MBA Lab entries
 │   ├── essays/           ← Essays
-│   └── sources/          ← Courses & sources
+│   └── sources/          ← Library sources
 ├── src/
 │   ├── app/              ← Pages (Next.js App Router)
 │   ├── components/       ← Reusable UI pieces
@@ -174,8 +174,7 @@ A few things worth updating before you share the site widely:
 - **`src/app/cv/page.tsx`** ,  replace the placeholder education/experience entries.
 - **`public/cv.pdf`** ,  add a real PDF here if you want the "Download PDF" button on
   the CV page to work (or remove that button).
-- **`src/app/layout.tsx` and `src/app/sitemap.ts` / `src/app/robots.ts`** ,  replace
-  `https://example.com` with your real domain once you have one.
+- **`src/app/layout.tsx`, `src/app/sitemap.ts`, `src/app/robots.ts`, and `src/app/rss.xml/route.ts`** use the site's canonical domain, `https://tavasolinia.com`.
 - **`src/app/icon.svg`** ,  replace with your own monogram or logo if you'd like.
 
 ---

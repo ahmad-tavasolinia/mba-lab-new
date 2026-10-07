@@ -1,14 +1,15 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Container, Eyebrow } from '@/components/ui';
+import { createPageMetadata } from '@/lib/seo';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'About',
   description: 'About Ahmad Tavasolinia and the thinking behind MBA Lab.',
-};
+  path: '/about/',
+});
 
 export default function AboutPage() {
   return (

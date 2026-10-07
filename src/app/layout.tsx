@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { createPageMetadata } from '@/lib/seo';
 
 const fontVariables = {
   display: 'Georgia, \"Times New Roman\", serif',
@@ -14,21 +15,24 @@ const fontVariables = {
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-export const metadata: Metadata = {
-  title: {
-    default: 'MBA Lab, Ahmad Tavasolinia',
-    template: '%s, MBA Lab',
-  },
+const siteMetadata = createPageMetadata({
+  title: 'MBA Lab',
+  documentTitle: 'MBA Lab | Ahmad Tavasolinia',
+  socialTitle: 'MBA Lab | Ahmad Tavasolinia',
   description:
     'An independent intellectual laboratory exploring business, strategy, finance, technology, and leadership, synthesized from academic sources, real-world cases, and original analysis.',
-  metadataBase: new URL('https://tavasolinia.com'),
-  openGraph: {
-    title: 'MBA Lab, Ahmad Tavasolinia',
-    description:
-      'An independent intellectual laboratory exploring business, strategy, finance, technology, and leadership.',
-    type: 'website',
+  path: '/',
+});
+
+export const metadata: Metadata = {
+  ...siteMetadata,
+  title: {
+    default: 'MBA Lab | Ahmad Tavasolinia',
+    template: '%s | MBA Lab',
   },
+  metadataBase: new URL('https://tavasolinia.com'),
   alternates: {
+    canonical: 'https://tavasolinia.com/',
     types: {
       'application/rss+xml': '/rss.xml',
     },

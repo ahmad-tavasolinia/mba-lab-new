@@ -7,6 +7,7 @@ import { getAllLabEntries, getAllSources } from '@/lib/content';
 import { getTopicColor, getCategoryColor } from '@/lib/keyColors';
 import { Container, Eyebrow } from '@/components/ui';
 import LabLibrary from '@/components/LabLibrary';
+import { createPageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return topics.map((t) => ({ slug: t.slug }));
@@ -19,7 +20,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const topic = getTopic(params.slug);
   if (!topic) return { title: 'Topic not found' };
-  return { title: topic.name, description: topic.description };
+  return createPageMetadata({
+    title: topic.name,
+    description: topic.description,
+    path: `/topics/${params.slug}/`,
+  });
 }
 
 export default async function TopicPage({ params }: { params: { slug: string } }) {

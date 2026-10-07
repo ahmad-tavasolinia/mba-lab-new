@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAllLabEntries, getLabEntry, getLabSlugs, getAllSources } from '@/lib/content';
 import { getPhase } from '@/lib/phases';
 import { Container, Eyebrow, TopicChip, CodeChip, formatDate } from '@/components/ui';
+import { createPageMetadata } from '@/lib/seo';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -18,7 +19,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   try {
     const entry = await getLabEntry(params.slug);
-    return { title: entry.title, description: entry.summary };
+    return createPageMetadata({
+      title: entry.title,
+      description: entry.summary,
+      path: `/mba-lab/${params.slug}/`,
+      type: 'article',
+    });
   } catch {
     return { title: 'Entry not found' };
   }

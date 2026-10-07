@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import { topics } from '@/lib/topics';
 import { getAllLabEntries } from '@/lib/content';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Topics',
   description: 'Explore MBA Lab by the ideas that connect it.',
-};
+  path: '/topics/',
+});
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 

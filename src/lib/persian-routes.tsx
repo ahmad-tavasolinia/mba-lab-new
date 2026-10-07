@@ -2,18 +2,79 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { getAllEssays, getAllLabEntries, getAllSources, getEssay, getEssaySlugs, getLabEntry, getLabSlugs, getSource, getSourceSlugs } from '@/lib/content';
+import { getAllEssays, getAllLabEntries, getAllSources, getEssay, getEssaySlugs, getLabEntry, getLabEntryFrontmatter, getLabSlugs, getSource, getSourceSlugs } from '@/lib/content';
 import { categories } from '@/lib/categories';
 import { phases } from '@/lib/phases';
 import { topics } from '@/lib/topics';
 import PersianLabLibrary from '@/components/PersianLabLibrary';
 import { faCategories, faEntrySummary, faEntryTitle, faEssaySummaries, faEssayTitles, faPhases, faSourceNames, faTopics } from '@/lib/persian';
+import { createPageMetadata } from '@/lib/seo';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const persianLabRouteSlug = (slug: string) => slug.toLowerCase().replace(/'/g, '');
 
 export function getPersianMetadata(path: string[]): Metadata {
-  return { title: path.length ? 'کارگاه مدیریت کسب‌وکار' : 'کارگاه مدیریت کسب‌وکار، احمد توسلی‌نیا', description: 'یادگیری، پژوهش و ساختن در کسب‌وکار؛ به روایت احمد توسلی‌نیا.' };
+  const route = (path[0] === 'mba-lab' && path.length === 2
+    ? `mba-lab/${persianLabRouteSlug(path[1])}`
+    : path.join('/')).toLowerCase();
+  const canonicalPath = `/fa${route ? `/${route}` : ''}/`;
+  let title = 'کارگاه مدیریت کسب‌وکار';
+  let description = 'یادگیری، پژوهش و ساختن در کسب‌وکار؛ به روایت احمد توسلی‌نیا.';
+  let type: 'website' | 'article' = 'website';
+
+  if (!route) {
+    title = 'کارگاه مدیریت کسب‌وکار';
+    description = 'مجموعه‌ای مستقل از مطالعات، تحلیل‌ها و پروژه‌ها؛ تلاشی برای درک عمیق‌تر دنیای کسب‌وکار.';
+  } else if (route === 'mba-lab') {
+    title = 'کارگاه مدیریت کسب‌وکار';
+    description = 'فضایی برای اندیشیدن به مسئله‌های کسب‌وکار، آزمودن ایده‌ها، ساختن پروژه‌ها و آموختن از کسانی که تجربهٔ ساختن دارند.';
+  } else if (route === 'topics') {
+    title = 'موضوع‌ها';
+    description = 'ایده‌های کارگاه را در موضوع‌های راهبرد، مالی، بازاریابی، کارآفرینی و هوش مصنوعی دنبال کنید.';
+  } else if (route === 'essays') {
+    title = 'جستارها';
+    description = 'نوشته‌هایی مستقل دربارهٔ کسب‌وکار، فناوری و آیندهٔ کار.';
+  } else if (route === 'courses') {
+    title = 'کتابخانه';
+    description = 'منابع دانشگاهی و دوره‌هایی که مطالعه شده‌اند و خروجی‌هایی که از آن‌ها شکل گرفته‌اند.';
+  } else if (route === 'about') {
+    title = 'دربارهٔ احمد توسلی‌نیا';
+    description = 'دربارهٔ مسیر یادگیری، علاقه‌های پژوهشی و کارگاه مدیریت کسب‌وکار احمد توسلی‌نیا.';
+  } else if (route === 'contact') {
+    title = 'تماس';
+    description = 'راه‌های تماس با احمد توسلی‌نیا دربارهٔ کارگاه مدیریت کسب‌وکار.';
+  } else if (route === 'cv') {
+    title = 'رزومه';
+    description = 'سوابق تحصیلی، حرفه‌ای و مهارت‌های احمد توسلی‌نیا.';
+  } else if (path[0] === 'topics' && path.length === 2) {
+    const topic = faTopics[path[1] as keyof typeof faTopics];
+    if (topic) ({ title, description } = { title: topic.name, description: topic.description });
+  } else if (path[0] === 'mba-lab' && path[1] === 'phase' && path.length === 3) {
+    const phase = faPhases[path[2] as keyof typeof faPhases];
+    if (phase) ({ title, description } = { title: phase.name, description: phase.description });
+  } else if (path[0] === 'mba-lab' && path[1] === 'category' && path.length === 3) {
+    const category = faCategories[path[2] as keyof typeof faCategories];
+    if (category) ({ title, description } = { title: category.name, description: category.description });
+  } else if (path[0] === 'mba-lab' && path.length === 2) {
+    const entry = getLabEntryFrontmatter(path[1]);
+    title = faEntryTitle(path[1], entry.title);
+    description = faEntrySummary(path[1], entry.summary);
+    type = 'article';
+  } else if (path[0] === 'courses' && path.length === 2) {
+    const source = getSource(path[1]);
+    const translated = faSourceNames[source.slug];
+    title = translated?.course ?? source.course;
+    description = translated?.why ?? source.why;
+    type = 'article';
+  }
+
+  return createPageMetadata({
+    title,
+    description,
+    path: canonicalPath,
+    socialTitle: `${title} | کارگاه مدیریت کسب‌وکار`,
+    type,
+  });
 }
 
 function FaEntryLink({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
@@ -144,7 +205,7 @@ async function FaPage({ path }: { path: string[] }) {
     const sources = getAllSources();
     const labEntries = entries;
     return (
-      <PageFrame eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد.">
+      <PageFrame eyebrow="خاستگاه ایده‌ها" title="کتابخانه" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد.">
         <PersianSourceFlow />
         <div className="fa-entry-list fa-source-list">
           {sources.map((source) => {

@@ -5,6 +5,7 @@ import { getSource, getSourceSlugs, getAllLabEntries } from '@/lib/content';
 import { getTopic } from '@/lib/topics';
 import { Container, Eyebrow, formatDate } from '@/components/ui';
 import SourceFlow from '@/components/SourceFlow';
+import { createPageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return getSourceSlugs().map((slug) => ({ slug }));
@@ -17,7 +18,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   try {
     const source = getSource(params.slug);
-    return { title: source.course, description: source.why };
+    return createPageMetadata({
+      title: source.course,
+      description: source.why,
+      path: `/courses/${params.slug}/`,
+      type: 'article',
+    });
   } catch {
     return { title: 'Source not found' };
   }
@@ -39,7 +45,7 @@ export default async function SourcePage({ params }: { params: { slug: string } 
             href="/courses"
             className="font-mono text-[11px] uppercase tracking-widest text-ink/40 hover:text-gold dark:text-dark-soft/60"
           >
-            ← Courses &amp; Sources
+            ← Library
           </Link>
           <p className="mt-6 font-mono text-[11px] uppercase tracking-widest text-gold">
             {source.institution}

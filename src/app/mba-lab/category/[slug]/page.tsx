@@ -6,6 +6,7 @@ import { getAllLabEntries } from '@/lib/content';
 import { getCategoryColor } from '@/lib/keyColors';
 import { Container, Eyebrow } from '@/components/ui';
 import LabLibrary from '@/components/LabLibrary';
+import { createPageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return categories.map((c) => ({ slug: c.slug }));
@@ -18,7 +19,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const category = getCategory(params.slug);
   if (!category) return { title: 'Category not found' };
-  return { title: category.name, description: category.description };
+  return createPageMetadata({
+    title: category.name,
+    description: category.description,
+    path: `/mba-lab/category/${params.slug}/`,
+  });
 }
 
 export default async function CategoryPage({ params }: { params: { slug: string } }) {

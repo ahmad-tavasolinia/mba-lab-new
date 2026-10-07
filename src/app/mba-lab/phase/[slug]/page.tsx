@@ -7,6 +7,7 @@ import { getAllLabEntries } from '@/lib/content';
 import { getCategoryColor } from '@/lib/keyColors';
 import { Container, Eyebrow } from '@/components/ui';
 import LabLibrary from '@/components/LabLibrary';
+import { createPageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return phases.map((p) => ({ slug: p.slug }));
@@ -19,7 +20,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const phase = getPhase(params.slug);
   if (!phase) return { title: 'Phase not found' };
-  return { title: phase.pageTitle, description: phase.description };
+  return createPageMetadata({
+    title: phase.pageTitle,
+    description: phase.description,
+    path: `/mba-lab/phase/${params.slug}/`,
+  });
 }
 
 export default async function PhasePage({ params }: { params: { slug: string } }) {

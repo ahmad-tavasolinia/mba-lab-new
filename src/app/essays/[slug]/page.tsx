@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getEssay, getEssaySlugs } from '@/lib/content';
 import { Container, TopicChip, formatDate } from '@/components/ui';
+import { createPageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return getEssaySlugs().map((slug) => ({ slug }));
@@ -15,7 +16,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   try {
     const essay = await getEssay(params.slug);
-    return { title: essay.title, description: essay.summary };
+    return createPageMetadata({
+      title: essay.title,
+      description: essay.summary,
+      path: `/essays/${params.slug}/`,
+      type: 'article',
+    });
   } catch {
     return { title: 'Essay not found' };
   }

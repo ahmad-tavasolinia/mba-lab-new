@@ -35,6 +35,13 @@ export function getLabSlugs(): string[] {
   return slugsIn(LAB_DIR);
 }
 
+export function getLabEntryFrontmatter(slug: string): LabEntryFrontmatter {
+  const fullPath = path.join(LAB_DIR, `${slug}.md`);
+  const raw = fs.readFileSync(fullPath, 'utf8');
+  const { data } = matter(raw);
+  return data as LabEntryFrontmatter;
+}
+
 export async function getLabEntry(slug: string): Promise<LabEntry> {
   const fullPath = path.join(LAB_DIR, `${slug}.md`);
   const raw = fs.readFileSync(fullPath, 'utf8');

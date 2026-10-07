@@ -6,9 +6,8 @@ import { usePathname } from 'next/navigation';
 const links = [
   { href: '/mba-lab', label: 'MBA Lab' },
   { href: '/topics', label: 'Topics' },
-  { href: '/essays', label: 'Essays' },
-  { href: '/courses', label: 'Courses & Sources' },
-  { href: '/about', label: 'About Ahmad' },
+  { href: '/courses', label: 'Library' },
+  { href: '/about', label: 'About' },
   { href: '/cv', label: 'CV' },
   { href: '/contact', label: 'Contact' },
   { href: '/rss.xml', label: 'RSS' },
@@ -31,7 +30,7 @@ export default function Footer() {
           <nav className="site-footer-links" aria-label={isPersian ? 'پیوندهای پایانی' : 'Footer navigation'}>
             {links.map((link, index) => (
               <Link key={link.href} href={isPersian && link.href !== '/rss.xml' ? `/fa${link.href}` : link.href}>
-                {isPersian ? ['کارگاه', 'موضوع‌ها', 'جستارها', 'دوره‌ها و منابع', 'دربارهٔ احمد', 'رزومه', 'تماس', 'خوراک RSS'][index] : link.label}
+                {isPersian ? ['کارگاه', 'موضوع‌ها', 'کتابخانه', 'درباره', 'رزومه', 'تماس', 'خوراک RSS'][index] : link.label}
               </Link>
             ))}
           </nav>

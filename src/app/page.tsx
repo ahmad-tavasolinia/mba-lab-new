@@ -1,5 +1,14 @@
 import Link from 'next/link';
+import { createPageMetadata } from '@/lib/seo';
 import JourneyPhases from '@/components/JourneyPhases';
+
+export const metadata = createPageMetadata({
+  title: 'MBA Lab',
+  documentTitle: 'MBA Lab | Ahmad Tavasolinia',
+  socialTitle: 'MBA Lab | Ahmad Tavasolinia',
+  description: 'An independent record of studying business, testing ideas, and building projects through a deliberate MBA journey.',
+  path: '/',
+});
 
 export default function HomePage() {
   return (
@@ -20,7 +29,7 @@ export default function HomePage() {
         </p>
 
         <Link href="/mba-lab" className="home-cta">
-          <span>Explore the Lab</span>
+          <span>Explore MBA Lab</span>
           <span className="home-arrow" aria-hidden="true">→</span>
         </Link>
       </section>

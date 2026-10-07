@@ -1,10 +1,11 @@
-import type { Metadata } from 'next';
 import { Container, Eyebrow } from '@/components/ui';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Contact',
   description: 'Get in touch with Ahmad Tavasolinia.',
-};
+  path: '/contact/',
+});
 
 export default function ContactPage() {
   return (

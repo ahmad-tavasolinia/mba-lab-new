@@ -1,12 +1,13 @@
-import type { Metadata } from 'next';
 import { getAllEssays } from '@/lib/content';
 import { Container, Eyebrow } from '@/components/ui';
 import EssaysLibrary from '@/components/EssaysLibrary';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Essays',
   description: 'Independent, broader essays on business, technology, and the future of work.',
-};
+  path: '/essays/',
+});
 
 export default async function EssaysPage() {
   const essays = await getAllEssays();
