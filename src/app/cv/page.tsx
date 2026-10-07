@@ -5,6 +5,9 @@ import { Container, Eyebrow } from '@/components/ui';
 export const metadata: Metadata = {
   title: 'CV',
   description: 'Curriculum vitae, Ahmad Tavasolinia.',
+  alternates: {
+    canonical: '/cv/',
+  },
 };
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
