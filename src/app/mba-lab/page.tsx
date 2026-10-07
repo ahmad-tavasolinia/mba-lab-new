@@ -4,7 +4,7 @@ import { getAllLabEntries } from '@/lib/content';
 import { categories } from '@/lib/categories';
 
 export const metadata: Metadata = {
-  title: 'MBA Lab',
+  title: 'The Lab',
   description: 'A personal laboratory for exploring the ideas behind business.',
   alternates: {
     canonical: '/mba-lab/',
