@@ -4,6 +4,9 @@ import { Container, Eyebrow } from '@/components/ui';
 export const metadata: Metadata = {
   title: 'Contact',
   description: 'Get in touch with Ahmad Tavasolinia.',
+  alternates: {
+    canonical: '/contact/',
+  },
 };
 
 export default function ContactPage() {
