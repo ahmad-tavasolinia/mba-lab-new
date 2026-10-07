@@ -4,7 +4,7 @@ import { topics } from '@/lib/topics';
 import { categories } from '@/lib/categories';
 import { phases } from '@/lib/phases';
 
-const SITE_URL = 'https://example.com';
+const SITE_URL = 'https://tavasolinia.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = ['', '/mba-lab', '/topics', '/courses', '/about', '/cv', '/contact'];

@@ -2,7 +2,7 @@ import { getAllEssays, getAllLabEntries } from '@/lib/content';
 
 export const dynamic = 'force-static';
 
-const SITE_URL = 'https://example.com';
+const SITE_URL = 'https://tavasolinia.com';
 
 function escapeXml(str: string) {
   return str
