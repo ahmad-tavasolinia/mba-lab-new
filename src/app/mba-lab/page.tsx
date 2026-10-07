@@ -6,6 +6,9 @@ import { categories } from '@/lib/categories';
 export const metadata: Metadata = {
   title: 'MBA Lab',
   description: 'A personal laboratory for exploring the ideas behind business.',
+  alternates: {
+    canonical: '/mba-lab/',
+  },
 };
 
 export default async function MbaLabPage() {
