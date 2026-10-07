@@ -8,6 +8,9 @@ import SourceFlow from '@/components/SourceFlow';
 export const metadata: Metadata = {
   title: 'Courses & Sources',
   description: 'The academic sources behind MBA Lab, and what emerged from studying them.',
+  alternates: {
+    canonical: '/courses/',
+  },
 };
 
 export default async function CoursesPage() {
