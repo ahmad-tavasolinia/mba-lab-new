@@ -8,6 +8,9 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export const metadata: Metadata = {
   title: 'About',
   description: 'About Ahmad Tavasolinia and the thinking behind MBA Lab.',
+  alternates: {
+    canonical: '/about/',
+  },
 };
 
 export default function AboutPage() {
