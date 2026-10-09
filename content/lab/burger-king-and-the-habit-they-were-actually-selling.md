@@ -4,58 +4,61 @@ date: "2026-08-22"
 code: "MBA·LAB·02"
 category: "cases"
 journeyPhase: "phase-1"
-topics: ["business-philosophy", "strategy"]
-summary: "A case on the Whopper Detour, worked cold, and the mechanism hiding under a viral stunt."
-centralQuestion: "When a promotion changes what someone physically does under real conditions, is that a different, more durable kind of win than one that just makes people laugh and share?"
+topics: ["strategy"]
+summary: "A case on Burger King's one-cent Whopper promotion, where the lasting result came from the physical redirect and not from the discount or the publicity."
+centralQuestion: "When a promotion changes what people physically do under real conditions, is that a more durable kind of win than one that just makes people laugh and share?"
 keyIdeas:
-  - "Anchoring an offer to a competitor's real estate instead of your own makes a campaign newsworthy in a way a self-referential coupon never could be."
-  - "The redirect itself is rehearsal, not just a discount, every customer who followed the notification physically practiced turning away from one brand toward another, a behavioral trigger that outlasts the campaign."
-  - "A steep loss on one item to get someone through the door has a name, loss leader, and naming the actual mechanism matters more than gesturing at 'they'll buy other things too.'"
-  - "The price gets attention; the delivery mechanic forces the specific action, crediting the wrong piece of a promotion for the wrong outcome is an easy, specific mistake to make."
-  - "A campaign that converts one-time bargain hunters into a standing base of repeat customers is a fundamentally different, more durable win than a viral moment that evaporates once the deal ends."
+  - "Anchoring an offer to a competitor's locations makes a campaign newsworthy in a way a coupon at your own restaurant never could be."
+  - "The redirect works as rehearsal. Each customer physically practiced turning away from one brand and toward another, and that trigger outlasts the campaign."
+  - "Selling one item at a steep loss to bring people in is called a loss leader. Naming the mechanism is more useful than saying 'they'll buy other things too.'"
+  - "The price gets attention, and the delivery mechanic forces the action. It is easy to credit the wrong piece for the wrong result."
+  - "Turning one-time bargain hunters into repeat customers is a more durable win than a viral moment that ends with the deal."
 connections:
-  - "pepsi-am-and-the-room-that-already-knew"
-  - "heinz-and-the-problem-with-accusing-the-wrong-culprit"
-  - "bud-light-and-the-backlash-that-came-from-the-wrong-direction"
-  - "real-burger-world-and-the-contradiction-built-into-the-name"
-  - "espn-and-the-question-underneath-the-question"
-  - "venture-southeast-asia-and-the-melting-ice-cube"
+  - "Pepsi A.M. and the Room That Already Knew"
+  - "Heinz and the Problem With Accusing the Wrong Culprit"
+  - "Bud Light and the Backlash That Came From the Wrong Direction"
+  - "Real Burger World and the Contradiction Built Into the Name"
 openQuestions:
-  - "Is there a way to distinguish, before a campaign launches, between a mechanic that will produce a durable behavioral change and one that will only produce a viral moment that fades with the deal?"
-  - "How often does crediting the wrong piece of a multi-part mechanic for a result go uncaught, simply because the overall number still looks good?"
-finalPerspective: "The thing worth keeping from this case is the habit-formation angle, because it's the layer most people skip entirely in favor of 'funny stunt, good PR.' A promotion that changes what someone physically does, repeatedly, under real conditions, is worth more than one that just makes people laugh and share, even when both produce the same headline."
+  - "Before a campaign launches, how can I tell whether a mechanic will change behavior for good or only produce a moment that fades with the deal?"
+  - "When someone credits the wrong piece of a multi-part mechanic, how often does it go unnoticed because the overall number still looks good?"
+finalPerspective: "The habit-formation angle is the part I want to keep. A promotion that changes what people physically do, repeatedly, is worth more than one that only gets laughs and shares."
 sources: []
 ---
-In 2018, Burger King ran a promotion built on a strange design choice: a Whopper for one cent, but the deal only unlocked when a customer's phone showed them standing near a McDonald's, using geofencing through the Burger King app. Redeeming it meant physically leaving McDonald's and driving to a Burger King. The case gave me the mechanic and four stated goals, app downloads, buzz, in-store traffic, brand likeability, and asked me to work out why anchoring the offer to a competitor's real estate, instead of their own, was the right call.
 
-I worked it cold.
+*How I work these cases: Before my MBA starts, I'm practicing the case method on my own. I give an AI a business case and ask it to release the details in stages, the way a class discussion unfolds. I give my read at each stage without looking anything up. Then the real outcome is revealed and I compare it with my reasoning. I call this working a case cold. These posts are my write-ups.*
 
-## The central question
+In 2018, Burger King ran a promotion with an odd design. A Whopper cost one cent, but the deal only unlocked when the customer's phone showed they were standing near a McDonald's. The Burger King app checked this using geofencing. To redeem the offer, you had to leave the McDonald's and go to a Burger King.
 
-When a promotion changes what someone physically does under real conditions, is that a different, more durable kind of win than one that just makes people laugh and share?
+The case gave me the mechanic and four stated goals: app downloads, buzz, in-store traffic, and brand likeability. My task was to explain why anchoring the offer to a competitor's locations, instead of Burger King's own, was the right call.
+
+## Central question
+
+When a promotion changes what people physically do under real conditions, is that a more durable kind of win than one that just makes people laugh and share?
 
 ## Key ideas
 
-The obvious layer was easy: choosing McDonald's over Burger King's own stores makes the campaign newsworthy in a way a self-referential coupon never could be. Nobody writes an article about "chain offers discount at its own restaurant." But the sharper read came from a place the case wasn't pointing to directly, the psychology of the redirect itself. Every person who followed that notification physically practiced the motion of turning away from McDonald's toward Burger King. That's not just a one-time discount. It's rehearsal. The habit being built wasn't "download an app," it was "when you think McDonald's, drive somewhere else instead", a behavioral trigger that keeps working long after the campaign ends and the one-cent price is gone.
+The obvious layer came first. Choosing McDonald's makes the campaign newsworthy in a way a coupon at your own restaurant never could be. Nobody writes an article about a chain discounting its own food.
 
-Then came the part of the case built to be misleading if you don't slow down: how does giving away nearly-free burgers produce a 37:1 return? My first answer was almost right and imprecisely stated, I said people would buy other things while they were there. The actual mechanism has a name, and naming it matters: loss leader. Price one item at a steep loss specifically to get someone through the door, because almost nobody orders a burger alone. The fries and the drink carry the real margin, and they're what the burger's price was designed to sacrifice for.
+The second layer was the redirect itself. Everyone who followed that notification physically practiced turning away from McDonald's and toward Burger King. That is rehearsal, and it goes beyond a discount. The habit being built was "when I think of McDonald's, go somewhere else," and that trigger keeps working after the one-cent price is gone.
 
-I'd also initially assigned the wrong piece of the mechanic to the wrong goal, crediting "the offer" (one cent) for driving app downloads, when the actual driver was the delivery method. A cheap burger doesn't require anyone to install anything; a deal that can only be unlocked through app-based geofencing does. The price gets attention. The mechanic forces the specific action.
+Then came the return. The case reports a 37:1 return, and I had to explain how nearly free burgers could produce that. My first answer was that people would buy other things while they were there. That was the right idea, but the mechanism has a name: a loss leader. You sell one item at a steep loss to get someone through the door. Almost nobody orders a burger alone, so the fries and the drink carry the margin.
 
-What the results confirmed: the app became the most-downloaded in the country during the promotion, 1.5 million downloads in nine days, mobile sales tripled during the campaign and stayed roughly double even after it ended. That last number is the real story. This wasn't a one-week spike that evaporated, it converted a meaningful slice of one-time bargain hunters into a standing base of repeat mobile customers, which is a completely different, more durable win than the viral moment that got them in the door.
+I also gave the wrong credit on one point. I said the one-cent offer drove the app downloads. The delivery method did. A cheap burger doesn't make anyone install anything, but a deal that can only be unlocked through app-based geofencing does. The price gets attention, and the mechanic forces the action.
+
+During the promotion, the app became the most downloaded in the country, with 1.5 million downloads in nine days. Mobile sales tripled during the campaign and stayed roughly double after it ended. That last number matters most. It shows that a meaningful share of one-time bargain hunters became repeat mobile customers, which is a different result from a viral moment that fades.
 
 ## My synthesis
 
-The case is designed to reward the person who stops at "funny stunt, good PR." The more useful read separates three things that got bundled together in the coverage: the newsworthiness of targeting a competitor, the economics of a loss leader, and the behavioral engineering of a physical redirect. Only the third one explains why sales stayed elevated after the promotion ended, the first two explain why people showed up once.
+Press coverage bundled three things together: the newsworthiness of targeting a competitor, the economics of a loss leader, and the physical redirect. Only the redirect explains why sales stayed high after the promotion ended. The other two explain why people showed up once.
 
 ## Connections
 
-This extends the "worked cold" series, [Pepsi A.M.](/mba-lab/pepsi-am-and-the-room-that-already-knew), [Heinz](/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit), [Bud Light](/mba-lab/bud-light-and-the-backlash-that-came-from-the-wrong-direction), [Real Burger World](/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name), [ESPN](/mba-lab/espn-and-the-question-underneath-the-question), and [Venture Southeast Asia](/mba-lab/venture-southeast-asia-and-the-melting-ice-cube), each one catching a different way a clean-sounding read outruns what it actually explains. This one adds mechanism-naming to the list: knowing that something works is not the same as being able to name the specific piece responsible for it working.
+This case follows the same pattern as Pepsi A.M., Heinz, Bud Light, and Real Burger World. Each one shows a way a clean-sounding read can explain less than it seems to. This one adds a lesson about naming the mechanism. Knowing that something works is different from knowing which piece is responsible.
 
 ## Questions I still have
 
-Is there a way to distinguish, before a campaign launches, between a mechanic that will produce a durable behavioral change and one that will only produce a viral moment that fades with the deal? And how often does crediting the wrong piece of a multi-part mechanic for a result go uncaught, simply because the overall number still looks good?
+Before a campaign launches, how can I tell whether a mechanic will change behavior for good or only produce a moment that fades with the deal? And when someone credits the wrong piece of a multi-part mechanic, how often does it go unnoticed because the overall number still looks good?
 
 ## Final perspective
 
-The thing worth keeping from this case is the habit-formation angle, because it's the layer most people skip entirely in favor of "funny stunt, good PR." A promotion that changes what someone physically does, repeatedly, under real conditions, is worth more than one that just makes people laugh and share, even when both produce the same headline.
+The habit-formation angle is the part I want to keep, because most people skip it in favor of "funny stunt, good PR." A promotion that changes what people physically do, repeatedly, is worth more than one that only gets laughs and shares, even when both produce the same headline.
