@@ -1,12 +1,11 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container, Eyebrow } from '@/components/ui';
-import { createPageMetadata } from '@/lib/seo';
 
-export const metadata = createPageMetadata({
+export const metadata: Metadata = {
   title: 'CV',
   description: 'Curriculum vitae, Ahmad Tavasolinia.',
-  path: '/cv/',
-});
+};
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
@@ -83,8 +82,8 @@ export default function CvPage() {
             <div className="border-t border-rule pt-6 dark:border-dark-rule">
               <SectionHeading>Education</SectionHeading>
               <div className="mt-4">
-                <Entry role="Self-directed graduate-level study" place="MIT OpenCourseWare, independent reading" time="2026">
-                  <p>Strategy, finance, economics, organizational behavior, and the intersection of AI and business; see the Library for details.</p>
+                <Entry role="Self-directed graduate-level study" place="MIT OpenCourseWare, Yale open lectures, independent reading" time="2026">
+                  <p>Strategy, finance, economics, organizational behavior, and the intersection of AI and business, see Courses &amp; Sources for full detail.</p>
                 </Entry>
                 <Entry role="[Add your degree here]" place="[Add your university]" time="[Years]" />
               </div>
