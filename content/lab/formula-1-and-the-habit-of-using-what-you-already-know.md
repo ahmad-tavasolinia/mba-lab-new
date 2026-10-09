@@ -2,41 +2,45 @@
 title: "Formula 1 and the Habit of Using What You Already Know"
 date: "2026-09-07"
 code: "MBA·LAB·17"
-journeyPhase: "phase-1"
 category: "cases"
+journeyPhase: "phase-1"
 topics: ["strategy"]
-summary: "A case-interview run on F1's growth strategy, and the discipline of letting your best evidence survive to the final answer."
-centralQuestion: "When a client says 'grow the business' with no target and no timeframe attached, is that vagueness a sign you haven't dug in, or a sign the objective is genuinely open-ended?"
+summary: "A case on growing Formula 1's business under Liberty Media, where I asked what 'growth' meant, corrected a hypothesis with data, and left my strongest evidence out of my closing summary."
+centralQuestion: "When a client says 'grow the business' with no target and no timeframe, is the vagueness a sign I haven't dug in, or a sign the objective is genuinely open-ended?"
 keyIdeas:
-  - "Resisting the instinct to manufacture a fake target number: asking the client directly what growth actually means is a distinct skill from having failed to look hard enough at the problem."
-  - "A three-lever structure (grow the existing pie, find a new pie, fix a leaking pie), with undefined terms like 'spectacle events' and 'brand expansion' named and clarified before being built on top of."
-  - "A hypothesis (live events drive buzz, buzz drives engagement) tested against data and correctly split apart once research showed it was the type of content, not live events themselves, driving engagement."
-  - "Stating each formula in plain words before running it, which caught a real trap: a conversion rate that applied specifically to new followers gained, not the full ending total."
-  - "Real, earned evidence (a $31 million auction figure, a 7% jump in Paddock Club sales, a $2.2 million profit calculation) that the closing synthesis didn't lean on as hard as it should have."
+  - "Asking the client what growth actually means is better than inventing a target number to look decisive. It also tells me whether the vagueness comes from the client or from my own lack of digging."
+  - "A three-lever structure (grow the existing pie, find a new pie, fix a leaking pie) needs its undefined terms, like 'spectacle events' and 'brand expansion,' clarified before anything is built on them."
+  - "A hypothesis that live events drive buzz and buzz drives engagement was split once research showed that the type of content, not live events themselves, drove engagement online."
+  - "Stating each formula in plain words before running it caught a real trap: a conversion rate that applied to new followers gained, not the full ending total."
+  - "I had specific, earned evidence by the end: a $31 million auction figure, a 7% jump in Paddock Club sales, and a $2.2 million profit calculation. My closing summary did not lean on it enough."
 connections: []
-openQuestions:
-  - "How do you build the habit of pulling your strongest already-earned evidence all the way into the final sentence, instead of letting it fade into general claims by the time you reach a conclusion?"
+openQuestions: []
+finalPerspective: "A specific figure I have already earned is a stronger closer than a general claim. The strongest evidence should reach the final sentence."
 sources: []
-finalPerspective: "A specific figure you've already earned is always a stronger closer than a general claim standing in for it."
 ---
-The case opened with something deceptively simple: Formula 1's new commercial leadership, under Liberty Media, wanted to grow the business after inheriting an organization that had barely engaged its fans or built any real digital presence. The prompt was "grow the business," with no target and no timeframe attached.
 
-## Naming the actual question
+*How I work these cases: Before my MBA starts, I'm practicing the case method on my own. I give an AI a business case and ask it to release the details in stages, the way a class discussion unfolds. I give my read at each stage without looking anything up. Then the real outcome is revealed and I compare it with my reasoning. I call this working a case cold. These posts are my write-ups.*
 
-My first move was to resist the instinct most people have in a case like this: manufacturing a fake number just to look decisive. Instead I asked directly what growth actually meant to the client, since the objective as stated was genuinely open-ended rather than something I hadn't looked hard enough at. That distinction, is this vague because I haven't dug in, or is it vague because it's actually unspecified, is worth naming as its own skill, and it's one I'm glad showed up on the first real attempt.
+Formula 1's new commercial leadership, under Liberty Media, wanted to grow the business. They had inherited an organization that had barely engaged its fans or built a real digital presence. The prompt was simply "grow the business," with no target and no timeframe attached.
 
-## Building the structure, and defining terms before using them
+## Central question
 
-From there I built a structure around three levers: grow the existing pie (more value from current fans and sponsors), find a new pie (geographic expansion, new audiences), or fix a leaking pie (underperforming areas). Two terms inside that structure, "spectacle events" and "brand expansion," needed defining before they were useful, and I said so plainly rather than building on top of a guess. That's a small habit with an outsized payoff: asking for a one-line definition costs nothing, and skipping it is how an entire framework quietly collapses two steps later.
+When a client says "grow the business" with no target and no timeframe, is the vagueness a sign I haven't dug in, or a sign the objective is genuinely open-ended?
 
-## Splitting a hypothesis the data didn't fully support
+## Key ideas
 
-The strongest moment in the case was a hypothesis I built, tested against data, and then correctly split apart. I'd initially treated live spectacle events, the Sotheby's memorabilia auction, Paddock Club hospitality, and social media virality as one connected lever: events drive buzz, buzz drives engagement. Research came back showing something more precise: it was the type of content, not live events themselves, that actually drove engagement online. That's a real, non-obvious distinction, and separating those two mechanisms rather than letting the data get absorbed into my original story is the kind of update that's easy to describe and genuinely hard to do in the moment.
+My first move was to ask the client what growth meant to them, instead of inventing a target number to look decisive. I needed to know whether the objective was vague because I hadn't looked hard enough, or because it was actually unspecified. Asking was the way to find out.
 
-## The trap in the numbers
+From there I built a structure with three levers: grow the existing pie (more value from current fans and sponsors), find a new pie (geographic expansion and new audiences), or fix a leaking pie (underperforming areas). Two terms inside it, "spectacle events" and "brand expansion," needed defining before they were useful. I asked for a one-line definition instead of building on a guess. Skipping that step is how a framework falls apart two steps later.
 
-The number work held up well once I forced myself to state each formula in plain words before running it, a habit that caught a real trap in the data: a conversion rate that applied specifically to new followers gained, not the full ending total. The nearest, most visible number on the page isn't automatically the right base to calculate from, and going back to what "new" conceptually meant, rather than grabbing the biggest number in sight, is exactly the kind of catch that separates a clean answer from a wrong one that looks clean.
+The most useful moment was correcting one of my own hypotheses. I had treated live spectacle events, including the Sotheby's memorabilia auction, Paddock Club hospitality, and social media virality, as one connected lever: events drive buzz, and buzz drives engagement. Research showed something more precise. The type of content drove engagement online, not live events themselves. I split the two mechanisms apart instead of fitting the data into my original story.
 
-## What I'm carrying into the next case
+When I got to the numbers, I stated each formula in plain words before running it. That caught a trap in the data: a conversion rate that applied specifically to new followers gained, not the full ending total. The biggest and nearest number on the page was not the right base. I went back to what "new" meant and calculated from there.
 
-The one thing worth carrying forward, more than any individual number: I had real, specific evidence sitting in my own analysis by the end, a $31 million auction figure, a 7% jump in Paddock Club sales, a $2.2 million profit calculation I'd built myself, and my closing synthesis didn't lean on those numbers as hard as it should have. A specific figure you've already earned is always a stronger closer than a general claim standing in for it. That's the refinement I'm actively building into the next case: not just doing the analysis well, but making sure the strongest evidence survives all the way to the final sentence.
+## My synthesis
+
+By the end I had specific evidence from my own analysis: a $31 million auction figure, a 7% jump in Paddock Club sales, and a $2.2 million profit calculation I had built myself. My closing summary did not use those figures as much as it should have. A specific figure I have already earned is a stronger closer than a general claim standing in for it. In the next case, I want the strongest evidence to reach the final sentence.
+
+## Final perspective
+
+A specific figure I have already earned is a stronger closer than a general claim. The strongest evidence should reach the final sentence.

@@ -18,7 +18,6 @@ connections:
   - "Pepsi A.M. and the Room That Already Knew"
   - "Heinz and the Problem With Accusing the Wrong Culprit"
   - "Bud Light and the Backlash That Came From the Wrong Direction"
-  - "Burger King and the Habit They Were Actually Selling"
 openQuestions:
   - "Can I test how much weight an analogy can carry before I use it, instead of finding its limits when someone pushes back?"
   - "When a real outcome matches my prediction, how do I tell whether my reasoning was right or whether outside events, like the joint venture collapsing, made the decision?"

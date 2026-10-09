@@ -5,58 +5,61 @@ code: "MBA·LAB·18"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy", "finance"]
-summary: "A market entry case worked from first principles, and the single number that ruled out an entire strategy before it could be tried."
-centralQuestion: "When a market shows plenty of appetite for a product but a fixed ceiling on what a household will actually pay for it, is the winning move to compete on price, or to compete for the one paid slot available?"
+summary: "A case on Netflix entering India, where one ratio, 2.4 services consumed against 1.1 paid for, ruled out price competition and left content as the remaining lever."
+centralQuestion: "When a market has plenty of appetite for a product but a fixed ceiling on what a household will pay, is the winning move to compete on price, or to compete for the one paid slot available?"
 keyIdeas:
-  - "A hypothesis can survive being wrong about its cause. The data showed Indian households already paying for streaming, just not for more than about one service at a time, so the fix wasn't switching business models, it was earning the one slot that existed."
-  - "The gap between services consumed (2.4 per household) and services actually paid for (1.1) is the whole market described in two numbers: real appetite for content, paired with a hard ceiling on how many subscriptions a household will fund at once."
-  - "Unit economics can rule out a strategy completely rather than just make it harder. Matching the incumbent's price would have required roughly 50 million subscribers to break even, inside a paid market of about 50 million people total, with the incumbent already holding 30 million of them."
-  - "Once price parity is closed off by the math, the only lever left is differentiation, in this case a lower cost, mobile first tier paired with local content strong enough to earn that single paid slot instead of the incumbent already sitting in it."
-  - "Presenting a case backward, walking through the whole discovery process before stating the answer, is a natural first draft habit that still has to be trained out in favor of recommendation first, then reasons, then risk, then next step."
+  - "My opening hypothesis survived being wrong about its cause. Indian households already paid for streaming, but only for about one service at a time, so the fix was earning the one slot that existed, not switching business models."
+  - "The gap between services consumed (2.4 per household) and services paid for (1.1) describes the whole market in two numbers: real appetite for content, and a hard ceiling on subscriptions."
+  - "Unit economics can rule out a strategy completely. Matching the incumbent's price would have needed roughly 50 million subscribers to break even, in a paid market of about 50 million people, 30 million of whom the incumbent already held."
+  - "With price parity closed off, differentiation was the remaining lever: a lower-cost, mobile-first tier paired with local content strong enough to win that one paid slot."
+  - "Presenting a case backward, walking through the discovery process before stating the answer, is a natural first-draft habit. The better order is recommendation, reasons, risk, next step."
 connections:
-  - "venture-southeast-asia-and-the-melting-ice-cube"
-  - "ferraris-bet-against-its-own-roadmap"
-  - "the-ripening-chemical-and-the-case-for-moving-first"
+  - "Venture Southeast Asia and the Melting Ice Cube"
+  - "The Ripening Chemical and the Case for Moving First"
+  - "Ferrari's Bet Against Its Own Roadmap"
 openQuestions:
-  - "Is there a reliable way to test whether a market's willingness to pay has a hard ceiling before building an entire strategy on the assumption that one exists?"
-  - "When unit economics rule out an option outright, how much of that certainty rests on cost assumptions, like content licensing or acquisition cost, that could shift over the life of the strategy?"
-finalPerspective: "The specific recommendation, a lower cost mobile tier paired with local content, is close to what Netflix actually did in India. The more durable lesson is the reasoning path that got there. A single ratio, 2.4 services consumed against 1.1 paid for, closed off an entire pricing strategy before it could even be tried, and left differentiation as the only lever still standing."
-sources: ["mit-netflix-bollywood"]
+  - "Is there a reliable way to test whether a market's willingness to pay has a hard ceiling before building a strategy on the assumption that it does?"
+  - "When unit economics rule out an option, how much of that certainty rests on cost assumptions, like content licensing or acquisition cost, that could shift over the life of the strategy?"
+finalPerspective: "The specific recommendation, a lower-cost mobile tier paired with local content, is close to what Netflix actually did in India. The more lasting lesson is the reasoning path. A single ratio, 2.4 services consumed against 1.1 paid for, closed off a whole pricing strategy and left differentiation as the only lever still standing."
+sources: []
 ---
-The prompt was simple on its surface: Netflix wants to enter the Indian streaming market. What is the right approach? Before touching any structure, I asked how Netflix actually makes money and what its cost side looks like, because a case about market entry is meaningless without first grounding it in the mechanics of the business itself.
 
-I built the structure from first principles rather than reaching for a memorized framework: what does success look like, what drives it, what has to be true for those drivers to move. That chain produced four buckets, customers and demand, competition, business model, and economics and risk, covering the market, the product, the money, and what could block it, without missing the financial side entirely the way an instinctive jump straight to "just lower the price" would have.
+*How I work these cases: Before my MBA starts, I'm practicing the case method on my own. I give an AI a business case and ask it to release the details in stages, the way a class discussion unfolds. I give my read at each stage without looking anything up. Then the real outcome is revealed and I compare it with my reasoning. I call this working a case cold. These posts are my write-ups.*
 
-## The central question
+The prompt was short: Netflix wants to enter the Indian streaming market, and the question was what the right approach is. Before building any structure, I asked how Netflix makes money and what its cost side looks like. A market-entry case means little until it is tied to how the business itself works.
 
-When a market shows plenty of appetite for a product but a fixed ceiling on what a household will actually pay for it, is the winning move to compete on price, or to compete for the one paid slot available?
+I built the structure from first principles, not from a memorized framework. I asked what success looks like, what drives it, and what has to be true for those drivers to move. That gave me four buckets: customers and demand, competition, business model, and economics and risk. Together they cover the market, the product, the money, and what could block it. The structure also kept the financial side in view, which an instinctive jump to "just lower the price" would have skipped.
+
+## Central question
+
+When a market has plenty of appetite for a product but a fixed ceiling on what a household will pay, is the winning move to compete on price, or to compete for the one paid slot available?
 
 ## Key ideas
 
-My opening hypothesis was that Netflix's default subscription model was mismatched against India's dominant free, ad supported viewing habit, and that the fix was switching models before anything else. It seemed reasonable on its face, and the data immediately complicated it. SVOD players in India had grown from 9 to 32 in six years, and the average household was already paying for 1.1 services. People weren't refusing to pay. I held onto the hypothesis's spirit but updated its shape rather than discarding it, which is the harder and more useful move. Most people either defend a wrong hypothesis or throw the whole thing out the moment one piece of data complicates it.
+My opening hypothesis was that Netflix's default subscription model didn't fit India's dominant habit of free, ad-supported viewing, and that switching models should come first. The data complicated it right away. The number of SVOD players in India had grown from 9 to 32 in six years, and the average household already paid for 1.1 services. People were not refusing to pay. I kept the idea behind the hypothesis and changed its shape instead of discarding it.
 
-The number that actually cracked the case open was the gap between 2.4 services consumed and 1.1 paid for. That is not a rounding detail. It is the whole market described in two digits. Indian households will consume plenty of content, but they'll only pay for one subscription. Netflix didn't need to be a service Indians watch. It needed to be the one they pay for, in a slot already occupied by a firmly established incumbent.
+The number that opened the case was the gap between 2.4 services consumed and 1.1 paid for. Indian households will consume plenty of content, but they pay for about one subscription. Netflix did not only need to be a service people watch. It needed to be the one they pay for, in a slot already held by an established incumbent.
 
-From there the case turned quantitative, and the math did something a purely qualitative argument couldn't: it eliminated an entire strategic option outright. Matching the incumbent's price point directly, I worked out, would require roughly 50 million paying subscribers just to break even on Netflix's planned investment, and the entire addressable paid market in the country was also about 50 million people, with the incumbent already holding 30 million of them. Undercutting on price wasn't a hard strategy. It was an arithmetically closed door. That is a genuinely different, sharper kind of insight than saying the market is too competitive. The data doesn't just describe difficulty. It rules a path out completely.
+From there the case became quantitative, and the math removed an entire option. Matching the incumbent's price would need roughly 50 million paying subscribers to break even on Netflix's planned investment. The whole paid market in the country was also about 50 million people, and the incumbent already held 30 million of them. Undercutting on price was not just hard. The arithmetic ruled it out.
 
-With price matching off the table, the real question became what Netflix could actually win on instead. I split the option set into what changes the revenue side of the business and what changes the cost side, rather than brainstorming randomly, and landed on a mobile first, lower cost tier paired with local content investment as the lead move. That meant cheaper delivery, a price point that fits the market's actual willingness to pay, and original content strong enough to give someone a specific reason to choose Netflix for that one paid slot instead of the incumbent already holding it.
+With price matching off the table, the question became what Netflix could win on instead. I split the options into those that change the revenue side and those that change the cost side, instead of brainstorming randomly. I landed on a mobile-first, lower-cost tier paired with local content investment as the lead move. That meant cheaper delivery, a price that fits what the market will pay, and original content strong enough to give someone a specific reason to spend their one paid slot on Netflix.
 
 ## My synthesis
 
-That's close to the actual strategy Netflix pursued in the real market, and the reasoning path to get there, price parity ruled out by unit economics, differentiation through content as the remaining lever, is the part worth remembering more than the specific answer.
+That is close to the strategy Netflix actually pursued in India. The reasoning matters more than the answer: unit economics ruled out price parity, which left differentiation through content as the remaining lever.
 
-The habit I'm actively building from this one: state the recommendation first, in one clean sentence, then the reasons, then the risk, then the next step, in that order, every time, rather than narrating the whole discovery process backward the way a first pass through a case naturally tends to come out. The substance was there. Getting it to land in thirty seconds instead of three minutes is the actual skill still being sharpened.
+One habit I'm working on is the order of my answer. I want to state the recommendation first in one sentence, then the reasons, then the risk, then the next step. My first pass tends to narrate the whole discovery process backward. The substance was there, but it should land in thirty seconds, not three minutes.
 
 ## Connections
 
-This sits alongside [Venture Southeast Asia](/mba-lab/venture-southeast-asia-and-the-melting-ice-cube), [Ferrari](/mba-lab/ferraris-bet-against-its-own-roadmap), and [The Ripening Chemical](/mba-lab/the-ripening-chemical-and-the-case-for-moving-first), each one a reminder that a clean sounding strategic instinct only earns its place once it survives contact with the actual numbers.
+This case sits with Venture Southeast Asia, Ferrari, and The Ripening Chemical. Each one is a reminder that a clean-sounding strategic instinct only earns its place once it survives contact with the numbers.
 
 ## Questions I still have
 
-Is there a reliable way to test whether a market's willingness to pay has a hard ceiling before building an entire strategy on the assumption that one exists? And when unit economics rule out an option outright, how much of that certainty rests on cost assumptions, like content licensing or acquisition cost, that could shift over the life of the strategy?
+Is there a reliable way to test whether a market's willingness to pay has a hard ceiling before building a strategy on the assumption that it does? And when unit economics rule out an option, how much of that certainty rests on cost assumptions, like content licensing or acquisition cost, that could shift over the life of the strategy?
 
 ## Final perspective
 
-The specific recommendation, a lower cost mobile tier paired with local content, is close to what Netflix actually did in India. The more durable lesson is the reasoning path that got there. A single ratio, 2.4 services consumed against 1.1 paid for, closed off an entire pricing strategy before it could even be tried, and left differentiation as the only lever still standing.
+The specific recommendation, a lower-cost mobile tier paired with local content, is close to what Netflix actually did in India. The more lasting lesson is the reasoning path. A single ratio, 2.4 services consumed against 1.1 paid for, closed off a whole pricing strategy and left differentiation as the only lever still standing.
 
-This case is adapted from a real MIT Sloan teaching case, "Netflix Goes to Bollywood." Worth a read if you want the full picture beyond what I worked through here.
+This case is adapted from a real MIT Sloan teaching case, "Netflix Goes to Bollywood." It is worth reading for the full picture beyond what I worked through here.
