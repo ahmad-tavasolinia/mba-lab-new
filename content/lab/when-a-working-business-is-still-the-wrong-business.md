@@ -58,7 +58,7 @@ He might also choose a different position in the value chain. Instead of competi
 
 There was another lesson that had little to do with technology: founder fit matters.
 
-The co-founder is naturally technical. He enjoys solving technical and product problems but is less suited to finance, HR and organizational management. He also considers financial transparency between partners one of the areas that should have been taken much more seriously from the beginning.
+The co-founder is naturally technical. He enjoys solving technical and product problems but is less suited to finance, HR and organizational management. 
 
 In retrospect, he would not necessarily choose himself as CEO.
 
