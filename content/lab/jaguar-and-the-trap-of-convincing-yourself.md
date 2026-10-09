@@ -5,48 +5,55 @@ code: "MBA·LAB·06"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["marketing"]
-summary: "A case on Jaguar's rebrand, worked cold, including a good-sounding fix that didn't survive its own logic."
-centralQuestion: "Can a 90-year-old brand convince a younger, design-focused audience it belongs to them, while betting on losing most of its existing customers?"
+summary: "A case on Jaguar's 2024 rebrand video, where I used my own reaction as a member of the target audience and then dropped a fix of mine that repeated the problem I had diagnosed."
+centralQuestion: "Can a 90-year-old brand convince a younger, design-focused audience that it belongs to them, while accepting the loss of most of its existing customers?"
 keyIdeas:
-  - "Putting myself directly inside the target demographic, as an actual thirty-year-old, the exact age Jaguar says it wants, turned my own reaction into data, instead of guessing at what a thirty-year-old might think."
-  - "Tesla already owns 'futuristic' as an earned position built on a decade of real product credibility. A slogan like 'copy nothing' doesn't inherit any of that, a fashion video isn't proof of anything, it's a costume."
-  - "A proposed fix built around introducing a cryptocurrency stunt sounded clever but repeated the exact mistake being criticized: a flashy signal with nothing under it."
-  - "The stronger move was already available: Coca-Cola faced a similar insight decades earlier and solved it by simply telling people to drink regular Coke in the morning, no new product, no new branding, no invented risk."
+  - "Putting myself inside the target demographic turned my own reaction into data. I'm thirty, the age Jaguar says it wants, so the question was whether the video convinced me."
+  - "Tesla already owns 'futuristic' through a decade of real product credibility. A slogan like 'copy nothing' doesn't inherit any of that, and a fashion video is not proof of anything."
+  - "My first fix, a cryptocurrency stunt before revealing the car, repeated the mistake I was criticizing: a flashy signal with nothing under it."
+  - "A simpler approach was available. Coca-Cola saw people drinking cola in the morning and told them to drink Coke then, with no new product, no new branding, and no invented risk."
 connections: []
 openQuestions:
-  - "Was there a version of this repositioning that could have modernized Jaguar's heritage instead of discarding it outright?"
-  - "How do you tell, in the moment, whether a bold creative swing is conviction or just confidence that hasn't been tested against its own logic yet?"
-finalPerspective: "Committing to a position fast is only useful if you're also willing to notice when the position you just built doesn't survive contact with itself."
+  - "Was there a version of this repositioning that modernized Jaguar's heritage instead of discarding it?"
+  - "How do I tell, in the moment, whether a bold creative swing is conviction or confidence that hasn't been tested against its own logic?"
+finalPerspective: "Committing to a position quickly only helps if I'm willing to drop it when it fails against my own reasoning. My first fix did, and I dropped it."
 sources: []
 ---
-This case was worked cold, using the moment-of-release facts around Jaguar's November 2024 rebrand, no outcome in sight until after the analysis was done.
 
-## The central question
+*How I work these cases: Before my MBA starts, I'm practicing the case method on my own. I give an AI a business case and ask it to release the details in stages, the way a class discussion unfolds. I give my read at each stage without looking anything up. Then the real outcome is revealed and I compare it with my reasoning. I call this working a case cold. These posts are my write-ups.*
 
-In November 2024 Jaguar released a rebrand video with no cars in it. Avant-garde models, bold slogans, "create exuberant," "break moulds," "copy nothing", and a target audience thirty years younger than the one that had bought Jaguars for decades. Elon Musk asked the obvious question on social media: "Do you sell cars?" The case holds back what happened after the backlash. It just gives you the setup: a 90-year-old brand, sales a fraction of its sister brand Land Rover, betting on losing 85–90% of its existing customers to chase a younger, design-focused audience instead.
+In November 2024, Jaguar released a rebrand video with no cars in it. It showed avant-garde models and bold slogans: "create exuberant," "break moulds," "copy nothing." The target audience was about thirty years younger than the people who had bought Jaguars for decades. Elon Musk asked on social media, "Do you sell cars?"
+
+The case gives the setup and holds back what happened after the backlash. Jaguar was a 90-year-old brand whose sales were a fraction of its sister brand Land Rover. It was prepared to lose 85–90% of its existing customers to chase a younger, design-focused audience.
+
+## Central question
+
+Can a 90-year-old brand convince a younger, design-focused audience that it belongs to them, while accepting the loss of most of its existing customers?
 
 ## Key ideas
 
-The move that did the actual work in this case wasn't a framework. It was putting myself inside the target demographic directly, I'm thirty, I'm the exact age Jaguar says it wants, so convince me. Not a hypothetical outsider guessing at what a thirty-year-old might think. My own reaction, used as data.
+The most useful move in this case was not a framework. I put myself inside the target demographic. I'm thirty, the exact age Jaguar says it wants, so the question was whether the video convinced me. I treated my own reaction as data, instead of guessing what a thirty-year-old might think.
 
-And the reaction was: not convinced. Tesla already owns "futuristic" as a real, earned position, a decade of actual product credibility, not a slogan. Jaguar saying "copy nothing" doesn't inherit any of that. If Jaguar wanted to enter the electric, tech-forward conversation, a fashion video wasn't proof of anything. It was a costume.
+I wasn't convinced. Tesla already owns "futuristic" as an earned position, built on a decade of real products. Jaguar saying "copy nothing" inherits none of that. If Jaguar wanted to enter the electric, tech-forward conversation, a fashion video proved nothing. It read like a costume.
+
+Then I proposed a fix: introduce an actual cryptocurrency, a piece of tech culture, before revealing the car. It sounded clever at first. But a crypto stunt doesn't close the credibility gap I had just described. It repeats the same mistake, a flashy signal with nothing under it.
+
+A simpler approach was available. In an unrelated case, Coca-Cola saw people drinking cola in the morning instead of coffee, and responded by telling people to drink regular Coke in the morning. It needed no new product, no new branding, and no invented risk. Jaguar could have looked for an existing behavior or strength to build on in the same way. It chose the larger, riskier change instead.
 
 ## My synthesis
 
-Then I proposed a fix, something built around introducing an actual coin, a piece of tech culture, before revealing the car. It sounded clever. It wasn't good. A cryptocurrency stunt doesn't solve the credibility gap I'd just diagnosed. It repeats the exact mistake I was criticizing: a flashy signal with nothing under it.
-
-The stronger move was already sitting there and I'd walked past it. Coca-Cola faced the same insight, people drinking cola in the morning instead of coffee, decades earlier, in an unrelated case, and solved it by just telling people to drink regular Coke in the morning. No new product, no new branding, no invented risk. Jaguar had the harder, riskier version of that same choice available and picked the harder one.
+My read was that the rebrand asked a younger audience to believe a claim Jaguar hadn't earned yet. The fix I proposed had the same weakness, so I dropped it. What was left was the diagnosis: the problem was credibility, and neither a video nor a stunt supplies it.
 
 ## What happened next
 
-The video was mocked widely, called out by name by Musk, and criticized by marketing experts on both sides, some defended it as necessary shock therapy for a struggling brand, others said Jaguar should have modernized its heritage instead of discarding it. The concept car that followed two weeks later landed better, but the brand had already spent its first impression on a fashion reel with no product in it.
+The video was widely mocked and called out by name by Musk. Marketing experts split. Some defended it as necessary shock therapy for a struggling brand, and others said Jaguar should have modernized its heritage instead of discarding it. A concept car followed two weeks later and landed better, but the brand had already spent its first impression on a fashion reel with no product in it.
 
 ## Questions I still have
 
-Was there a version of this repositioning that could have modernized Jaguar's heritage instead of discarding it outright?
+Was there a version of this repositioning that modernized Jaguar's heritage instead of discarding it?
 
-How do you tell, in the moment, whether a bold creative swing is conviction or just confidence that hasn't been tested against its own logic yet?
+How do I tell, in the moment, whether a bold creative swing is conviction or confidence that hasn't been tested against its own logic?
 
 ## Final perspective
 
-The real value in this one wasn't the final verdict. It was catching myself proposing a bad idea with real confidence, and being willing to junk it once it didn't hold up against my own stated reasoning. Committing to a position fast is only useful if you're also willing to notice when the position you just built doesn't survive contact with itself.
+Committing to a position quickly only helps if I'm willing to drop it when it fails against my own reasoning. In this case my first fix failed that test, and I dropped it.

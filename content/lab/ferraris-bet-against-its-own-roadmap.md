@@ -5,61 +5,60 @@ code: "MBA·LAB·04"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy"]
-summary: "A case on Ferrari's EV strategy, worked cold, and a real-world outcome that landed closer than expected."
-centralQuestion: "How does a brand built on scarcity and a screaming V12 grow in a world moving toward silence?"
+summary: "A case on Ferrari's electric target, where the useful question was not how fast to go electric but whether electric was what Ferrari's customers wanted at all."
+centralQuestion: "How does a brand built on scarcity and the sound of a V12 grow in a market moving toward electric cars?"
 keyIdeas:
-  - "Identity risk: Ferrari's entire emotional proposition is built on the engine. Electric removes the thing the brand is actually selling."
-  - "Hybrid resale erosion of 20–25% is not evidence against electric specifically, it's a plausible middle-ground problem, the kind that hits products stuck between two clear identities."
-  - "Competitor demand signals from Bentley and Aston Martin pulling back matter less as 'everyone else is doing it' and more as a live experiment already running, a lesson, not an excuse."
-  - "Rivals slowing their own EV timelines is an opportunity, not a neutral fact: a market where competitors hesitate is a market where hesitation is cheaper to correct than to repeat."
-  - "Tesla's presence in the category raises the bar. A Ferrari customer who wants electric has to be answered with 'why this car, not the one already synonymous with electric performance', not just 'why buy a car.'"
+  - "Identity risk: Ferrari's emotional appeal is built around the engine. An electric car removes the thing the brand sells."
+  - "A 20–25% drop in hybrid resale value is not evidence against electric specifically. It points to a problem for products stuck between two clear identities."
+  - "Bentley and Aston Martin pulling back matter less as a reason to copy them and more as a live experiment Ferrari can learn from."
+  - "If rivals are slowing their own EV timelines, Ferrari can wait without falling behind, and correcting course later costs less than committing too early."
+  - "Tesla raises the bar. A customer who wants electric will ask why this car and not the one already linked with electric performance."
 connections: []
 openQuestions:
-  - "Was electric ever the right question, or just the assumption the whole industry inherited because everyone else was doing it?"
-  - "How much of this verdict would survive contact with the internal sales data, dealer feedback, and engineering constraints no casebook reproduces?"
-finalPerspective: "Slow down, not retreat. Keep hand-building the electric platform, but don't force a 40% target onto a customer base whose actual behavior doesn't support that pace."
+  - "Was electric ever the right question, or just an assumption the whole industry inherited because everyone else was doing it?"
+  - "How much of this verdict would survive contact with the internal sales data, dealer feedback, and engineering constraints that no casebook reproduces?"
+finalPerspective: "Before deciding what a company should do, ask why it needs to do anything at all. Most bad strategy calls come from accepting the premise without questioning it."
 sources: []
 ---
-This case was worked cold, using the MIT Sloan study on Ferrari's "controlled growth" strategy, no outcome, no hindsight, just the facts as they stood in mid-2025.
 
-## The central question
+*How I work these cases: Before my MBA starts, I'm practicing the case method on my own. I give an AI a business case and ask it to release the details in stages, the way a class discussion unfolds. I give my read at each stage without looking anything up. Then the real outcome is revealed and I compare it with my reasoning. I call this working a case cold. These posts are my write-ups.*
 
-In mid-2025 Ferrari had a public number attached to its name: 40% of the lineup electric by 2030. The case that lays this out doesn't resolve the underlying tension. It ends with CEO Benedetto Vigna still asking it: how do you grow a brand built on scarcity and a screaming V12 in a world moving toward silence.
+This case comes from MIT Sloan's study of Ferrari's "controlled growth" strategy. I worked from the facts as they stood in mid-2025, with no knowledge of the outcome.
+
+In mid-2025, Ferrari had a public number attached to its name: 40% of its lineup electric by 2030. The case doesn't resolve the tension behind that number. It ends with CEO Benedetto Vigna still facing it.
+
+## Central question
+
+How does a brand built on scarcity and the sound of a V12 grow in a market moving toward electric cars?
 
 ## Key ideas
 
-I sorted five signals before writing anything down.
+Before writing anything down, I sorted the evidence into five signals.
 
-**Identity risk (negative).** Ferrari's entire emotional proposition is built on the engine. Electric removes the thing the brand is actually selling.
-
-**Hybrid resale erosion, 20–25% (neutral).** Not evidence against electric specifically, a plausible middle-ground problem, the kind that hits products stuck between two clear identities.
-
-**Competitor demand signals, Bentley, Aston Martin pulling back (negative, but instructive).** Not because "everyone else is doing it," but because it's a live experiment already running. Bentley and Aston Martin can be the lesson, not the excuse.
-
-**Rivals slowing their own EV timelines (opportunity, not neutral).** A market where competitors hesitate is a market where hesitation is cheaper to correct than to repeat.
-
-**Tesla's presence in the category (negative).** If a Ferrari customer wants electric specifically, the brand has to answer a harder question than "why buy a car", it has to answer "why this car, and not the one already synonymous with electric performance."
+- Identity risk (negative). Ferrari's emotional appeal is built around the engine. An electric car removes the thing the brand sells.
+- Hybrid resale values down 20–25% (neutral). This is not evidence against electric specifically. It points to a problem for products stuck between two clear identities.
+- Bentley and Aston Martin pulling back on electric (negative, but useful). "Everyone else is doing it" is not a reason by itself. This is a live experiment Ferrari can learn from.
+- Rivals slowing their own EV timelines (an opportunity). If competitors are hesitating, Ferrari can wait without falling behind, and correcting course later costs less than committing too early.
+- Tesla's presence in the category (negative). A customer who wants electric will ask why this car and not the one already linked with electric performance.
 
 ## My synthesis
 
-None of those five signals were the real question, though. The real question was buried under them: why electric, specifically? Not whether Ferrari should change, that's not in dispute anywhere in the case. Whether electric is what Ferrari's own customers are actually asking for, or just the assumption the whole industry inherited because everyone else is doing it.
+None of those five signals was the real question. The real question was underneath them: why electric? Nothing in the case disputes that Ferrari has to change. What the case doesn't establish is whether electric is what Ferrari's own customers are asking for, or just an assumption the whole industry inherited.
 
-That's where the verdict landed: slow down. Not retreat, the electric platform was already being hand-built in Maranello, and that continues either way. Just don't force a 40% target onto a customer base whose actual behavior, a collector buying one electric model out of curiosity, not swapping out the whole garage, doesn't support that pace.
+My verdict was to slow down, without retreating. Ferrari's electric platform was already being built by hand in Maranello, and that work continues either way. But I wouldn't force a 40% target onto customers whose behavior doesn't support that pace. A collector who buys one electric model out of curiosity is not replacing the whole garage.
 
 ## What happened next
 
-Seven months later, Ferrari cut its 2030 electric target from 40% to 20%, rebalancing to 40% combustion, 40% hybrid, 20% electric. The stock dropped about 15% in a single day, its worst since going public. Investors had priced in a faster shift than the one Ferrari actually delivered.
+In October 2025, Ferrari cut its 2030 electric target from 40% to 20%. The new mix is 40% combustion, 40% hybrid, and 20% electric. The stock fell about 15% in a single day, its worst drop on record. Reports at the time tied that fall to financial targets that disappointed investors as well as to the scaled-back electric plan, so I wouldn't read it as a verdict on the electric cut alone.
 
-I don't think this proves the case analysis was right in any strong sense. Ferrari's real decision had internal sales data, dealer feedback, and engineering constraints no casebook reproduces. What it shows is narrower: working from a small set of honestly sorted signals, refusing "everyone else is doing it" as a reason on its own, and asking the question one level down, landed in the same direction the company itself took.
+I don't think this proves my analysis was right. Ferrari's real decision used internal sales data, dealer feedback, and engineering constraints that no casebook reproduces. The narrower point is that I sorted a small set of signals, didn't accept "everyone else is doing it" as a reason, and asked the question one level down. That ended up pointing in the same direction the company took.
 
 ## Questions I still have
 
-Was electric ever the right question, or just the assumption the whole industry inherited because everyone else was doing it?
+Was electric ever the right question, or just an assumption the whole industry inherited because everyone else was doing it?
 
-How much of this verdict would survive contact with the internal sales data, dealer feedback, and engineering constraints no casebook reproduces?
+How much of this verdict would survive contact with the internal sales data, dealer feedback, and engineering constraints that no casebook reproduces?
 
 ## Final perspective
 
-The lesson worth keeping isn't to trust a gut call. It's this: don't answer what a company should do before answering why it needs to do anything at all. Most bad strategy calls aren't failures of analysis. They're failures to question the premise before accepting it.
-
-If you'd like to read more about the case, here it is: [Ferrari 2025, MIT Sloan case (PDF)](https://mitsloan.mit.edu/sites/default/files/2025-05/Ferrari%202025%20to%20circulate%2011%20MAY%2025%20%282%29.pdf)
+Before deciding what a company should do, ask why it needs to do anything at all. Most bad strategy calls come from accepting the premise without questioning it.

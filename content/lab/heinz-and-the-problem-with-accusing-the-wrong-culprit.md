@@ -4,53 +4,56 @@ date: "2026-08-22"
 code: "MBA·LAB·05"
 category: "cases"
 journeyPhase: "phase-1"
-topics: ["business-philosophy", "strategy"]
-summary: "A case on Heinz's \"Ketchup Fraud\" campaign, worked cold, and a stock number I found but chose not to use."
-centralQuestion: "Can a campaign be correct about a real problem and still be aimed at the wrong cause of it, and does winning on attention hide that mismatch rather than resolve it?"
+topics: ["strategy"]
+summary: "A case on Heinz's 'Ketchup Fraud' campaign, which named a real problem but, in my read, aimed at the wrong cause and measured attention instead of the behavior it wanted to change."
+centralQuestion: "Can a campaign be right about a real problem and still be aimed at the wrong cause of it, and does winning on attention hide that mismatch instead of resolving it?"
 keyIdeas:
-  - "Silent brand damage is the real risk before any data exists: a diner served fake Heinz who dislikes it blames the real brand without ever learning a substitution happened."
-  - "Restaurants aren't substituting out of dishonesty, they're substituting because Heinz costs more and margins are tight. Naming that 'fraud' doesn't touch the actual constraint."
-  - "An accusation aimed at a price problem can backfire: it gives a cost-conscious restaurant one more reason to switch to an openly, honestly branded competitor instead."
-  - "A striking number found in passing, like a stock price drop, is not evidence for a specific claim just because it's dramatic and nearby in time."
-  - "Earned media and attention are not the same measurement as the behavior a campaign was actually built to change."
+  - "Silent brand damage is the real risk before any data exists. A diner served fake Heinz who dislikes it blames the real brand without ever learning a substitution happened."
+  - "Restaurants substitute because Heinz costs more and margins are tight, not because they are dishonest. Calling it 'fraud' doesn't change that constraint."
+  - "An accusation aimed at a price problem can backfire. It gives a cost-conscious restaurant one more reason to switch to an openly branded competitor."
+  - "A striking number found in passing, like a stock price drop, is not evidence for a specific claim just because it is dramatic and close in time."
+  - "Earned media and attention are not the same measurement as the behavior a campaign was built to change."
 connections:
-  - "pepsi-am-and-the-room-that-already-knew"
+  - "Pepsi A.M. and the Room That Already Knew"
 openQuestions:
-  - "Is there a way to test, before launch, whether a campaign's named villain (dishonesty) actually matches the underlying cause (cost), or does that gap only become visible once the case holds back the outcome and forces you to reason it through?"
-  - "How much earned media and attention should count as evidence of success at all, when the specific channel behavior a campaign targets was never measured?"
-finalPerspective: "The campaign won on visibility and lost on mechanism. Attention isn't the same thing as fixing the actual problem, and a clever accusation aimed at the wrong cause doesn't become right just because people talked about it."
+  - "Can I test before launch whether a campaign's named villain matches the underlying cause, or does the gap only show once the outcome is known?"
+  - "How much should earned media count as evidence of success when the behavior the campaign was built to change was never measured?"
+finalPerspective: "I noticed a piece of real evidence, wanted to use it, and set it aside because it proved nothing about this campaign. That habit is worth keeping."
 sources: []
 ---
-In 2024, Heinz ran a campaign calling a real, quiet practice "Ketchup Fraud", restaurants refilling Heinz bottles with generic ketchup, or serving unbranded ketchup and letting customers assume it's Heinz by default. The pitch was public confrontation instead of quiet contract negotiation: make diners suspicious, let that suspicion pressure restaurants into stocking the real thing. The case holds back what happened. Just the setup and the bet.
 
-I worked it cold.
+*How I work these cases: Before my MBA starts, I'm practicing the case method on my own. I give an AI a business case and ask it to release the details in stages, the way a class discussion unfolds. I give my read at each stage without looking anything up. Then the real outcome is revealed and I compare it with my reasoning. I call this working a case cold. These posts are my write-ups.*
 
-## The central question
+In 2024, Heinz ran a campaign it called "Ketchup Fraud." It targeted a real, quiet practice: restaurants refilling Heinz bottles with generic ketchup, or serving unbranded ketchup and letting customers assume it was Heinz. Heinz chose public confrontation over quiet contract negotiation. The idea was to make diners suspicious, so that the suspicion would pressure restaurants into stocking the real product.
 
-Can a campaign be correct about a real problem and still be aimed at the wrong cause of it, and does winning on attention hide that mismatch rather than resolve it?
+The case gives the setup and the bet, and holds back the result.
+
+## Central question
+
+Can a campaign be right about a real problem and still be aimed at the wrong cause of it, and does winning on attention hide that mismatch instead of resolving it?
 
 ## Key ideas
 
-The real risk, before any data: silent brand damage. If a diner gets served fake Heinz and it tastes bad, they blame the actual brand without ever knowing a substitution happened. That's the case for doing something loud rather than negotiating quietly behind the scenes, you're defending against damage you can't even see occurring.
+The real risk, before any data, is silent brand damage. If a diner is served fake Heinz and it tastes bad, they blame the actual brand without ever knowing a substitution happened. That is the case for doing something loud instead of negotiating quietly. Heinz was defending against damage it couldn't even see.
 
-Then I pushed on my own read and found the actual flaw in the campaign, not just a risk to flag. Restaurants aren't substituting out of dishonesty. They're substituting because Heinz costs more and margins are tight. Calling that "fraud" doesn't touch the real constraint, a restaurant that can't afford Heinz doesn't suddenly get a bigger budget because customers are now more suspicious. If anything, the accusation gives them one more reason to switch to a competitor's product that's honestly, openly branded, and skip the accusation altogether. Heinz built an authenticity weapon and pointed it at a price problem.
+Then I pushed on my own read and found a flaw in the campaign itself, beyond a risk to flag. Restaurants don't substitute out of dishonesty. They substitute because Heinz costs more and margins are tight. Calling that "fraud" doesn't touch the constraint. A restaurant that can't afford Heinz doesn't get a bigger budget because customers are more suspicious. The accusation may even give it one more reason to switch to a competitor that is openly branded and avoid the accusation altogether. Heinz built an authenticity weapon and pointed it at a price problem.
 
-I checked the stock market for confirmation and found Heinz's stock had dropped roughly 30% since 2024. I noted it, then set it aside, no real link between that number and this specific campaign, and using it anyway would have been reaching for evidence instead of reasoning through one.
+I also looked at the stock market for confirmation. Kraft Heinz stock, the parent company's, had dropped roughly 30% since 2024. I noted it and set it aside. Nothing linked that drop to this campaign, and using it would have meant reaching for evidence instead of reasoning.
 
-What the case actually reports: strong earned media, real conversation about brand authenticity, and reinforcement of Heinz as the category benchmark. No data either way on whether restaurants actually switched, or whether a competitor moved in on the opening. The case measures attention. It doesn't measure the channel behavior the whole campaign was supposedly built to change.
+The case reports strong earned media, real conversation about brand authenticity, and reinforcement of Heinz as the category benchmark. It has no data on whether restaurants switched, or whether a competitor moved into the opening. It measures attention. It does not measure the restaurant behavior the campaign was built to change.
 
 ## My synthesis
 
-Final read: the campaign won on visibility and lost on mechanism, attention isn't the same thing as fixing the actual problem, and a clever accusation aimed at the wrong cause doesn't become right just because people talked about it. A campaign can be tonally sharp, earn genuine coverage, and still miss the lever that would have actually moved restaurant behavior, because the villain it named, dishonesty, was never the real constraint in the first place.
+The campaign won on visibility. My read is that it was aimed at the wrong cause, because the villain it named, dishonesty, was never the real constraint. The case gives no data to confirm or refute that, so it remains a read and not a finding. Either way, attention is not the same as fixing the problem, and a sharp accusation doesn't become correct because people talked about it.
 
 ## Connections
 
-This pairs directly with [Pepsi A.M.](/mba-lab/pepsi-am-and-the-room-that-already-knew): both are cases worked cold, before seeing the outcome, and both turn on the same failure mode, mistaking a confident, well-told story (a marketing goal restated as a plan, an accusation restated as a fix) for an argument that actually holds up against the underlying constraint.
+This pairs with Pepsi A.M. Both cases were worked cold, before seeing the outcome, and both turn on the same failure: a confident, well-told story (a marketing goal restated as a plan, an accusation restated as a fix) that doesn't hold up against the underlying constraint.
 
 ## Questions I still have
 
-Is there a way to test, before launch, whether a campaign's named villain actually matches the underlying cause, or does that gap only become visible once the case holds back the outcome and forces you to reason it through independently? And how much should earned media and attention count as evidence of success at all, when the specific channel behavior a campaign was built to change was never measured?
+Can I test before launch whether a campaign's named villain matches the underlying cause, or does the gap only show once the outcome is known and I'm forced to reason it through? And how much should earned media count as evidence of success when the behavior the campaign was built to change was never measured?
 
 ## Final perspective
 
-The thing worth keeping from this one is noticing a piece of real evidence, wanting to use it, and setting it down anyway because it didn't actually prove anything. That's a harder discipline than finding the evidence in the first place.
+I noticed a piece of real evidence, wanted to use it, and set it aside because it proved nothing about this campaign. That habit is worth keeping.
