@@ -106,7 +106,8 @@ main {
 }
 
 .site-header:not(.site-header-home) + main:has(.lab-room-hero),
-.site-header:not(.site-header-home) + main:has(.topics-reference-hero) {
+.site-header:not(.site-header-home) + main:has(.topics-reference-hero),
+.site-header:not(.site-header-home) + main:has(.fa-visual-heading) {
   padding-top: 0;
 }
 
@@ -1930,6 +1931,12 @@ html[data-theme="light"] .lab-library-more:hover {
 
 .fa-art-topics {
   background-image: var(--asset-topics);
+  background-position: center;
+  background-size: cover;
+}
+
+.fa-art-library {
+  background-image: var(--asset-library);
   background-position: center;
   background-size: cover;
 }

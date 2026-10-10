@@ -54,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '--asset-home': 'url("' + basePath + '/images/home-lab-bg.png")',
         '--asset-lab': 'url("' + basePath + '/mba-lab/lab-room-reference.png")',
         '--asset-topics': 'url("' + basePath + '/topcis/topics-room-reference.png")',
+        '--asset-library': 'url("' + basePath + '/library/library-room-reference.png")',
       } as CSSProperties}
     >
       <head>

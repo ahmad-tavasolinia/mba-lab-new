@@ -68,7 +68,7 @@ function FaTopicIndex({ entries }: { entries: Awaited<ReturnType<typeof getAllLa
   </PageFrame>;
 }
 
-function PageFrame({ eyebrow, title, intro, children, hero, headerBeforeTitle, headerAfterIntro }: { eyebrow?: string; title: string; intro?: string; children: React.ReactNode; hero?: 'lab' | 'topics'; headerBeforeTitle?: React.ReactNode; headerAfterIntro?: React.ReactNode }) {
+function PageFrame({ eyebrow, title, intro, children, hero, headerBeforeTitle, headerAfterIntro }: { eyebrow?: string; title: string; intro?: string; children: React.ReactNode; hero?: 'lab' | 'topics' | 'library'; headerBeforeTitle?: React.ReactNode; headerAfterIntro?: React.ReactNode }) {
   return <div className="fa-site" lang="fa" dir="rtl"><section className={`fa-page-heading${hero ? ` fa-visual-heading fa-visual-${hero}` : ''}`}>{hero && <div className={`fa-visual-art fa-art-${hero}`} aria-hidden="true" />}{hero && <div className="fa-visual-shade" aria-hidden="true" />}<div className="fa-heading-copy"><span className="fa-eyebrow">{eyebrow}</span>{headerBeforeTitle}<h1>{title}</h1>{intro && <p>{intro}</p>}{headerAfterIntro}</div></section><section className="fa-page-body">{children}</section></div>;
 }
 
@@ -292,7 +292,7 @@ async function FaPage({ path }: { path: string[] }) {
     const sources = getAllSources();
     const labEntries = entries;
     return (
-      <PageFrame eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد.">
+      <PageFrame hero="library" eyebrow="خاستگاه ایده‌ها" title="دوره‌ها و منابع" intro="این صفحه فهرست گواهی‌نامه‌ها نیست؛ ثبت چیزهایی است که مطالعه کردم و مهم‌تر از آن، چیزی که از این مطالعه به‌دست آمد.">
         <PersianSourceFlow />
         <div className="fa-entry-list fa-source-list">
           {sources.map((source) => {
