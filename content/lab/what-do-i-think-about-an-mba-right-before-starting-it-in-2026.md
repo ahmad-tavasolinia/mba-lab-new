@@ -18,7 +18,7 @@ openQuestions:
 finalPerspective: "Not a prediction that I know will be correct, but a position from which I can adapt if my prediction turns out to be wrong."
 sources: []
 ---
-The world is scary. We are not used to change happening at this pace. The lack of stability and the uncertainty about the future are scary for so many of us. But a few of us accept that uncertainty and say, "Okay, I can't predict tomorrow, so I give up." We say: yes, the situation is changing rapidly, but I can still use what I know today to plan for my future.
+The world is changing faster than ever, and that opens up possibilities we’ve never had before. It takes some getting used to, but we’re adapting. Few of us respond to that uncertainty by saying, “I can’t predict tomorrow, so I give up.” Most of us say, “Yes, things are changing quickly, but I can still use what I know today to plan for my future.”
 
 And that is how I came up with studying for an MBA.
 
