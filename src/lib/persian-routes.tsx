@@ -51,7 +51,7 @@ function FaHome() {
           <p className="journey-title">مسیر یادگیری</p>
           <div className="fa-journey-track">
             {phases.map((phase, index) => (
-              <Link key={phase.slug} href={`/fa/mba-lab/phase/${phase.slug}`} className={phase.slug === 'phase-2' ? 'fa-journey-phase active' : 'fa-journey-phase'}>
+              <Link key={phase.slug} href={`/fa/mba-lab/phase/${phase.slug}`} className={phase.slug === 'phase-1' ? 'fa-journey-phase active' : 'fa-journey-phase'}>
                 <span>{String(index + 1).padStart(2, '0')}</span><small>{faPhases[phase.slug].name}</small>
               </Link>
             ))}
@@ -98,31 +98,23 @@ async function FaPage({ path }: { path: string[] }) {
   const route = path.join('/');
   if (!route) return <FaHome />;
 
-  const entries = await getAllLabEntries();
+  const allEntries = await getAllLabEntries();
+  const entries = allEntries.filter((entry) => !entry.slug.toLowerCase().includes('mud-bay-and-the-hour-that-was'));
   if (route === 'topics') return <FaTopicIndex entries={entries} />;
   if (route === 'mba-lab') return <PageFrame hero="lab" eyebrow="دفتر کارگاه" title="کارگاه مدیریت کسب و کار" intro="فضایی برای اندیشیدن به مسئله‌های کسب‌وکار، آزمودن ایده‌ها، ساختن پروژه‌ها و آموختن از کسانی که تجربهٔ ساختن دارند."><div className="fa-card-grid">{categories.map((category) => { const count = entries.filter((e) => e.category === category.slug).length; return <Link key={category.slug} href={`/fa/mba-lab/category/${category.slug}`} className="fa-topic-card"><span className="fa-meta">{category.code} · {count.toLocaleString('fa-IR')} یادداشت</span><h2>{faCategories[category.slug].name}</h2><p>{faCategories[category.slug].description}</p></Link>; })}</div></PageFrame>;
 
   if (route === 'about') return (
     <PageFrame eyebrow="دربارهٔ من" title="احمد توسلی‌نیا">
       <div className="fa-about-layout">
-        <div>
-          <div className="fa-prose">
-            <p className="fa-lead">به مسئله‌هایی علاقه دارم که پاسخ ساده‌ای ندارند.</p>
-            <p>کار و یادگیری من در پیوند میان کسب‌وکار، راهبرد، بازار، فناوری، هوش مصنوعی و کارآفرینی قرار دارد. به مسئله‌هایی جذب می‌شوم که اطلاعات ناقص است، منابع محدودند و بااین‌حال باید تصمیم گرفت.</p>
-            <p>این کارگاه را ساختم تا مسیر یادگیری‌ام را عمومی کنم: ایده‌ها را بخوانم، فرض‌ها را بیازمایم، با عددها روبه‌رو شوم و ببینم آیا تحلیل در برابر واقعیت دوام می‌آورد یا نه.</p>
-            <p>به‌جای جمع‌کردن دانسته‌ها، می‌خواهم از آن‌ها استفاده کنم؛ با نوشتن، تحلیل‌کردن، ساختن و آزمودن ایده‌ها.</p>
-            <p>این روزها به‌ویژه به اثر هوش مصنوعی بر اقتصاد کسب‌وکارها، تغییر بازارها و مزیت رقابتی، و شیوهٔ خلق و تصاحب ارزش در محیط‌های متغیر فکر می‌کنم.</p>
-          </div>
-          <ul className="fa-interest-list">
-            <li>کسب‌وکار و کارآفرینی</li>
-            <li>استراتژی و تحلیل کسب‌وکار</li>
-            <li>هوش مصنوعی</li>
-            <li>فناوری و بازارها</li>
-          </ul>
+        <div className="fa-prose">
+          <p>همیشه برایم جالب بوده که چرا بعضی کسب‌وکارها راه خودشان را پیدا می‌کنند و رشد می‌کنند، درحالی‌که بعضی دیگر، با وجود ایده‌های خوب و تلاش زیاد، به جایی نمی‌رسند. پاسخ این سؤال‌ها معمولاً به یک عامل محدود نمی‌شود. بازار، تصمیم‌های مدیران، منابع در دسترس و حتی زمان‌بندی می‌توانند نتیجه را تغییر دهند.</p>
+          <p>بخش زیادی از چیزی که این روزها می‌خوانم و دنبال می‌کنم، به همین موضوع‌ها مربوط است: استراتژی و رقابت، شناخت بازار، کارآفرینی و نقش فناوری، به‌ویژه هوش مصنوعی، در تغییر دنیای کسب‌وکار.</p>
+          <p>MBA Lab فضایی است تا این یادگیری‌ها فقط به خواندن کتاب و گذراندن دوره محدود نمانند. اینجا دربارهٔ ایده‌ها می‌نویسم، مطالعه‌های موردی را بررسی می‌کنم و سعی می‌کنم بفهمم مفاهیم مدیریتی بیرون از کتاب‌ها چه معنایی پیدا می‌کنند. برایم مهم است که یک ایده را فقط به‌خاطر جذاب‌بودنش نپذیرم؛ بلکه با موشکافی آن‌ها را تحلیل کنم.</p>
+          <p>هنوز سؤال‌های زیادی برایم بی‌پاسخ‌اند و احتمالاً بعضی از برداشت‌هایم هم در ادامه تغییر خواهند کرد. این سایت جایی است برای ثبت همین مسیر؛ از چیزهایی که یاد می‌گیرم تا ایده‌هایی که ارزش بررسی بیشتر دارند.</p>
         </div>
         <aside className="fa-about-aside">
           <Image
-            src={`${basePath}/me.jpg`}
+            src={basePath + '/me.jpg'}
             alt="احمد توسلی‌نیا"
             width={200}
             height={200}
@@ -138,7 +130,58 @@ async function FaPage({ path }: { path: string[] }) {
 
   if (route === 'contact') return <PageFrame eyebrow="در تماس باشیم" title="تماس" intro="اگر چیزی در کارگاه پرسشی در ذهن‌تان ایجاد کرده، با آن مخالفید یا پیوند تازه‌ای به نظرتان می‌رسد، خوشحال می‌شوم بشنوم."><div className="fa-contact-grid"><section><span className="fa-eyebrow">ایمیل</span><a dir="ltr" href="mailto:amd.tavasolinia@gmail.com">amd.tavasolinia@gmail.com</a></section><section><span className="fa-eyebrow">در شبکه‌های دیگر</span><a dir="ltr" href="https://www.linkedin.com/in/ahmad-tavasolinia-0a4903202/">LinkedIn</a></section></div></PageFrame>;
 
-  if (route === 'cv') return <PageFrame eyebrow="سوابق تحصیلی و حرفه‌ای" title="رزومه"><p className="fa-prose">نسخهٔ انگلیسی رزومه برای بارگیری در دسترس است.</p><a className="fa-action" href={`${basePath}/cv.pdf`}>بارگیری فایل PDF</a><h2 className="fa-section-title">پروژهٔ مستقل</h2><div className="fa-prose"><h3>بنیان‌گذار و نویسندهٔ کارگاه مدیریت کسب‌وکار</h3><p>پروژه‌ای مستقل برای بررسی کسب‌وکار، راهبرد، مالی، فناوری و مدیریت؛ با پیوند میان منابع دانشگاهی، مسئله‌های واقعی و تحلیل شخصی.</p><h3>تحصیلات</h3><p>مطالعهٔ مستقل در سطح تحصیلات تکمیلی: راهبرد، مالی، اقتصاد، رفتار سازمانی و پیوند هوش مصنوعی با کسب‌وکار.</p><h3>مهارت‌ها</h3><p>راهبرد، تحلیل مالی، نگارش کسب‌وکار، هوش مصنوعی و فناوری، رهبری، پژوهش و ترکیب ایده‌ها، SQL و Power BI.</p></div></PageFrame>;
+  if (route === 'cv') return (
+    <PageFrame eyebrow="سوابق تحصیلی و حرفه‌ای" title="رزومه">
+      <a className="fa-action" href={basePath + '/cv-fa.pdf'} download>
+        دانلود رزومهٔ فارسی (PDF) ←
+      </a>
+      <div className="fa-prose">
+        <h2 className="fa-section-title">دربارهٔ من</h2>
+        <p>دانش‌آموختهٔ مهندسی معماری و متقاضی کارشناسی ارشد مدیریت کسب‌وکار (MBA) در تهران هستم و از آبان‌ماه ۱۴۰۵ تحصیل در این دوره را آغاز می‌کنم. به حوزه‌های تحلیل و توسعهٔ کسب‌وکار علاقه‌مندم و به‌دنبال فرصتی برای به‌کارگیری توانمندی‌هایم و کسب تجربهٔ حرفه‌ای در محیط کسب‌وکار هستم.</p>
+        <h2 className="fa-section-title">تجربهٔ حرفه‌ای</h2>
+        <h3>بنیان‌گذار | باشگاه زبان انگلیسی وطن</h3>
+        <p>آوریل ۲۰۲۶ تا اکنون، بیرجند</p>
+        <ul>
+          <li>طراحی و آزمون ایدهٔ کسب‌وکار و تبدیل آن به فعالیت درآمدزا طی دو ماه.</li>
+          <li>ایجاد همکاری با یک فضای برگزاری رویداد برای تقسیم هزینه‌ها و راه‌اندازی با حداقل سرمایهٔ اولیه.</li>
+          <li>طراحی قالب‌های متفاوت برای رویدادها با هدف ایجاد تمایز از کلاس‌های سنتی زبان انگلیسی.</li>
+        </ul>
+        <h3>مدرس زبان انگلیسی | مؤسسهٔ بین‌المللی خوارزمی</h3>
+        <p>اوت ۲۰۲۴ تا ژانویهٔ ۲۰۲۶</p>
+        <ul>
+          <li>بیش از ۲٬۰۰۰ ساعت تدریس به بیش از ۱۵۰ زبان‌آموز؛ ارائهٔ آموزش متناسب با سطح و نیاز مخاطبان.</li>
+        </ul>
+        <h3>هم‌بنیان‌گذار | XpertAim</h3>
+        <p>پارک علم و فناوری خراسان جنوبی، ژوئن ۲۰۲۳ تا مه ۲۰۲۴</p>
+        <ul>
+          <li>هدایت تیم از توسعهٔ اولیه تا ساخت محصول اولیه (MVP)، تعیین زمان‌بندی و تقسیم و پیگیری وظایف.</li>
+          <li>شناخت نیاز مشتری، آزمون محصول با مشتریان و تبدیل بازخوردها به قابلیت‌ها و بهبودهای محصول.</li>
+        </ul>
+        <h3>خدمت نظام‌وظیفه | ارتش جمهوری اسلامی ایران</h3>
+        <p>۲۰۲۱ تا ۲۰۲۳</p>
+        <h3>کارآموز هماهنگی پروژه</h3>
+        <p>Sustainable Alignment | زوریخ، دورکاری، مارس تا اوت ۲۰۲۱</p>
+        <ul>
+          <li>پژوهش و همکاری در برنامه‌ریزی و اجرای پروژه‌های پایداری، تهیهٔ محتوای شبکه‌های اجتماعی و همکاری با تیم از راه دور.</li>
+        </ul>
+        <h2 className="fa-section-title">تحصیلات</h2>
+        <h3>کارشناسی مهندسی معماری</h3>
+        <p>دانشگاه آزاد اسلامی، ۲۰۱۷ تا ۲۰۲۱</p>
+        <h3>دیپلم ریاضی</h3>
+        <p>۲۰۱۲ تا ۲۰۱۶</p>
+        <h2 className="fa-section-title">مهارت‌ها</h2>
+        <p>توسعهٔ محصول، شناخت نیاز مشتری، توسعهٔ کسب‌وکار، هماهنگی پروژه و تیم، ارتباط مؤثر، اکسل، پاورپوینت و آشنایی مقدماتی با SQL.</p>
+        <h2 className="fa-section-title">زبان‌ها</h2>
+        <p>آیلتس آکادمیک: نمرهٔ ۷٫۰، سطح C1، فوریهٔ ۲۰۲۲</p>
+        <h2 className="fa-section-title">دوره‌های آموزشی</h2>
+        <ul>
+          <li>مدیریت استراتژیک | دانشکدهٔ وارتون</li>
+          <li>سازوکار کسب‌وکارهای نوپا | دانشگاه MIT</li>
+          <li>بازارهای مالی تطبیقی | دانشگاه MIT</li>
+        </ul>
+      </div>
+    </PageFrame>
+  );
 
   if (route === 'courses') {
     const sources = getAllSources();
