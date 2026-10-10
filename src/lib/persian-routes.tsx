@@ -389,7 +389,7 @@ async function FaPage({ path }: { path: string[] }) {
           </>
         )}
       >
-        <p className="fa-original-note">متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p>
+        <p className="fa-original-note">{entry.category === 'interviews' ? 'نسخهٔ فارسی این گفت‌وگو هنوز آماده نیست؛ فعلاً متن انگلیسی در دسترس است.' : 'متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.'}</p>
         <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
       </PageFrame>
     );
