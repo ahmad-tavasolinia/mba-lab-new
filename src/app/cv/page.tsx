@@ -1,6 +1,8 @@
 import { Container, Eyebrow } from '@/components/ui';
 import { createPageMetadata } from '@/lib/seo';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export const metadata = createPageMetadata({
   title: 'CV',
   description: 'Education, experience, certifications, and skills of Ahmad Tavasolinia.',
@@ -56,6 +58,13 @@ export default function CvPage() {
             across product development, entrepreneurship, English-language teaching, and project
             coordination.
           </p>
+          <a
+            href={basePath + '/cv-en.pdf'}
+            download
+            className="mt-6 inline-flex items-center gap-3 rounded-full border border-gold px-6 py-3 font-mono text-xs uppercase tracking-[0.16em] text-ink transition hover:bg-gold hover:text-paper dark:text-dark-ink dark:hover:text-dark-bg"
+          >
+            Download English CV (PDF) <span aria-hidden="true">↓</span>
+          </a>
         </Container>
       </section>
 
