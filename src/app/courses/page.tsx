@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { getAllSources, getAllLabEntries } from '@/lib/content';
 import { getTopic } from '@/lib/topics';
-import { Container, Eyebrow } from '@/components/ui';
+import { Container } from '@/components/ui';
 import SourceFlow from '@/components/SourceFlow';
 import { createPageMetadata } from '@/lib/seo';
 
@@ -11,34 +11,43 @@ export const metadata = createPageMetadata({
   path: '/courses/',
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default async function CoursesPage() {
   const sources = getAllSources();
   const labEntries = await getAllLabEntries();
 
   return (
-    <div>
-      <section className="border-b border-rule dark:border-dark-rule">
-        <Container className="py-10 md:py-12">
-          <Eyebrow>Where the ideas come from</Eyebrow>
-          <h1 className="mt-3 max-w-3xl font-serif text-5xl font-medium tracking-tight text-ink dark:text-dark-ink md:text-6xl">
-            Library
-          </h1>
-          <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-ink/70 dark:text-dark-soft">
-            This is not a list of certificates. It's a record of what I studied and, more
-            importantly, what came out of studying it.
-          </p>
-          <div className="mt-5">
-            <SourceFlow />
+    <div className="library-reference-page topics-reference-page">
+      <section className="topics-reference-hero library-reference-hero">
+        <img
+          className="topics-reference-image"
+          src={basePath + '/library/library-room-reference.png'}
+          alt=""
+          aria-hidden="true"
+        />
+        <div className="topics-reference-shade" aria-hidden="true" />
+        <div className="topics-reference-copy">
+          <div className="topics-reference-eyebrow">
+            <span>Where the ideas come from</span>
+            <i />
           </div>
-          <p className="mt-4 max-w-xl text-[13px] leading-relaxed text-ink/40 dark:text-dark-soft/50">
-            Academic sources are credited for context. No university named below has reviewed,
-            endorsed, or is otherwise affiliated with MBA Lab.
+          <h1>Library</h1>
+          <p>
+            A record of what I study, and what comes out of studying it.
           </p>
-        </Container>
+        </div>
       </section>
 
-      <section>
-        <Container className="py-8">
+      <section className="topics-reference-grid library-reference-content">
+        <Container className="py-8 md:py-10">
+          <div className="mb-6">
+            <SourceFlow />
+            <p className="mt-4 max-w-xl text-[13px] leading-relaxed text-ink/50 dark:text-dark-soft/60">
+              Academic sources are credited for context. No university named below has reviewed,
+              endorsed, or is otherwise affiliated with MBA Lab.
+            </p>
+          </div>
           <div>
             {sources.map((s) => {
               const outputs = labEntries.filter((e) => s.outputs.includes(e.slug));
