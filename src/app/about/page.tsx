@@ -26,45 +26,28 @@ export default function AboutPage() {
       <section>
         <Container className="grid gap-14 py-16 md:grid-cols-[1fr,320px]">
           <div className="prose-lab max-w-prose text-ink dark:text-dark-ink">
-            <p className="font-serif text-xl italic leading-relaxed text-ink/80 dark:text-dark-soft">
-              I’m interested in what happens when a difficult problem has no clean answer.
+            <p>
+              I’ve always wondered why some businesses find their footing and grow while others
+              struggle despite good ideas and a lot of effort. It’s rarely one thing. Markets,
+              management decisions, resources, and timing all play a part.
             </p>
 
             <p>
-              My work sits at the intersection of <strong>business, strategy, markets, technology,
-              AI, and entrepreneurship</strong>. I like problems where the information is
-              incomplete, the resources are limited, the incentives are messy, and a decision still
-              has to be made.
+              Most of what I read circles around strategy and competition, how markets work,
+              entrepreneurship, and what AI is doing to the way businesses operate.
             </p>
 
             <p>
-              I approach business through a simple habit: <strong>understand the problem, test the
-              assumptions, follow the numbers, and question the model when reality doesn't fit
-              it.</strong>
+              I started MBA Lab to take my learning past books and courses. I write about ideas,
+              work through business cases, and try to see what management concepts mean outside the
+              classroom. I don’t want to accept an idea just because it sounds convincing. I’d
+              rather look closely, question its assumptions, and see whether it holds up.
             </p>
 
             <p>
-              That’s why I spend a lot of my time studying cases, markets, financial models,
-              strategy, and emerging technologies. I don't want to collect knowledge. I want to use
-              it. I write, analyze, build, and test ideas to see whether they survive contact with
-              reality.
-            </p>
-
-            <p>
-              I'm particularly interested in how <strong>AI is changing the economics of
-              businesses</strong>, how technology changes markets and competitive advantage, and how
-              companies can create and capture value when the environment keeps changing.
-            </p>
-
-            <p>
-              I’m also building toward a career in <strong>strategy, business analysis, and
-              technology-driven entrepreneurship</strong>, with a growing focus on the intersection
-              of AI and business.
-            </p>
-
-            <p>
-              I don't have a fixed answer for where all of this leads yet. That's part of the point.
-              I’d rather work on difficult problems and find out.
+              I still have plenty of open questions, and some of my views will probably change as I
+              learn more. This site is where I keep track of what I’m learning and the ideas I want
+              to explore further.
             </p>
           </div>
 
