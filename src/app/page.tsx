@@ -15,17 +15,15 @@ export default function HomePage() {
     <div className="home-hero">
       <div className="home-hero-background" aria-hidden="true" />
 
-      <section className="home-copy" aria-labelledby="home-title">
+      <section className="home-copy home-copy-english" aria-labelledby="home-title">
         <h1 id="home-title">
-          Building the next
-          <br />
-          chapter, deliberately.
+          <span className="home-copy-line home-title-line">Building the next</span>
+          <span className="home-copy-line home-title-line">chapter, deliberately.</span>
         </h1>
 
         <p className="home-description">
-          Exploring ideas, skills and opportunities
-          <br />
-          for a meaningful MBA journey.
+          <span className="home-copy-line home-description-line">Exploring ideas, skills and opportunities</span>
+          <span className="home-copy-line home-description-line">for a meaningful MBA journey.</span>
         </p>
 
         <Link href="/mba-lab" className="home-cta">
@@ -34,7 +32,7 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <div className="home-journey" aria-label="MBA journey phases">
+      <div className="home-journey home-journey-english" aria-label="MBA journey phases">
         <JourneyPhases />
       </div>
     </div>
