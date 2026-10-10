@@ -94,6 +94,111 @@ function FaCategoryBlocks({ entries }: { entries: Awaited<ReturnType<typeof getA
   })}</div>;
 }
 
+function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
+  const screenshotOrder = ['transactions', 'summary', 'income', 'monthly'];
+  const screenshots = [...(entry.screenshots ?? [])].sort((a, b) => {
+    const ai = screenshotOrder.findIndex((key) => [a.src, a.alt, a.caption].join(' ').toLowerCase().includes(key));
+    const bi = screenshotOrder.findIndex((key) => [b.src, b.alt, b.caption].join(' ').toLowerCase().includes(key));
+    return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+  });
+  const screenshotCopy: Record<string, { alt: string; caption: string }> = {
+    'transactions.png': { alt: 'جدول تراکنش‌های مالی در اکسل', caption: 'جدول تراکنش‌ها؛ داده‌های ساختاریافته‌ای که مبنای مدل هستند.' },
+    'summary.png': { alt: 'جدول خلاصهٔ محاسبات مالی در اکسل', caption: 'خلاصهٔ محاسبات؛ شاخص‌های مالی به‌دست‌آمده از جدول تراکنش‌ها.' },
+    'income-and-expenses.png': { alt: 'نمودار مقایسهٔ درآمد کل و هزینهٔ کل', caption: 'درآمد و هزینه‌ها؛ مقایسهٔ تصویری مجموع درآمد و مجموع هزینه‌ها.' },
+    'monthly-spending-by-category.png': { alt: 'نمودار ماهانهٔ هزینه‌ها بر اساس دسته‌بندی', caption: 'هزینهٔ ماهانه بر اساس دسته‌بندی؛ مقایسهٔ مجموع هزینه‌ها در گروه‌های مختلف.' },
+  };
+  const practice = [
+    'جدول‌های اکسل و ارجاع‌های ساختاریافته',
+    'SUMIF',
+    'SUMIFS',
+    'COUNTIF',
+    'COUNTA',
+    'MAXIFS',
+    'XLOOKUP',
+    'محاسبات پایه و ارجاع سلولی',
+    'نمودارها برای مصورسازی داده‌های مالی',
+  ];
+
+  return (
+    <PageFrame
+      eyebrow={faCategories[entry.category].name}
+      title={faEntryTitle(entry.slug, entry.title)}
+      intro={faEntrySummary(entry.slug, entry.summary)}
+      headerBeforeTitle={(
+        <div className="fa-reading-tag-row">
+          <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
+          <Link href={'/fa/mba-lab/phase/' + entry.journeyPhase} className="fa-entry-topic fa-phase-topic">
+            {faPhases[entry.journeyPhase].title}
+          </Link>
+        </div>
+      )}
+      headerAfterIntro={(
+        <>
+          <div className="fa-meta fa-reading-meta">
+            <time>{new Date(entry.date).toLocaleDateString('fa-IR')}</time>
+          </div>
+          <div className="fa-entry-topics fa-reading-topics" aria-label="موضوع‌ها">
+            {entry.topics.map((topic) => (
+              <Link key={topic} href={'/fa/topics/' + topic} className="fa-entry-topic">
+                {faTopics[topic]?.name ?? topic}
+              </Link>
+            ))}
+          </div>
+        </>
+      )}
+    >
+      <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+      <div className="fa-prose">
+        <p>این پروژه را به‌صورت یک مدل مالی ساده و در سطح تراکنش در اکسل ساختم. فایل کار با یک جدول ساختاریافته از تراکنش‌ها را آغاز می‌کند و آن را به خلاصه‌ای مالی تبدیل می‌کند که درآمد، هزینه‌ها، ماندهٔ خالص، هزینه بر اساس دسته‌بندی، تعداد تراکنش‌ها، میانگین هزینه و بزرگ‌ترین هزینه را نشان می‌دهد. هدفم تمرین تبدیل داده‌های خام مالی به محاسبات و سپس رسیدن به تصویری روشن‌تر از عملکرد مالی بود.</p>
+        <p>این پروژه فرصتی بود تا فرمول‌های اکسل را در یک مدل واقعی و به‌هم‌پیوسته، نه به‌صورت تمرین‌هایی جدا از هم، به‌کار ببرم. محاسبات خلاصه با استفاده از توابع شرطی و جست‌وجو روی جدول تراکنش‌ها انجام می‌شوند و نمودارها کمک می‌کنند بعضی از نتایج آسان‌تر تفسیر شوند.</p>
+      </div>
+
+      {practice.length > 0 && (
+        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule">
+          <h2 className="fa-section-title">مهارت‌ها و ابزارهای تمرین‌شده</h2>
+          <div className="mt-3 flex flex-wrap gap-2.5" dir="ltr">
+            {practice.map((item) => (
+              <span key={item} className="rounded-full border border-rule px-3 py-1.5 font-mono text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {screenshots.length > 0 && (
+        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule">
+          <h2 className="fa-section-title">تصاویر پروژه</h2>
+          <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+            {screenshots.map((shot) => {
+              const filename = shot.src.split('/').pop() ?? '';
+              const copy = screenshotCopy[filename] ?? { alt: shot.alt, caption: shot.caption };
+              return (
+                <figure key={shot.src} className="min-w-0">
+                  <a href={basePath + shot.src} target="_blank" rel="noreferrer" aria-label={'نمایش تصویر بزرگ‌تر: ' + copy.alt} className="group block overflow-hidden border border-rule bg-black/20 dark:border-dark-rule">
+                    <img src={basePath + shot.src} alt={copy.alt} className="block h-32 w-full object-cover transition-opacity group-hover:opacity-80" />
+                  </a>
+                  <figcaption className="mt-2 text-xs leading-relaxed text-ink/60 dark:text-dark-soft/65">{copy.caption}</figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {entry.download && (
+        <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">
+          <h2 className="fa-section-title">فایل اکسل پروژه</h2>
+          <p className="fa-prose mt-2">برای دیدن شیوهٔ کار مدل، فایل اصلی اکسل را باز کنید و فرمول‌ها، محاسبات و داده‌های پایهٔ تراکنش‌ها را بررسی کنید.</p>
+          <a href={basePath + entry.download.href} download className="fa-action mt-4 inline-flex">
+            دانلود فایل اکسل ←
+          </a>
+        </section>
+      )}
+    </PageFrame>
+  );
+}
+
 async function FaPage({ path }: { path: string[] }) {
   const route = path.join('/');
   if (!route) return <FaHome />;
@@ -254,6 +359,7 @@ async function FaPage({ path }: { path: string[] }) {
 
   if (path[0] === 'mba-lab' && path.length === 2 && getLabSlugs().includes(path[1])) {
     const entry = await getLabEntry(path[1]);
+    if (entry.slug === 'excel-financial-data-analysis') return <FaExcelProject entry={entry} />;
     return (
       <PageFrame
         eyebrow={faCategories[entry.category].name}
