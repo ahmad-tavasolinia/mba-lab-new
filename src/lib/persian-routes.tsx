@@ -7,6 +7,7 @@ import { categories } from '@/lib/categories';
 import { phases } from '@/lib/phases';
 import { topics } from '@/lib/topics';
 import PersianLabLibrary from '@/components/PersianLabLibrary';
+import SqlCodeBlock from '@/components/SqlCodeBlock';
 import { faCategories, faEntrySummary, faEntryTitle, faEssaySummaries, faEssayTitles, faPhases, faSourceNames, faTopics } from '@/lib/persian';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -199,6 +200,68 @@ function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
   );
 }
 
+function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
+  const phase = faPhases[entry.journeyPhase];
+  return (
+    <PageFrame
+      eyebrow={faCategories.projects.name}
+      title={entry.title}
+      intro={entry.summary}
+      headerBeforeTitle={(
+        <div className="fa-reading-tag-row">
+          <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
+          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">{phase.title}</Link>
+        </div>
+      )}
+      headerAfterIntro={(
+        <>
+          <div className="fa-meta fa-reading-meta"><time>{new Date(entry.date).toLocaleDateString('fa-IR')}</time></div>
+          <div className="fa-entry-topics fa-reading-topics" aria-label="Project topics">
+            {entry.topics.map((topic) => <Link key={topic} href={`/fa/topics/${topic}`} className="fa-entry-topic">{faTopics[topic]?.name ?? topic}</Link>)}
+          </div>
+        </>
+      )}
+    >
+      <p className="fa-original-note">متن و جزئیات این پروژه به زبان انگلیسی ارائه شده‌اند.</p>
+      <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+      <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="ltr">
+        <h2 className="fa-section-title">SQL query</h2>
+        <div className="mt-4"><SqlCodeBlock copyLabel="Copy" copiedLabel="Copied" /></div>
+      </section>
+      {(entry.practice?.length ?? 0) > 0 && (
+        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="ltr">
+          <h2 className="fa-section-title">What I practiced</h2>
+          <div className="mt-3 flex flex-wrap gap-2.5">
+            {entry.practice!.map((item) => <span key={item} className="rounded-full border border-rule px-3 py-1.5 font-mono text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">{item}</span>)}
+          </div>
+        </section>
+      )}
+      {(entry.screenshots?.length ?? 0) > 0 && (
+        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="ltr">
+          <h2 className="fa-section-title">Project screenshot</h2>
+          <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+            {entry.screenshots!.map((shot) => (
+              <figure key={shot.src} className="min-w-0">
+                <a href={basePath + shot.src} target="_blank" rel="noreferrer" aria-label={`Open ${shot.alt} at full size`} className="group block overflow-hidden border border-rule bg-black/20 dark:border-dark-rule">
+                  <img src={basePath + shot.src} alt={shot.alt} className="block h-auto w-full transition-opacity group-hover:opacity-80" />
+                </a>
+                <figcaption className="mt-2 text-xs leading-relaxed text-ink/60 dark:text-dark-soft/65">{shot.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+      {entry.download && (
+        <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="ltr">
+          <h2 className="fa-section-title">Download the query</h2>
+          <p className="fa-prose mt-2">Requires the AdventureWorks sample database to run.</p>
+          <a href={basePath + entry.download.href} download className="fa-action mt-4 inline-flex">{entry.download.label}</a>
+        </section>
+      )}
+    </PageFrame>
+  );
+}
+
 async function FaPage({ path }: { path: string[] }) {
   const route = path.join('/');
   if (!route) return <FaHome />;
@@ -360,6 +423,7 @@ async function FaPage({ path }: { path: string[] }) {
   if (path[0] === 'mba-lab' && path.length === 2 && getLabSlugs().includes(path[1])) {
     const entry = await getLabEntry(path[1]);
     if (entry.slug === 'excel-financial-data-analysis') return <FaExcelProject entry={entry} />;
+    if (entry.slug === 'sql-business-analysis-sales-performance') return <FaSqlProject entry={entry} />;
     return (
       <PageFrame
         eyebrow={faCategories[entry.category].name}

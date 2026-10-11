@@ -5,6 +5,7 @@ import { getAllLabEntries, getLabEntry, getLabSlugs, getAllSources } from '@/lib
 import { getPhase } from '@/lib/phases';
 import { Container, Eyebrow, TopicChip, CodeChip, formatDate } from '@/components/ui';
 import { createPageMetadata } from '@/lib/seo';
+import SqlCodeBlock from '@/components/SqlCodeBlock';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -80,6 +81,13 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
       <Container className="py-6 md:py-8">
         <div className="prose-lab text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
 
+        {entry.projectType === 'SQL Server' && (
+          <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-gold">SQL query</p>
+            <div className="mt-4"><SqlCodeBlock /></div>
+          </section>
+        )}
+
         {practice.length > 0 && (
           <section className="mt-6 border-t border-rule pt-4 dark:border-dark-rule">
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">
@@ -103,7 +111,7 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">
               Project
             </p>
-            <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+            <div className={`mt-4 grid gap-3 ${entry.projectType === 'SQL Server' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 md:grid-cols-4'}`}>
               {screenshots.map((shot) => (
                 <figure key={shot.src} className="min-w-0">
                   <a
@@ -116,7 +124,7 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
                     <img
                       src={`${basePath}${shot.src}`}
                       alt={shot.alt}
-                      className="block h-32 w-full object-cover transition-opacity group-hover:opacity-80"
+                      className={`block w-full transition-opacity group-hover:opacity-80 ${entry.projectType === 'SQL Server' ? 'h-auto' : 'h-32 object-cover'}`}
                     />
                   </a>
                   <figcaption className="mt-2 text-xs leading-relaxed text-ink/50 dark:text-dark-soft/65">
@@ -131,11 +139,12 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
         {entry.download && (
           <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">
-              Explore the model
+              {entry.projectType === 'SQL Server' ? 'Explore the query' : 'Explore the model'}
             </p>
             <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
-              Want to see how the model works? Open the original workbook and explore the
-              formulas, calculations, and underlying transaction data.
+              {entry.projectType === 'SQL Server'
+                ? 'Download the SQL file to inspect or run the query with the AdventureWorks sample database.'
+                : 'Want to see how the model works? Open the original workbook and explore the formulas, calculations, and underlying transaction data.'}
             </p>
             <a
               href={`${basePath}${entry.download.href}`}
