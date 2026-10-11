@@ -201,16 +201,16 @@ function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
 }
 
 function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
-  const phase = faPhases[entry.journeyPhase];
+  const phase = phases.find((item) => item.slug === entry.journeyPhase);
   return (
     <PageFrame
       eyebrow={faCategories.projects.name}
-      title={entry.title}
+      title={faEntryTitle(entry.slug, entry.title)}
       intro={entry.summary}
       headerBeforeTitle={(
         <div className="fa-reading-tag-row">
           <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
-          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">{phase.title}</Link>
+          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">{phase?.pageTitle ?? entry.journeyPhase}</Link>
         </div>
       )}
       headerAfterIntro={(
@@ -223,7 +223,7 @@ function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>
       )}
     >
       <p className="fa-original-note">متن و جزئیات این پروژه به زبان انگلیسی ارائه شده‌اند.</p>
-      <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+      <div className="prose-lab fa-sql-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
       <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="ltr">
         <h2 className="fa-section-title">SQL query</h2>
         <div className="mt-4"><SqlCodeBlock copyLabel="Copy" copiedLabel="Copied" /></div>

@@ -28,6 +28,7 @@ export const faEntryTitles: Record<string, string> = {
   'when-a-working-business-is-still-the-wrong-business': 'وقتی یک کسب‌وکارِ فعال، کسب‌وکارِ درستی نیست',
   'same-macro-economy-different-businesses': 'اقتصاد کلان یکسان، کسب‌وکارهای متفاوت',
   'excel-financial-data-analysis': 'اکسل: تحلیل داده‌های مالی',
+  'sql-business-analysis-sales-performance': 'SQL: تحلیل کسب‌وکار و عملکرد فروش',
   'ferraris-bet-against-its-own-roadmap': 'شرط فراری برخلاف نقشهٔ راه خودش',
   'formula-1-and-the-habit-of-using-what-you-already-know': 'فرمول یک و عادتِ تکیه بر دانسته‌های قبلی',
   'heinz-and-the-problem-of-accusing-the-wrong-culprit': 'هاینز و مشکل متهم‌کردنِ عامل اشتباه',

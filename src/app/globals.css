@@ -1280,8 +1280,8 @@ main {
   }
 
   .site-menu-control .site-menu-button {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-color: rgba(216, 231, 241, 0.48);
   }
 
@@ -2306,6 +2306,9 @@ html[data-theme="light"] .lab-library-more:hover {
 .fa-reading-topics { margin-top: 16px; }
 .fa-original-note { margin: 30px 0 14px; color: var(--site-accent); font-size: 14px; line-height: 2; }
 .fa-original-content { padding: 24px; border: 1px solid var(--site-rule); background: rgba(18, 35, 48, 0.28); }
+.fa-sql-content { padding: 0; border: 0; background: transparent; line-height: 1.85; }
+.fa-sql-content h2 { margin: 1.75em 0 0.5em; font-size: clamp(22px, 2.6vw, 30px); }
+.fa-sql-content p { margin: 0 0 0.9em; }
 .fa-disclaimer { margin-top: 28px; color: var(--site-muted); font-size: 12px; line-height: 2; }
 
 .sql-code-shell {
