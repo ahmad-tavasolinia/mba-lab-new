@@ -79,7 +79,7 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
       </section>
 
       <Container className="py-6 md:py-8">
-        <div className="prose-lab text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+        <div className={`prose-lab text-ink dark:text-dark-ink ${entry.slug === 'sql-business-analysis-sales-performance' ? 'sql-project-copy' : ''}`} dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
 
         {entry.projectType === 'SQL Server' && (
           <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">

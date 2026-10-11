@@ -8,6 +8,7 @@ import { createPageMetadata } from '@/lib/seo';
 const fontVariables = {
   display: 'Georgia, \"Times New Roman\", serif',
   body: 'Arial, Helvetica, sans-serif',
+  reading: '"Montserrat", "Avenir Next", "Segoe UI", Arial, sans-serif',
   mono: '\"IBM Plex Mono\", \"Courier New\", monospace',
   nav: '\"Montserrat\", \"Avenir Next\", \"Segoe UI\", Arial, sans-serif',
   persian: '\"Vazirmatn\", Tahoma, \"Segoe UI\", \"Noto Sans Arabic\", sans-serif',
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       style={{
         '--font-display': fontVariables.display,
         '--font-body': fontVariables.body,
+        '--font-reading': fontVariables.reading,
         '--font-mono': fontVariables.mono,
         '--font-nav': fontVariables.nav,
         '--font-persian': fontVariables.persian,
@@ -60,6 +62,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap"
           rel="stylesheet"

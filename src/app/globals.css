@@ -409,6 +409,38 @@ main {
   line-height: 1.85;
 }
 
+/* Reading copy on entry pages and About uses the same clean, justified type. */
+.reader-page,
+.page-about {
+  font-family: var(--font-reading), Arial, sans-serif;
+}
+
+.reader-page .font-serif,
+.reader-page .prose-lab,
+.reader-page .prose-lab h2,
+.reader-page .prose-lab h3,
+.reader-page .prose-lab h4,
+.page-about h1,
+.page-about .prose-lab {
+  font-family: var(--font-reading), Arial, sans-serif;
+}
+
+.reader-page .prose-lab,
+.reader-page .prose-lab p,
+.reader-page .prose-lab li,
+.reader-page .prose-lab blockquote,
+.reader-page aside p,
+.reader-page aside li,
+.page-about .prose-lab,
+.page-about .prose-lab p,
+.page-about .prose-lab li,
+.page-about aside li {
+  text-align: justify;
+}
+
+.reader-page .sql-project-copy h2 { margin: 1.45em 0 0.45em; }
+.reader-page .sql-project-copy p { margin-bottom: 0.75em; }
+
 .site-shell main p.font-serif {
   font-family: var(--font-body), Arial, sans-serif;
 }
@@ -2260,6 +2292,22 @@ html[data-theme="light"] .lab-library-more:hover {
   line-height: 2.2;
 }
 
+.fa-site .fa-about-layout .fa-prose,
+.fa-site .fa-about-layout .fa-prose p,
+.fa-site .fa-page-body > .fa-prose,
+.fa-site .fa-page-body > .fa-prose p,
+.fa-site .fa-page-body > .fa-prose li,
+.fa-site .fa-original-content,
+.fa-site .fa-original-content p,
+.fa-site .fa-original-content li {
+  text-align: justify;
+}
+
+.fa-site .fa-original-content[lang="en"],
+.fa-site .fa-sql-content {
+  font-family: var(--font-reading), Arial, sans-serif;
+}
+
 .fa-prose p { margin: 0 0 22px; }
 .fa-prose h3 { margin: 28px 0 6px; color: var(--site-text); font-size: 20px; }
 .fa-prose .fa-lead,
@@ -2308,8 +2356,8 @@ html[data-theme="light"] .lab-library-more:hover {
 .fa-original-note { margin: 30px 0 14px; color: var(--site-accent); font-size: 14px; line-height: 2; }
 .fa-original-content { padding: 24px; border: 1px solid var(--site-rule); background: rgba(18, 35, 48, 0.28); }
 .fa-sql-content { padding: 0; border: 0; background: transparent; line-height: 1.85; }
-.fa-sql-content h2 { margin: 1.75em 0 0.5em; font-size: clamp(22px, 2.6vw, 30px); }
-.fa-sql-content p { margin: 0 0 0.9em; }
+.fa-sql-content h2 { margin: 1.25em 0 0.4em; font-size: clamp(22px, 2.6vw, 30px); }
+.fa-sql-content p { margin: 0 0 0.55em; }
 .fa-disclaimer { margin-top: 28px; color: var(--site-muted); font-size: 12px; line-height: 2; }
 
 .sql-code-shell {
