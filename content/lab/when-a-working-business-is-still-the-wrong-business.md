@@ -64,7 +64,7 @@ In retrospect, he would not necessarily choose himself as CEO.
 
 That is an important realization. Starting a company does not mean every founder has to become a general manager.
 
-## What AI changes—and what it doesn't
+## What AI changes and what it doesn't
 
 And AI may change this equation further.
 
