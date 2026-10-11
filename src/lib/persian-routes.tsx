@@ -202,6 +202,7 @@ function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
 
 function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
   const phase = phases.find((item) => item.slug === entry.journeyPhase);
+  const [sqlIntroHtml, sqlFindingsHtml = ''] = entry.contentHtml.split(/<p>SQL_QUERY_INSERTION_POINT<\/p>\s*/);
   return (
     <PageFrame
       eyebrow={faCategories.projects.name}
@@ -223,11 +224,12 @@ function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>
       )}
     >
       <p className="fa-original-note">متن و جزئیات این پروژه به زبان انگلیسی ارائه شده‌اند.</p>
-      <div className="prose-lab fa-sql-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
-      <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="ltr">
+      <div className="prose-lab fa-sql-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: sqlIntroHtml }} />
+      <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule" dir="ltr">
         <h2 className="fa-section-title">SQL query</h2>
-        <div className="mt-4"><SqlCodeBlock copyLabel="Copy" copiedLabel="Copied" /></div>
+        <div className="mt-3"><SqlCodeBlock copyLabel="Copy" copiedLabel="Copied" /></div>
       </section>
+      {sqlFindingsHtml && <div className="prose-lab fa-sql-content mt-4" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />}
       {(entry.practice?.length ?? 0) > 0 && (
         <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="ltr">
           <h2 className="fa-section-title">What I practiced</h2>
@@ -253,8 +255,7 @@ function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>
       )}
       {entry.download && (
         <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="ltr">
-          <h2 className="fa-section-title">Download the query</h2>
-          <p className="fa-prose mt-2">Requires the AdventureWorks sample database to run.</p>
+          <h2 className="fa-section-title">Download SQL query</h2>
           <a href={basePath + entry.download.href} download className="fa-action mt-4 inline-flex">{entry.download.label}</a>
         </section>
       )}

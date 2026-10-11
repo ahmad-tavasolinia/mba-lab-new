@@ -40,6 +40,8 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
   });
   const practice = entry.practice ?? [];
   const journeyPhase = getPhase(entry.journeyPhase);
+  const [sqlIntroHtml, sqlFindingsHtml = ''] = entry.contentHtml.split(/<p>SQL_QUERY_INSERTION_POINT<\/p>\s*/);
+  const isSqlProject = entry.slug === 'sql-business-analysis-sales-performance';
 
   return (
     <article className="reader-page">
@@ -79,13 +81,17 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
       </section>
 
       <Container className="py-6 md:py-8">
-        <div className={`prose-lab text-ink dark:text-dark-ink ${entry.slug === 'sql-business-analysis-sales-performance' ? 'sql-project-copy' : ''}`} dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+        <div className={`prose-lab text-ink dark:text-dark-ink ${isSqlProject ? 'sql-project-copy' : ''}`} dangerouslySetInnerHTML={{ __html: isSqlProject ? sqlIntroHtml : entry.contentHtml }} />
 
-        {entry.projectType === 'SQL Server' && (
-          <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">
+        {isSqlProject && (
+          <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule">
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">SQL query</p>
-            <div className="mt-4"><SqlCodeBlock /></div>
+            <div className="mt-3"><SqlCodeBlock /></div>
           </section>
+        )}
+
+        {isSqlProject && sqlFindingsHtml && (
+          <div className="prose-lab sql-project-copy mt-4 text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />
         )}
 
         {practice.length > 0 && (
@@ -139,13 +145,9 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
         {entry.download && (
           <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">
-              {entry.projectType === 'SQL Server' ? 'Explore the query' : 'Explore the model'}
+              {entry.projectType === 'SQL Server' ? 'Download SQL query' : 'Explore the model'}
             </p>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
-              {entry.projectType === 'SQL Server'
-                ? 'Download the SQL file to inspect or run the query with the AdventureWorks sample database.'
-                : 'Want to see how the model works? Open the original workbook and explore the formulas, calculations, and underlying transaction data.'}
-            </p>
+            {entry.projectType !== 'SQL Server' && <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">Want to see how the model works? Open the original workbook and explore the formulas, calculations, and underlying transaction data.</p>}
             <a
               href={`${basePath}${entry.download.href}`}
               download
