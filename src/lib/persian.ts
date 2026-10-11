@@ -1,11 +1,15 @@
-import type { CategorySlug, PhaseSlug, TopicSlug } from './types';
+import type { CategorySlug, PhaseSlug } from './types';
 
-export const faTopics: Record<TopicSlug, { name: string; description: string }> = {
+export const faTopics: Record<string, { name: string; description: string }> = {
   strategy: { name: 'استراتژی', description: 'مزیت رقابتی چگونه ساخته، حفظ و از دست می‌رود؛ و این مسیر دربارهٔ ماهیت رقابت چه می‌گوید.' },
   finance: { name: 'مالی', description: 'سازوکار و روان‌شناسی سرمایه: قیمت‌گذاری، تخصیص و برداشت‌های نادرست از آن.' },
   marketing: { name: 'بازاریابی', description: 'ارزش چگونه به مشتری معرفی می‌شود، جایگاه می‌گیرد و در ذهن او خواستنی می‌شود.' },
   entrepreneurship: { name: 'کارآفرینی', description: 'ساختن در دل عدم‌قطعیت؛ از دیدن و آزمودن فرصت تا تبدیل آن به یک سازمان.' },
   'artificial-intelligence': { name: 'هوش مصنوعی', description: 'هوش مصنوعی چگونه هزینهٔ ساختن را تغییر می‌دهد و معنای تخصص و مزیت رقابتی را دگرگون می‌کند.' },
+  'business-philosophy': { name: 'اندیشهٔ کسب‌وکار', description: 'پرسش‌هایی دربارهٔ معنا، هدف و تصمیم‌گیری در کسب‌وکار.' },
+  leadership: { name: 'رهبری', description: 'تصمیم‌گیری، مسئولیت‌پذیری و هدایت افراد و سازمان‌ها.' },
+  economics: { name: 'اقتصاد', description: 'سازوکارهای اقتصادی و پیامد آن‌ها برای کسب‌وکار.' },
+  innovation: { name: 'نوآوری', description: 'ایده‌ها و روش‌هایی که به محصولات و کسب‌وکارهای تازه تبدیل می‌شوند.' },
 };
 
 export const faCategories: Record<CategorySlug, { name: string; description: string }> = {
@@ -23,6 +27,7 @@ export const faPhases: Record<PhaseSlug, { name: string; title: string; descript
 
 export const faEntryTitles: Record<string, string> = {
   'bud-light-and-the-backlash-that-came-from-the-wrong-direction': 'بود لایت و واکنشی که از مسیر دیگری آمد',
+  'mud-bay-and-the-hour-that-wasnt-actually-dead': 'ماد بِی و ساعتی که واقعاً مرده نبود',
   'burger-king-and-the-habit-they-were-actually-selling': 'برگر کینگ و عادتی که واقعاً می‌فروخت',
   'espn-and-the-question-underneath-the-question': 'ESPN و پرسشی که زیرِ پرسش اصلی پنهان بود',
   'when-a-working-business-is-still-the-wrong-business': 'وقتی یک کسب‌وکارِ فعال، کسب‌وکارِ درستی نیست',
@@ -49,11 +54,13 @@ export const faEntryTitles: Record<string, string> = {
 
 export const faEntrySummaries: Record<string, string> = {
   'bud-light-and-the-backlash-that-came-from-the-wrong-direction': 'بررسی کارزار بود لایت در سال ۲۰۲۳ و تفاوت میان درست‌بودن پیش‌بینی و درست‌بودنِ دلیل آن.',
+  'mud-bay-and-the-hour-that-wasnt-actually-dead': 'بررسی پیشنهاد تعطیلی زودتر فروشگاه‌ها، محاسبهٔ صرفه‌جویی و ارزشی که دسترسی مشتریان دارد.',
   'burger-king-and-the-habit-they-were-actually-selling': 'بررسی کمپین Whopper Detour و سازوکاری که زیرِ یک حرکت وایرال پنهان بود.',
   'espn-and-the-question-underneath-the-question': 'بررسی چرخش ESPN به سمت پخش آنلاین و قیاسی که با پرسش‌گری دوام نیاورد.',
   'when-a-working-business-is-still-the-wrong-business': 'گفت‌وگو با محمدحسین نداف، بنیان‌گذار نیمرو، دربارهٔ تقاضای اولیه، ساختار بازار، تناسب بنیان‌گذار و انتخاب کسب‌وکاری که ارزش ساختن دارد.',
   'same-macro-economy-different-businesses': 'درس‌هایی از گفت‌وگو با بنیان‌گذار یواسپیس دربارهٔ تمرکز، فروش زودهنگام، بازارهای دوسویه، اقتصاد کلان و ساخت کسب‌وکار در شرایط عدم‌قطعیت.',
   'excel-financial-data-analysis': 'ساخت مدلی مالی در سطح تراکنش برای بررسی الگوی هزینه، جریان نقد و عملکرد مالی.',
+  'sql-business-analysis-sales-performance': 'تحلیل فروش آنلاین و حضوری با SQL Server و داده‌های AdventureWorks در بازهٔ ۲۰۱۱ تا ۲۰۱۴.',
   'ferraris-bet-against-its-own-roadmap': 'بررسی راهبرد خودروهای برقی فراری و نتیجه‌ای واقعی که از انتظار نزدیک‌تر بود.',
   'formula-1-and-the-habit-of-using-what-you-already-know': 'تمرین مصاحبهٔ موردی دربارهٔ رشد فرمول یک و حفظ شواهد محکم تا پاسخ نهایی.',
   'heinz-and-the-problem-with-accusing-the-wrong-culprit': 'بررسی کارزار «تقلب در کچاپ» هاینز و عددی که پیدا شد اما برای استدلال کافی نبود.',

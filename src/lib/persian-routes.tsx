@@ -207,16 +207,6 @@ async function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLab
   const phase = phases.find((item) => item.slug === entry.journeyPhase);
   const translatedContent = await getPersianLabContent(entry.slug);
   const [sqlIntroHtml, sqlFindingsHtml = ''] = (translatedContent ?? entry.contentHtml).split(/<p>SQL_QUERY_INSERTION_POINT<\/p>\s*/);
-  const practiceTranslations: Record<string, string> = {
-    'SQL Server and T-SQL': 'SQL Server و T-SQL',
-    'Aggregate functions: SUM and COUNT': 'توابع تجمیعی: SUM و COUNT',
-    'Conditional aggregation with CASE WHEN': 'تجمیع شرطی با CASE WHEN',
-    'Grouping and sorting with GROUP BY and ORDER BY': 'گروه‌بندی و مرتب‌سازی با GROUP BY و ORDER BY',
-    'Extracting years from dates with YEAR()': 'استخراج سال از تاریخ با YEAR()',
-    'Calculating average order value and revenue ratios': 'محاسبهٔ میانگین ارزش سفارش و نسبت‌های درآمدی',
-    'Comparing online and offline sales performance': 'مقایسهٔ عملکرد فروش آنلاین و حضوری',
-    'Interpreting query results in a business context': 'تفسیر نتایج پرس‌وجو در زمینهٔ کسب‌وکار',
-  };
   return (
     <PageFrame
       eyebrow={faCategories.projects.name}
@@ -244,14 +234,6 @@ async function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLab
         <div className="mt-3" dir="ltr"><SqlCodeBlock copyLabel="کپی" copiedLabel="کپی شد" /></div>
       </section>
       {sqlFindingsHtml && <div className="prose-lab fa-original-content mt-4" dir={translatedContent ? 'rtl' : 'ltr'} lang={translatedContent ? 'fa' : 'en'} dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />}
-      {(entry.practice?.length ?? 0) > 0 && (
-        <section className="fa-sql-project-practice mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="rtl">
-          <h2 className="fa-section-title">مهارت‌ها و ابزارهای تمرین‌شده</h2>
-          <div className="mt-3 flex flex-wrap gap-2.5">
-            {entry.practice!.map((item) => <span key={item} dir="auto" className="rounded-full border border-rule px-3 py-1.5 text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">{practiceTranslations[item] ?? item}</span>)}
-          </div>
-        </section>
-      )}
       {(entry.screenshots?.length ?? 0) > 0 && (
         <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="rtl">
           <h2 className="fa-section-title">تصویر پروژه</h2>
