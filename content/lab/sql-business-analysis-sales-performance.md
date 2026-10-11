@@ -1,5 +1,5 @@
 ---
-title: "SQL: Business Analysis: Sales Performance"
+title: "SQL: Business Analysis (Sales Performance)"
 date: "2026-10-11"
 code: "MBA·LAB·22"
 journeyPhase: "phase-1"
