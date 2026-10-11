@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import { getAllEssays, getAllLabEntries, getAllSources, getEssay, getEssaySlugs, getLabEntry, getLabSlugs, getSource, getSourceSlugs } from '@/lib/content';
+import { getAllEssays, getAllLabEntries, getAllSources, getEssay, getEssaySlugs, getLabEntry, getLabSlugs, getPersianEssayContent, getPersianLabContent, getSource, getSourceSlugs } from '@/lib/content';
 import { categories } from '@/lib/categories';
 import { phases } from '@/lib/phases';
 import { topics } from '@/lib/topics';
@@ -12,6 +12,9 @@ import { faCategories, faEntrySummary, faEntryTitle, faEssaySummaries, faEssayTi
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 const persianLabRouteSlug = (slug: string) => slug.toLowerCase().replace(/'/g, '');
+const faReadingTime = (value: string) => value
+  .replace(/(\d+)\s*min(?:ute)?s?\s*read/i, (_, minutes: string) => `${Number(minutes).toLocaleString('fa-IR')} دقیقه مطالعه`)
+  .replace(/(\d+)\s*(?:hr|hour)s?\s*read/i, (_, hours: string) => `${Number(hours).toLocaleString('fa-IR')} ساعت مطالعه`);
 
 export function getPersianMetadata(path: string[]): Metadata {
   return { title: path.length ? 'کارگاه مدیریت کسب‌وکار' : 'کارگاه مدیریت کسب‌وکار، احمد توسلی‌نیا', description: 'یادگیری، پژوهش و ساختن در کسب‌وکار؛ به روایت احمد توسلی‌نیا.' };
@@ -30,7 +33,7 @@ function FaEntryLink({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>>
 function FaEssayLink({ essay }: { essay: Awaited<ReturnType<typeof getEssay>> }) {
   return (
     <Link href={`/fa/essays/${essay.slug}`} className="fa-entry-card">
-      <span className="fa-meta">{new Date(essay.date).toLocaleDateString('fa-IR')} <bdi dir="ltr">· {essay.readingTime}</bdi></span>
+      <span className="fa-meta">{new Date(essay.date).toLocaleDateString('fa-IR')} <bdi>· {faReadingTime(essay.readingTime)}</bdi></span>
       <h3>{faEssayTitles[essay.slug] ?? essay.title}</h3>
       <p>{faEssaySummaries[essay.slug] ?? essay.summary}</p>
     </Link>
@@ -200,18 +203,29 @@ function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
   );
 }
 
-function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
+async function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>> }) {
   const phase = phases.find((item) => item.slug === entry.journeyPhase);
-  const [sqlIntroHtml, sqlFindingsHtml = ''] = entry.contentHtml.split(/<p>SQL_QUERY_INSERTION_POINT<\/p>\s*/);
+  const translatedContent = await getPersianLabContent(entry.slug);
+  const [sqlIntroHtml, sqlFindingsHtml = ''] = (translatedContent ?? entry.contentHtml).split(/<p>SQL_QUERY_INSERTION_POINT<\/p>\s*/);
+  const practiceTranslations: Record<string, string> = {
+    'SQL Server and T-SQL': 'SQL Server و T-SQL',
+    'Aggregate functions: SUM and COUNT': 'توابع تجمیعی: SUM و COUNT',
+    'Conditional aggregation with CASE WHEN': 'تجمیع شرطی با CASE WHEN',
+    'Grouping and sorting with GROUP BY and ORDER BY': 'گروه‌بندی و مرتب‌سازی با GROUP BY و ORDER BY',
+    'Extracting years from dates with YEAR()': 'استخراج سال از تاریخ با YEAR()',
+    'Calculating average order value and revenue ratios': 'محاسبهٔ میانگین ارزش سفارش و نسبت‌های درآمدی',
+    'Comparing online and offline sales performance': 'مقایسهٔ عملکرد فروش آنلاین و حضوری',
+    'Interpreting query results in a business context': 'تفسیر نتایج پرس‌وجو در زمینهٔ کسب‌وکار',
+  };
   return (
     <PageFrame
       eyebrow={faCategories.projects.name}
       title={faEntryTitle(entry.slug, entry.title)}
-      intro={entry.summary}
+      intro={faEntrySummary(entry.slug, entry.summary)}
       headerBeforeTitle={(
         <div className="fa-reading-tag-row">
           <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
-          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">{phase?.pageTitle ?? entry.journeyPhase}</Link>
+          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">{faPhases[entry.journeyPhase].title}</Link>
         </div>
       )}
       headerAfterIntro={(
@@ -223,40 +237,40 @@ function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntry>
         </>
       )}
     >
-      <p className="fa-original-note">متن و جزئیات این پروژه به زبان انگلیسی ارائه شده‌اند.</p>
-      <div className="prose-lab fa-sql-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: sqlIntroHtml }} />
-      <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule" dir="ltr">
-        <h2 className="fa-section-title">SQL query</h2>
-        <div className="mt-3"><SqlCodeBlock copyLabel="Copy" copiedLabel="Copied" /></div>
+      <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+      <div className="prose-lab fa-original-content" dir={translatedContent ? 'rtl' : 'ltr'} lang={translatedContent ? 'fa' : 'en'} dangerouslySetInnerHTML={{ __html: sqlIntroHtml }} />
+      <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule" dir="rtl">
+        <h2 className="fa-section-title">پرس‌وجوی SQL</h2>
+        <div className="mt-3" dir="ltr"><SqlCodeBlock copyLabel="کپی" copiedLabel="کپی شد" /></div>
       </section>
-      {sqlFindingsHtml && <div className="prose-lab fa-sql-content mt-4" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />}
+      {sqlFindingsHtml && <div className="prose-lab fa-original-content mt-4" dir={translatedContent ? 'rtl' : 'ltr'} lang={translatedContent ? 'fa' : 'en'} dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />}
       {(entry.practice?.length ?? 0) > 0 && (
-        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="ltr">
-          <h2 className="fa-section-title">What I practiced</h2>
+        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="rtl">
+          <h2 className="fa-section-title">مهارت‌ها و ابزارهای تمرین‌شده</h2>
           <div className="mt-3 flex flex-wrap gap-2.5">
-            {entry.practice!.map((item) => <span key={item} className="rounded-full border border-rule px-3 py-1.5 font-mono text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">{item}</span>)}
+            {entry.practice!.map((item) => <span key={item} dir="auto" className="rounded-full border border-rule px-3 py-1.5 font-mono text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">{practiceTranslations[item] ?? item}</span>)}
           </div>
         </section>
       )}
       {(entry.screenshots?.length ?? 0) > 0 && (
-        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="ltr">
-          <h2 className="fa-section-title">Project screenshot</h2>
+        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="rtl">
+          <h2 className="fa-section-title">تصویر پروژه</h2>
           <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
             {entry.screenshots!.map((shot) => (
               <figure key={shot.src} className="min-w-0">
-                <a href={basePath + shot.src} target="_blank" rel="noreferrer" aria-label={`Open ${shot.alt} at full size`} className="group block overflow-hidden border border-rule bg-black/20 dark:border-dark-rule">
-                  <img src={basePath + shot.src} alt={shot.alt} className="block h-auto w-full transition-opacity group-hover:opacity-80" />
+                <a href={basePath + shot.src} target="_blank" rel="noreferrer" aria-label="نمایش تصویر در اندازهٔ کامل" className="group block overflow-hidden border border-rule bg-black/20 dark:border-dark-rule">
+                  <img src={basePath + shot.src} alt="پرس‌وجوی SQL و نتایج سالانهٔ فروش از ۲۰۱۱ تا ۲۰۱۴" className="block h-auto w-full transition-opacity group-hover:opacity-80" />
                 </a>
-                <figcaption className="mt-2 text-xs leading-relaxed text-ink/60 dark:text-dark-soft/65">{shot.caption}</figcaption>
+                <figcaption className="mt-2 text-xs leading-relaxed text-ink/60 dark:text-dark-soft/65">نتایج سالانهٔ فروش در پایگاه نمونهٔ AdventureWorks به تفکیک سفارش‌های آنلاین و حضوری.</figcaption>
               </figure>
             ))}
           </div>
         </section>
       )}
       {entry.download && (
-        <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="ltr">
-          <h2 className="fa-section-title">Download SQL query</h2>
-          <a href={basePath + entry.download.href} download className="fa-action mt-4 inline-flex">{entry.download.label}</a>
+        <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule" dir="rtl">
+          <h2 className="fa-section-title">دریافت فایل پرس‌وجوی SQL</h2>
+          <a href={basePath + entry.download.href} download className="fa-action mt-4 inline-flex">دانلود فایل SQL ←</a>
         </section>
       )}
     </PageFrame>
@@ -268,7 +282,8 @@ async function FaPage({ path }: { path: string[] }) {
   if (!route) return <FaHome />;
 
   const allEntries = await getAllLabEntries();
-  const entries = allEntries.filter((entry) => !entry.slug.toLowerCase().includes('mud-bay-and-the-hour-that-was'));
+  // Keep the current Mud Bay case in Persian; omit only the duplicate legacy file.
+  const entries = allEntries.filter((entry) => entry.slug !== "Mud-Bay-and-the-Hour-That-Wasn't-Actually-Dead");
   if (route === 'topics') return <FaTopicIndex entries={entries} />;
   if (route === 'mba-lab') return <PageFrame hero="lab" eyebrow="دفتر کارگاه" title="کارگاه مدیریت کسب و کار" intro="فضایی برای اندیشیدن به مسئله‌های کسب‌وکار، آزمودن ایده‌ها، ساختن پروژه‌ها و آموختن از کسانی که تجربهٔ ساختن دارند."><div className="fa-card-grid">{categories.map((category) => { const count = entries.filter((e) => e.category === category.slug).length; return <Link key={category.slug} href={`/fa/mba-lab/category/${category.slug}`} className="fa-topic-card"><span className="fa-meta">{category.code} · {count.toLocaleString('fa-IR')} یادداشت</span><h2>{faCategories[category.slug].name}</h2><p>{faCategories[category.slug].description}</p></Link>; })}</div></PageFrame>;
 
@@ -408,7 +423,7 @@ async function FaPage({ path }: { path: string[] }) {
       date: new Date(entry.date).toLocaleDateString('fa-IR'),
       title: faEntryTitle(entry.slug, entry.title),
       summary: faEntrySummary(entry.slug, entry.summary),
-      searchText: `${entry.title} ${entry.summary} ${entry.centralQuestion}`,
+      searchText: `${faEntryTitle(entry.slug, entry.title)} ${faEntrySummary(entry.slug, entry.summary)} ${entry.topics.map((slug) => faTopics[slug]?.name ?? slug).join(' ')}`,
       topics: entry.topics.map((slug) => ({ slug, name: faTopics[slug]?.name ?? slug })),
     }));
     return <PageFrame eyebrow="کارگاه مدیریت کسب‌وکار" title={faCategories[category.slug].name} intro={faCategories[category.slug].description}><PersianLabLibrary items={libraryItems} topicOptions={topicOptions} /></PageFrame>;
@@ -424,7 +439,8 @@ async function FaPage({ path }: { path: string[] }) {
   if (path[0] === 'mba-lab' && path.length === 2 && getLabSlugs().includes(path[1])) {
     const entry = await getLabEntry(path[1]);
     if (entry.slug === 'excel-financial-data-analysis') return <FaExcelProject entry={entry} />;
-    if (entry.slug === 'sql-business-analysis-sales-performance') return <FaSqlProject entry={entry} />;
+    if (entry.slug === 'sql-business-analysis-sales-performance') return await FaSqlProject({ entry });
+    const persianContent = await getPersianLabContent(entry.slug);
     return (
       <PageFrame
         eyebrow={faCategories[entry.category].name}
@@ -442,7 +458,7 @@ async function FaPage({ path }: { path: string[] }) {
           <>
             <div className="fa-meta fa-reading-meta">
               <time>{new Date(entry.date).toLocaleDateString('fa-IR')}</time>
-              <bdi dir="ltr">{entry.readingTime}</bdi>
+              <bdi>{faReadingTime(entry.readingTime)}</bdi>
             </div>
             <div className="fa-entry-topics fa-reading-topics" aria-label="موضوع‌ها">
               {entry.topics.map((topic) => (
@@ -454,14 +470,24 @@ async function FaPage({ path }: { path: string[] }) {
           </>
         )}
       >
-        <p className="fa-original-note">{entry.category === 'interviews' ? 'نسخهٔ فارسی این گفت‌وگو هنوز آماده نیست؛ فعلاً متن انگلیسی در دسترس است.' : 'متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.'}</p>
-        <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+        {persianContent ? (
+          <>
+            <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+            <div className="prose-lab fa-original-content" dir="rtl" lang="fa" dangerouslySetInnerHTML={{ __html: persianContent }} />
+          </>
+        ) : (
+          <>
+            <p className="fa-original-note">{entry.category === 'interviews' ? 'نسخهٔ فارسی این گفت‌وگو هنوز آماده نیست؛ فعلاً متن انگلیسی در دسترس است.' : 'متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.'}</p>
+            <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+          </>
+        )}
       </PageFrame>
     );
   }
 
   if (path[0] === 'essays' && path.length === 2 && getEssaySlugs().includes(path[1])) {
     const essay = await getEssay(path[1]);
+    const persianContent = await getPersianEssayContent(essay.slug);
     return (
       <PageFrame
         eyebrow="جستار"
@@ -471,7 +497,7 @@ async function FaPage({ path }: { path: string[] }) {
           <>
             <div className="fa-meta fa-reading-meta">
               <time>{new Date(essay.date).toLocaleDateString('fa-IR')}</time>
-              <bdi dir="ltr">{essay.readingTime}</bdi>
+              <bdi>{faReadingTime(essay.readingTime)}</bdi>
             </div>
             <div className="fa-entry-topics fa-reading-topics" aria-label="موضوع‌ها">
               {essay.topics.map((topic) => (
@@ -483,8 +509,17 @@ async function FaPage({ path }: { path: string[] }) {
           </>
         )}
       >
-        <p className="fa-original-note">متن کامل این جستار فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p>
-        <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: essay.contentHtml }} />
+        {persianContent ? (
+          <>
+            <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+            <div className="prose-lab fa-original-content" dir="rtl" lang="fa" dangerouslySetInnerHTML={{ __html: persianContent }} />
+          </>
+        ) : (
+          <>
+            <p className="fa-original-note">متن کامل این جستار فعلاً به زبان اصلی، انگلیسی، در دسترس است.</p>
+            <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: essay.contentHtml }} />
+          </>
+        )}
       </PageFrame>
     );
   }

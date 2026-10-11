@@ -17,6 +17,8 @@ const CONTENT_DIR = path.join(process.cwd(), 'content');
 const LAB_DIR = path.join(CONTENT_DIR, 'lab');
 const ESSAYS_DIR = path.join(CONTENT_DIR, 'essays');
 const SOURCES_DIR = path.join(CONTENT_DIR, 'sources');
+const FA_LAB_DIR = path.join(CONTENT_DIR, 'fa', 'lab');
+const FA_ESSAYS_DIR = path.join(CONTENT_DIR, 'fa', 'essays');
 
 function slugsIn(dir: string): string[] {
   if (!fs.existsSync(dir)) return [];
@@ -29,6 +31,20 @@ function slugsIn(dir: string): string[] {
 async function toHtml(markdown: string): Promise<string> {
   const result = await remark().use(remarkHtml).process(markdown);
   return result.toString();
+}
+
+async function getTranslatedHtml(dir: string, slug: string): Promise<string | undefined> {
+  const fullPath = path.join(dir, `${slug}.md`);
+  if (!fs.existsSync(fullPath)) return undefined;
+  return toHtml(fs.readFileSync(fullPath, 'utf8'));
+}
+
+export function getPersianLabContent(slug: string): Promise<string | undefined> {
+  return getTranslatedHtml(FA_LAB_DIR, slug);
+}
+
+export function getPersianEssayContent(slug: string): Promise<string | undefined> {
+  return getTranslatedHtml(FA_ESSAYS_DIR, slug);
 }
 
 export function getLabSlugs(): string[] {
