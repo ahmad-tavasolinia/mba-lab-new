@@ -610,8 +610,8 @@ main {
 }
 
 .home-copy-english .home-cta::before {
-  opacity: 0;
-  animation: home-rule-appear 700ms ease-out 650ms both;
+  opacity: 1;
+  animation: home-rule-reveal 1050ms cubic-bezier(0.45, 0, 0.55, 1) 650ms both;
 }
 
 .home-copy-english .home-cta::after {
@@ -630,9 +630,9 @@ main {
   to { opacity: 1; filter: blur(0); transform: translateY(0); }
 }
 
-@keyframes home-rule-appear {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes home-rule-reveal {
+  from { clip-path: inset(0 0 0 100%); }
+  to { clip-path: inset(0 0 0 0); }
 }
 
 @keyframes home-glow-travel {
