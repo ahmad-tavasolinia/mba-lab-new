@@ -36,9 +36,7 @@ download:
   href: "/projects/sql-business-analysis-sales-performance/Annual_Sales_Analysis.sql"
 ---
 
-I used SQL Server to explore sales data from the AdventureWorks sample database, comparing online and offline sales between 2011 and 2014.
-
-I wanted to answer a simple question: how did sales performance change between 2011 and 2014, and how did online and offline sales compare?
+I used SQL Server to explore sales data from the AdventureWorks sample database, comparing online and offline sales between 2011 and 2014. I wanted to answer a simple question: how did sales performance change between 2011 and 2014, and how did online and offline sales compare?
 
 ## What I Found
 
@@ -64,14 +62,3 @@ The sharp revenue decline in 2014 also raises a question worth investigating: di
 
 This project gave me an opportunity to practice SQL in a business context, identify patterns in transactional data, and turn those patterns into questions for further analysis.
 
-## Project
-
-**SQL query and annual sales results**
-
-The SQL query uses the `Sales.SalesOrderHeader` table to calculate annual order counts, revenue, average order value, and freight costs, with separate metrics for online and offline orders.
-
-## Explore the analysis
-
-Explore the SQL query and its results to see how transaction-level data can be grouped into annual metrics and used to identify sales patterns and differences between channels.
-
-The query requires the AdventureWorks sample database to run.
