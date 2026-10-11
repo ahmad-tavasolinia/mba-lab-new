@@ -245,10 +245,10 @@ async function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLab
       </section>
       {sqlFindingsHtml && <div className="prose-lab fa-original-content mt-4" dir={translatedContent ? 'rtl' : 'ltr'} lang={translatedContent ? 'fa' : 'en'} dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />}
       {(entry.practice?.length ?? 0) > 0 && (
-        <section className="mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="rtl">
+        <section className="fa-sql-project-practice mt-8 border-t border-rule pt-5 dark:border-dark-rule" dir="rtl">
           <h2 className="fa-section-title">مهارت‌ها و ابزارهای تمرین‌شده</h2>
           <div className="mt-3 flex flex-wrap gap-2.5">
-            {entry.practice!.map((item) => <span key={item} dir="auto" className="rounded-full border border-rule px-3 py-1.5 font-mono text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">{practiceTranslations[item] ?? item}</span>)}
+            {entry.practice!.map((item) => <span key={item} dir="auto" className="rounded-full border border-rule px-3 py-1.5 text-[12px] text-ink/65 dark:border-dark-rule dark:text-dark-soft">{practiceTranslations[item] ?? item}</span>)}
           </div>
         </section>
       )}

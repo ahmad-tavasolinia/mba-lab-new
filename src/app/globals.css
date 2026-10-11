@@ -2308,6 +2308,20 @@ html[data-theme="light"] .lab-library-more:hover {
   font-family: var(--font-reading), Arial, sans-serif;
 }
 
+.fa-site .fa-original-content[lang="fa"],
+.fa-site .fa-original-content[lang="fa"] * {
+  font-family: var(--font-persian), Tahoma, sans-serif;
+}
+
+.fa-site .fa-original-content[lang="fa"] code,
+.fa-site .fa-original-content[lang="fa"] pre {
+  font-family: var(--font-mono), "Courier New", monospace;
+}
+
+.fa-site .fa-sql-project-practice span {
+  font-family: var(--font-persian), Tahoma, sans-serif;
+}
+
 .fa-prose p { margin: 0 0 22px; }
 .fa-prose h3 { margin: 28px 0 6px; color: var(--site-text); font-size: 20px; }
 .fa-prose .fa-lead,
