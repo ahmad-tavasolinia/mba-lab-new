@@ -151,7 +151,7 @@ function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
         </>
       )}
     >
-      <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+      <p className="fa-original-note fa-translation-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
       <div className="fa-prose">
         <p>این پروژه را به‌صورت یک مدل مالی ساده و در سطح تراکنش در اکسل ساختم. فایل کار با یک جدول ساختاریافته از تراکنش‌ها را آغاز می‌کند و آن را به خلاصه‌ای مالی تبدیل می‌کند که درآمد، هزینه‌ها، ماندهٔ خالص، هزینه بر اساس دسته‌بندی، تعداد تراکنش‌ها، میانگین هزینه و بزرگ‌ترین هزینه را نشان می‌دهد. هدفم تمرین تبدیل داده‌های خام مالی به محاسبات و سپس رسیدن به تصویری روشن‌تر از عملکرد مالی بود.</p>
         <p>این پروژه فرصتی بود تا فرمول‌های اکسل را در یک مدل واقعی و به‌هم‌پیوسته، نه به‌صورت تمرین‌هایی جدا از هم، به‌کار ببرم. محاسبات خلاصه با استفاده از توابع شرطی و جست‌وجو روی جدول تراکنش‌ها انجام می‌شوند و نمودارها کمک می‌کنند بعضی از نتایج آسان‌تر تفسیر شوند.</p>
@@ -237,7 +237,7 @@ async function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLab
         </>
       )}
     >
-      <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+      <p className="fa-original-note fa-translation-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
       <div className="prose-lab fa-original-content" dir={translatedContent ? 'rtl' : 'ltr'} lang={translatedContent ? 'fa' : 'en'} dangerouslySetInnerHTML={{ __html: sqlIntroHtml }} />
       <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule" dir="rtl">
         <h2 className="fa-section-title">پرس‌وجوی SQL</h2>
@@ -476,7 +476,7 @@ async function FaPage({ path }: { path: string[] }) {
       >
         {persianContent ? (
           <>
-            <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+            <p className="fa-original-note fa-translation-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
             <div className="prose-lab fa-original-content" dir="rtl" lang="fa" dangerouslySetInnerHTML={{ __html: persianContent }} />
           </>
         ) : (
@@ -515,7 +515,7 @@ async function FaPage({ path }: { path: string[] }) {
       >
         {persianContent ? (
           <>
-            <p className="fa-original-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
+            <p className="fa-original-note fa-translation-note">متن اصلی به زبان انگلیسی نگاشته شده و نسخهٔ فارسی، توسط هوش مصنوعی ترجمه شده است.</p>
             <div className="prose-lab fa-original-content" dir="rtl" lang="fa" dangerouslySetInnerHTML={{ __html: persianContent }} />
           </>
         ) : (
