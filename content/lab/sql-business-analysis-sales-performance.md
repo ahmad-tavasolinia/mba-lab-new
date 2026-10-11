@@ -37,11 +37,8 @@ download:
 ---
 
 I used SQL Server to explore sales data from the AdventureWorks sample database, comparing online and offline sales between 2011 and 2014. I wanted to answer a simple question: how did sales performance change between 2011 and 2014, and how did online and offline sales compare?
-<<<<<<< HEAD
 
 SQL_QUERY_INSERTION_POINT
-=======
->>>>>>> 10c675a708e1952135f83ad3f0c827eed823a1aa
 
 ## What I Found
 
@@ -66,7 +63,3 @@ The online channel may offer room for growth, particularly if the business can i
 The sharp revenue decline in 2014 also raises a question worth investigating: did customers start placing smaller orders, did the product mix change, or was something else happening?
 
 This project gave me an opportunity to practice SQL in a business context, identify patterns in transactional data, and turn those patterns into questions for further analysis.
-<<<<<<< HEAD
-=======
-
->>>>>>> 10c675a708e1952135f83ad3f0c827eed823a1aa
