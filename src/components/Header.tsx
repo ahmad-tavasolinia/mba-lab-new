@@ -65,7 +65,7 @@ export default function Header() {
   }
 
   return (
-    <header lang={isPersian ? 'fa' : 'en'} dir={isPersian ? 'rtl' : 'ltr'} className={isHome ? 'site-header site-header-home' : 'site-header'}>
+    <header lang={isPersian ? 'fa' : 'en'} dir={isPersian ? 'rtl' : 'ltr'} className={isHome ? `site-header site-header-home${isPersian ? '' : ' home-header-entrance'}` : 'site-header'}>
       <Link href={isPersian ? '/fa' : '/'} className="site-brand" aria-label={isPersian ? 'کارگاه مدیریت کسب و کار، احمد توسلی نیا' : 'MBA Lab by Ahmad Tavasolinia'}>
         <span dir={isPersian ? 'rtl' : 'ltr'} className="site-brand-name">{isPersian ? 'کارگاه مدیریت کسب و کار' : 'MBA Lab'}</span>
         <span dir={isPersian ? 'rtl' : 'ltr'} className="site-brand-byline">{isPersian ? 'احمد توسلی نیا' : 'Ahmad Tavasolinia'}</span>
