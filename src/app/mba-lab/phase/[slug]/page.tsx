@@ -46,7 +46,7 @@ export default async function PhasePage({ params }: { params: { slug: string } }
             ← MBA Lab
           </Link>
           <div className="mt-6 flex items-center gap-3">
-            <span className="rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold">
+            <span className={`rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold ${phase.slug === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}>
               {phase.fullLabel}
             </span>
           </div>
@@ -100,7 +100,7 @@ export default async function PhasePage({ params }: { params: { slug: string } }
               <Link
                 key={p.slug}
                 href={`/mba-lab/phase/${p.slug}`}
-                className="rounded-full border border-gold/30 bg-gold/5 px-4 py-2 text-sm text-gold hover:border-gold"
+                className={`rounded-full border border-gold/30 bg-gold/5 px-4 py-2 text-sm text-gold hover:border-gold ${p.slug === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}
               >
                 {p.name}
               </Link>

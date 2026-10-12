@@ -2367,6 +2367,10 @@ html[data-theme="light"] .lab-library-more:hover {
 .fa-reading-code { display: inline-flex; align-items: center; }
 .fa-phase-topic { background: rgba(184, 207, 222, 0.07); text-decoration: none; }
 .fa-phase-topic:hover { border-color: var(--site-accent); color: var(--site-text); }
+.phase-pre-mba-tag,
+.fa-phase-topic.phase-pre-mba-tag { border-color: #007fff; background: #007fff; color: #061521; }
+.phase-pre-mba-tag:hover,
+.fa-phase-topic.phase-pre-mba-tag:hover { border-color: #2690ff; background: #2690ff; color: #061521; }
 .fa-reading-topics { margin-top: 16px; }
 .fa-original-note { margin: 30px 0 14px; color: var(--site-accent); font-size: 14px; line-height: 2; }
 .fa-translation-note { width: fit-content; max-width: 100%; margin: 30px 0 14px auto; padding: 1px 5px; border-radius: 3px; background: #e6e9ee; color: #17212b; font-weight: 500; line-height: 1.75; }

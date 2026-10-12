@@ -131,7 +131,7 @@ function FaExcelProject({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
       headerBeforeTitle={(
         <div className="fa-reading-tag-row">
           <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
-          <Link href={'/fa/mba-lab/phase/' + entry.journeyPhase} className="fa-entry-topic fa-phase-topic">
+          <Link href={'/fa/mba-lab/phase/' + entry.journeyPhase} className={`fa-entry-topic fa-phase-topic ${entry.journeyPhase === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}>
             {faPhases[entry.journeyPhase].title}
           </Link>
         </div>
@@ -225,7 +225,7 @@ async function FaSqlProject({ entry }: { entry: Awaited<ReturnType<typeof getLab
       headerBeforeTitle={(
         <div className="fa-reading-tag-row">
           <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
-          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">{faPhases[entry.journeyPhase].title}</Link>
+          <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className={`fa-entry-topic fa-phase-topic ${entry.journeyPhase === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}>{faPhases[entry.journeyPhase].title}</Link>
         </div>
       )}
       headerAfterIntro={(
@@ -453,7 +453,7 @@ async function FaPage({ path }: { path: string[] }) {
         headerBeforeTitle={(
           <div className="fa-reading-tag-row">
             <span className="fa-reading-code"><bdi dir="ltr">{entry.code}</bdi></span>
-            <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className="fa-entry-topic fa-phase-topic">
+            <Link href={`/fa/mba-lab/phase/${entry.journeyPhase}`} className={`fa-entry-topic fa-phase-topic ${entry.journeyPhase === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}>
               {faPhases[entry.journeyPhase].title}
             </Link>
           </div>

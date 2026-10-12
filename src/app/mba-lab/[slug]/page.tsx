@@ -62,7 +62,7 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
             {journeyPhase && (
               <Link
                 href={`/mba-lab/phase/${journeyPhase.slug}`}
-                className="rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold"
+                className={`rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold ${journeyPhase.slug === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}
               >
                 {journeyPhase.name}
               </Link>
@@ -191,7 +191,7 @@ export default async function LabEntryPage({ params }: { params: { slug: string 
             {journeyPhase && (
               <Link
                 href={`/mba-lab/phase/${journeyPhase.slug}`}
-                className="rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold"
+                className={`rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold ${journeyPhase.slug === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}
               >
                 {journeyPhase.pageTitle}
               </Link>
