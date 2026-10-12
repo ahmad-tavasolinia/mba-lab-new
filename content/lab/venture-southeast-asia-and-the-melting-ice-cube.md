@@ -50,7 +50,7 @@ The more important lesson sits underneath that call. The wrong answer and the ri
 
 ## Connections
 
-This case sits with Pepsi A.M., Heinz, Bud Light, Real Burger World, and ESPN, but it moves the failure from persuasive reasoning to persuasive arithmetic. The pattern is the same: something felt right before it had been checked.
+This case sits with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), and [ESPN](../espn-and-the-question-underneath-the-question/), but it moves the failure from persuasive reasoning to persuasive arithmetic. The pattern is the same: something felt right before it had been checked.
 
 ## Questions I still have
 

@@ -47,7 +47,7 @@ The half of my read about the old audience held up: they felt betrayed, and a br
 
 ## Connections
 
-This case sits alongside two others in the series. In Pepsi A.M., the lesson was that confidence in the room can't stand in for a correct argument. In Heinz, it was that a dramatic but irrelevant number can't stand in for evidence. Here, a correct overall verdict can hide a claim nobody checked.
+This case sits alongside two others in the series. In [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), the lesson was that confidence in the room can't stand in for a correct argument. In [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), it was that a dramatic but irrelevant number can't stand in for evidence. Here, a correct overall verdict can hide a claim nobody checked.
 
 ## Questions I still have
 

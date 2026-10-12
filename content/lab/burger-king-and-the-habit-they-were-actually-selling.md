@@ -55,7 +55,7 @@ Press coverage bundled three things together: the newsworthiness of targeting a 
 
 ## Connections
 
-This case follows the same pattern as Pepsi A.M., Heinz, Bud Light, Real Burger World, ESPN, and Venture Southeast Asia. Each one shows a way a clean-sounding read can explain less than it seems to. This one adds a lesson about naming the mechanism. Knowing that something works is different from knowing which piece is responsible.
+This case follows the same pattern as [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [ESPN](../espn-and-the-question-underneath-the-question/), and [Venture Southeast Asia](../venture-southeast-asia-and-the-melting-ice-cube/). Each one shows a way a clean-sounding read can explain less than it seems to. This one adds a lesson about naming the mechanism. Knowing that something works is different from knowing which piece is responsible.
 
 ## Questions I still have
 

@@ -52,7 +52,7 @@ One habit I'm working on is the order of my answer. I want to state the recommen
 
 ## Connections
 
-This case sits with Venture Southeast Asia, Ferrari, and The Ripening Chemical. Each one is a reminder that a clean-sounding strategic instinct only earns its place once it survives contact with the numbers.
+This case sits with [Venture Southeast Asia](../venture-southeast-asia-and-the-melting-ice-cube/), [Ferrari](../ferraris-bet-against-its-own-roadmap/), and [The Ripening Chemical](../the-ripening-chemical-and-the-case-for-moving-first/). Each one is a reminder that a clean-sounding strategic instinct only earns its place once it survives contact with the numbers.
 
 ## Questions I still have
 

@@ -48,7 +48,7 @@ The campaign won on visibility. My read is that it was aimed at the wrong cause,
 
 ## Connections
 
-This pairs with Pepsi A.M. Both cases were worked cold, before seeing the outcome, and both turn on the same failure: a confident, well-told story (a marketing goal restated as a plan, an accusation restated as a fix) that doesn't hold up against the underlying constraint.
+This pairs with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/). Both cases were worked cold, before seeing the outcome, and both turn on the same failure: a confident, well-told story (a marketing goal restated as a plan, an accusation restated as a fix) that doesn't hold up against the underlying constraint.
 
 ## Questions I still have
 
