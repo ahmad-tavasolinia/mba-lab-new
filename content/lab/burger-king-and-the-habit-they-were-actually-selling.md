@@ -1,7 +1,7 @@
 ---
 title: "Burger King and the Habit They Were Actually Selling"
 date: "2026-08-22"
-code: "MBA·LAB·02"
+code: "MBA·LAB·01"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy"]
@@ -14,12 +14,10 @@ keyIdeas:
   - "The price gets attention, and the delivery mechanic forces the action. It is easy to credit the wrong piece for the wrong result."
   - "Turning one-time bargain hunters into repeat customers is a more durable win than a viral moment that ends with the deal."
 connections:
-  - "Venture Southeast Asia and the Melting Ice Cube"
   - "Real Burger World and the Contradiction Built Into the Name"
   - "Pepsi A.M. and the Room That Already Knew"
   - "Heinz and the Problem With Accusing the Wrong Culprit"
   - "ESPN and the Question Underneath the Question"
-  - "Bud Light and the Backlash That Came From the Wrong Direction"
 openQuestions:
   - "Before a campaign launches, how can I tell whether a mechanic will change behavior for good or only produce a moment that fades with the deal?"
   - "When someone credits the wrong piece of a multi-part mechanic, how often does it go unnoticed because the overall number still looks good?"
@@ -55,7 +53,7 @@ Press coverage bundled three things together: the newsworthiness of targeting a 
 
 ## Connections
 
-This case follows the same pattern as [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [ESPN](../espn-and-the-question-underneath-the-question/), and [Venture Southeast Asia](../venture-southeast-asia-and-the-melting-ice-cube/). Each one shows a way a clean-sounding read can explain less than it seems to. This one adds a lesson about naming the mechanism. Knowing that something works is different from knowing which piece is responsible.
+This case follows the same pattern as [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), and [ESPN](../espn-and-the-question-underneath-the-question/). Each case shows how a clean-sounding read can explain less than it seems. This one adds a lesson about naming the mechanism. Knowing that something works is different from knowing which piece is responsible.
 
 ## Questions I still have
 

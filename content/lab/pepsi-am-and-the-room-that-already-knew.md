@@ -1,7 +1,7 @@
 ---
 title: "Pepsi A.M. and the Room That Already Knew"
 date: "2026-08-22"
-code: "MBA·LAB·08"
+code: "MBA·LAB·07"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["business-philosophy", "strategy"]

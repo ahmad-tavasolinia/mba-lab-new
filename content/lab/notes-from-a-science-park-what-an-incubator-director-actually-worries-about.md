@@ -1,7 +1,7 @@
 ---
 title: "Notes From a Science Park: What an Incubator Director Actually Worries About"
 date: "2026-08-23"
-code: "MBA·LAB·14"
+code: "MBA·LAB·12"
 journeyPhase: "phase-1"
 category: "interviews"
 topics: ["entrepreneurship"]

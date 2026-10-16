@@ -1,7 +1,7 @@
 ---
 title: "The Ripening Chemical and the Case for Moving First"
 date: "2026-08-22"
-code: "MBA·LAB·11"
+code: "MBA·LAB·10"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy", "finance"]
@@ -14,14 +14,12 @@ keyIdeas:
   - "A once-a-year harvest window is a structural deadline built into the product category, not a general instinct about speed."
   - "A pilot's numbers only confirm a decision when they are tied to the mechanism argued for it, not used to validate whichever instinct came first."
 connections:
-  - "Venture Southeast Asia and the Melting Ice Cube"
   - "Real Burger World and the Contradiction Built Into the Name"
   - "Pepsi A.M. and the Room That Already Knew"
   - "Old Spice and the Answer That Was Already on the Table"
   - "Heinz and the Problem With Accusing the Wrong Culprit"
   - "ESPN and the Question Underneath the Question"
   - "Burger King and the Habit They Were Actually Selling"
-  - "Bud Light and the Backlash That Came From the Wrong Direction"
 openQuestions:
   - "Can I notice in the moment that a reflexive answer like 'sooner is better' is a slogan and not a mechanism, or does that only show when someone pushes for a sharper reason?"
   - "How often does scope confusion, arguing against a decision already made instead of the narrower one being asked, derail an otherwise sound analysis?"
@@ -53,7 +51,7 @@ My call held: commercialize, on the condition that the seasonal argument is the 
 
 ## Connections
 
-This case sits with [Venture Southeast Asia](../venture-southeast-asia-and-the-melting-ice-cube/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Old Spice](../old-spice-and-the-answer-that-was-already-on-the-table/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [ESPN](../espn-and-the-question-underneath-the-question/), [Burger King](../burger-king-and-the-habit-they-were-actually-selling/), and [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/). Each one showed a different way a plausible read can outrun what it proves. This one adds two: a true-sounding generality mistaken for a specific mechanism, and a scope error mistaken for a strategic insight.
+This case sits with [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Old Spice](../old-spice-and-the-answer-that-was-already-on-the-table/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [ESPN](../espn-and-the-question-underneath-the-question/), and [Burger King](../burger-king-and-the-habit-they-were-actually-selling/). Each one showed a different way a plausible read can outrun what it proves. This one adds two: a true-sounding generality mistaken for a specific mechanism, and a scope error mistaken for a strategic insight.
 
 ## Questions I still have
 
