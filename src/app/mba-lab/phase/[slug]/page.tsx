@@ -7,7 +7,6 @@ import { getAllLabEntries } from '@/lib/content';
 import { getCategoryColor } from '@/lib/keyColors';
 import { Container, Eyebrow } from '@/components/ui';
 import LabLibrary from '@/components/LabLibrary';
-import { createPageMetadata } from '@/lib/seo';
 
 export async function generateStaticParams() {
   return phases.map((p) => ({ slug: p.slug }));
@@ -20,11 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const phase = getPhase(params.slug);
   if (!phase) return { title: 'Phase not found' };
-  return createPageMetadata({
-    title: phase.pageTitle,
-    description: phase.description,
-    path: `/mba-lab/phase/${params.slug}/`,
-  });
+  return { title: phase.pageTitle, description: phase.description };
 }
 
 export default async function PhasePage({ params }: { params: { slug: string } }) {
@@ -46,8 +41,8 @@ export default async function PhasePage({ params }: { params: { slug: string } }
             ← MBA Lab
           </Link>
           <div className="mt-6 flex items-center gap-3">
-            <span className={`rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold ${phase.slug === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}>
-              {phase.fullLabel}
+            <span className={phase.slug === 'phase-1' ? 'phase-pre-mba-tag' : 'rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold'}>
+              {phase.pageTitle}
             </span>
           </div>
           <h1 className="mt-3 max-w-3xl font-serif text-5xl font-medium tracking-tight text-ink dark:text-dark-ink md:text-6xl">
@@ -100,9 +95,9 @@ export default async function PhasePage({ params }: { params: { slug: string } }
               <Link
                 key={p.slug}
                 href={`/mba-lab/phase/${p.slug}`}
-                className={`rounded-full border border-gold/30 bg-gold/5 px-4 py-2 text-sm text-gold hover:border-gold ${p.slug === 'phase-1' ? 'phase-pre-mba-tag' : ''}`}
+                className={`rounded-full px-4 py-2 text-sm ${p.slug === 'phase-1' ? 'phase-pre-mba-tag font-mono text-[11px] uppercase' : 'border border-gold/30 bg-gold/5 text-gold hover:border-gold'}`}
               >
-                {p.name}
+                {p.slug === 'phase-1' ? p.pageTitle : p.name}
               </Link>
             ))}
           </div>
