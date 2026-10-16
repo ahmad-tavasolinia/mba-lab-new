@@ -58,9 +58,9 @@ You can have a brilliant idea, but your idea might be so difficult to execute th
 
 So simply, before starting a business, we can have a simple business model:
 
-1.      The value we create
+1.      The value we create
 
-2. The way we bring the value to customers
+2.      The way we bring the value to customers
 
 3.      The way we capture value
 
