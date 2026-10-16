@@ -4,6 +4,10 @@ import { notFound } from 'next/navigation';
 import { getAllLabEntries, getLabEntry, getLabSlugs, getAllSources } from '@/lib/content';
 import { getPhase } from '@/lib/phases';
 import { Container, Eyebrow, TopicChip, CodeChip, formatDate } from '@/components/ui';
+import { createPageMetadata } from '@/lib/seo';
+import SqlCodeBlock from '@/components/SqlCodeBlock';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export async function generateStaticParams() {
   return getLabSlugs().map((slug) => ({ slug }));
@@ -16,7 +20,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   try {
     const entry = await getLabEntry(params.slug);
-    return { title: entry.title, description: entry.summary };
+    return createPageMetadata({
+      title: entry.title,
+      description: entry.summary,
+      path: `/mba-lab/${params.slug}/`,
+      type: 'article',
+    });
   } catch {
     return { title: 'Entry not found' };
   }
@@ -31,6 +40,8 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
   });
   const practice = entry.practice ?? [];
   const journeyPhase = getPhase(entry.journeyPhase);
+  const [sqlIntroHtml, sqlFindingsHtml = ''] = entry.contentHtml.split(/<p>SQL_QUERY_INSERTION_POINT<\/p>\s*/);
+  const isSqlProject = entry.slug === 'sql-business-analysis-sales-performance';
 
   return (
     <article className="reader-page">
@@ -51,9 +62,9 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
             {journeyPhase && (
               <Link
                 href={`/mba-lab/phase/${journeyPhase.slug}`}
-                className={journeyPhase.slug === 'phase-1' ? 'phase-pre-mba-tag' : 'rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold'}
+                className="rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold"
               >
-                {journeyPhase.pageTitle}
+                {journeyPhase.name}
               </Link>
             )}
           </div>
@@ -70,7 +81,18 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
       </section>
 
       <Container className="py-6 md:py-8">
-        <div className="prose-lab text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+        <div className={`prose-lab text-ink dark:text-dark-ink ${isSqlProject ? 'sql-project-copy' : ''}`} dangerouslySetInnerHTML={{ __html: isSqlProject ? sqlIntroHtml : entry.contentHtml }} />
+
+        {isSqlProject && (
+          <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-gold">SQL query</p>
+            <div className="mt-3"><SqlCodeBlock /></div>
+          </section>
+        )}
+
+        {isSqlProject && sqlFindingsHtml && (
+          <div className="prose-lab sql-project-copy mt-4 text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: sqlFindingsHtml }} />
+        )}
 
         {practice.length > 0 && (
           <section className="mt-6 border-t border-rule pt-4 dark:border-dark-rule">
@@ -95,20 +117,20 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">
               Project
             </p>
-            <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+            <div className={`mt-4 grid gap-3 ${entry.projectType === 'SQL Server' ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-2 md:grid-cols-4'}`}>
               {screenshots.map((shot) => (
                 <figure key={shot.src} className="min-w-0">
                   <a
-                    href={shot.src}
+                    href={`${basePath}${shot.src}`}
                     target="_blank"
                     rel="noreferrer"
                     aria-label={`Open ${shot.alt} at full size`}
                     className="group block overflow-hidden border border-rule bg-black/20 dark:border-dark-rule"
                   >
                     <img
-                      src={shot.src}
+                      src={`${basePath}${shot.src}`}
                       alt={shot.alt}
-                      className="block h-32 w-full object-cover transition-opacity group-hover:opacity-80"
+                      className={`block w-full transition-opacity group-hover:opacity-80 ${entry.projectType === 'SQL Server' ? 'h-auto' : 'h-32 object-cover'}`}
                     />
                   </a>
                   <figcaption className="mt-2 text-xs leading-relaxed text-ink/50 dark:text-dark-soft/65">
@@ -123,14 +145,11 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
         {entry.download && (
           <section className="mt-8 border-t border-rule pt-6 dark:border-dark-rule">
             <p className="font-mono text-[11px] uppercase tracking-widest text-gold">
-              Explore the model
+              {entry.projectType === 'SQL Server' ? 'Download SQL query' : 'Explore the model'}
             </p>
-            <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
-              Want to see how the model works? Open the original workbook and explore the
-              formulas, calculations, and underlying transaction data.
-            </p>
+            {entry.projectType !== 'SQL Server' && <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">Want to see how the model works? Open the original workbook and explore the formulas, calculations, and underlying transaction data.</p>}
             <a
-              href={entry.download.href}
+              href={`${basePath}${entry.download.href}`}
               download
               className="mt-4 inline-flex items-center gap-4 border-b border-gold pb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-ink hover:text-gold dark:text-dark-ink"
             >
@@ -172,7 +191,7 @@ export default async function LabEntryPage({ params }: { params: { slug: string 
             {journeyPhase && (
               <Link
                 href={`/mba-lab/phase/${journeyPhase.slug}`}
-                className={journeyPhase.slug === 'phase-1' ? 'phase-pre-mba-tag' : 'rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold'}
+                className="rounded-full border border-gold/40 bg-gold/5 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-gold hover:border-gold"
               >
                 {journeyPhase.pageTitle}
               </Link>

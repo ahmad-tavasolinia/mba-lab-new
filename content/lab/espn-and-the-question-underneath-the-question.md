@@ -55,7 +55,7 @@ My final call held up reasonably well. The more useful lesson is one level below
 
 ## Connections
 
-This case belongs with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), and [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), each worked cold, each showing how confident-sounding reasoning can claim more than it proves. This one adds analogy to the list, next to misplaced confidence, dramatic but irrelevant evidence, and a correct verdict with unchecked claims inside it.
+This case belongs with Pepsi A.M., Heinz, Bud Light, and Real Burger World, each worked cold, each showing how confident-sounding reasoning can claim more than it proves. This one adds analogy to the list, next to misplaced confidence, dramatic but irrelevant evidence, and a correct verdict with unchecked claims inside it.
 
 ## Questions I still have
 

@@ -48,7 +48,7 @@ The operational post-mortem is the less useful part of this case. Lease timing, 
 
 ## Connections
 
-This case sits with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), and [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), each worked cold. In those cases, confidence, a dramatic number, or a correct-sounding overall verdict stood in for a checked argument. This one adds a founder-specific version: attachment to the founding idea standing in for a clear read of what the business had become.
+This case sits with Pepsi A.M., Heinz, and Bud Light, each worked cold. In those cases, confidence, a dramatic number, or a correct-sounding overall verdict stood in for a checked argument. This one adds a founder-specific version: attachment to the founding idea standing in for a clear read of what the business had become.
 
 ## Questions I still have
 

@@ -53,7 +53,7 @@ My call held: commercialize, on the condition that the seasonal argument is the 
 
 ## Connections
 
-This case sits with [Venture Southeast Asia](../venture-southeast-asia-and-the-melting-ice-cube/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Old Spice](../old-spice-and-the-answer-that-was-already-on-the-table/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [ESPN](../espn-and-the-question-underneath-the-question/), [Burger King](../burger-king-and-the-habit-they-were-actually-selling/), and [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/). Each one showed a different way a plausible read can outrun what it proves. This one adds two: a true-sounding generality mistaken for a specific mechanism, and a scope error mistaken for a strategic insight.
+This case sits with Venture Southeast Asia, Real Burger World, Pepsi A.M., Old Spice, Heinz, ESPN, Burger King, and Bud Light. Each one showed a different way a plausible read can outrun what it proves. This one adds two: a true-sounding generality mistaken for a specific mechanism, and a scope error mistaken for a strategic insight.
 
 ## Questions I still have
 

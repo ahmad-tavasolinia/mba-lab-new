@@ -54,7 +54,7 @@ Two different corrections happened in this case. Rejecting the mother-buys-for-t
 
 ## Connections
 
-This case follows [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [ESPN](../espn-and-the-question-underneath-the-question/), [Venture Southeast Asia](../venture-southeast-asia-and-the-melting-ice-cube/), and [Burger King](../burger-king-and-the-habit-they-were-actually-selling/). Each one showed a different way a persuasive read can outrun what it proves. This one runs in the opposite direction from most of them: the problem here was too little confidence in a good idea that was already available, instead of too much confidence in a bad one.
+This case follows Pepsi A.M., Heinz, Bud Light, Real Burger World, ESPN, Venture Southeast Asia, and Burger King. Each one showed a different way a persuasive read can outrun what it proves. This one runs in the opposite direction from most of them: the problem here was too little confidence in a good idea that was already available, instead of too much confidence in a bad one.
 
 ## Questions I still have
 
