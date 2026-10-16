@@ -1,7 +1,7 @@
 ---
 title: "Jaguar and the Trap of Convincing Yourself"
 date: "2026-08-22"
-code: "MBA·LAB·05"
+code: "MBA·LAB·06"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["marketing"]

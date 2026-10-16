@@ -1,7 +1,7 @@
 ---
 title: "SQL Business Analysis: Sales Performance"
 date: "2026-10-11"
-code: "MBA·LAB·20"
+code: "MBA·LAB·22"
 journeyPhase: "phase-1"
 category: "projects"
 topics: ["finance", "strategy"]

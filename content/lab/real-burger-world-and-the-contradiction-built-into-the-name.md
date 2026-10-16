@@ -1,7 +1,7 @@
 ---
 title: "Real Burger World and the Contradiction Built Into the Name"
 date: "2026-08-22"
-code: "MBA·LAB·09"
+code: "MBA·LAB·10"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["entrepreneurship", "strategy"]
@@ -16,6 +16,7 @@ keyIdeas:
 connections:
   - "Pepsi A.M. and the Room That Already Knew"
   - "Heinz and the Problem With Accusing the Wrong Culprit"
+  - "Bud Light and the Backlash That Came From the Wrong Direction"
 openQuestions:
   - "How can I tell, from inside a company, whether I'm defending a sound premise with bad execution or a premise that is itself the operational problem?"
   - "Is separating commitment to the business from attachment to its original idea a personal discipline, or does it take someone outside the founding team to force the split?"
@@ -47,7 +48,7 @@ The operational post-mortem is the less useful part of this case. Lease timing, 
 
 ## Connections
 
-This case sits with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/) and [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), both worked cold. In those cases, confidence or a dramatic number stood in for a checked argument. This one adds a founder-specific version: attachment to the founding idea standing in for a clear read of what the business had become.
+This case sits with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), and [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), each worked cold. In those cases, confidence, a dramatic number, or a correct-sounding overall verdict stood in for a checked argument. This one adds a founder-specific version: attachment to the founding idea standing in for a clear read of what the business had become.
 
 ## Questions I still have
 

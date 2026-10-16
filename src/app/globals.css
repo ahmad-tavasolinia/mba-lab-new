@@ -562,69 +562,6 @@ main {
   line-height: 1;
 }
 
-/* Home entrance: copy first, then the light sweep, then navigation and journey. */
-.home-copy-english {
-  opacity: 0;
-  animation: home-copy-arrive 820ms cubic-bezier(0.2, 0.72, 0.24, 1) 100ms both;
-}
-
-.home-copy-english .home-cta::before {
-  transform: scaleX(0);
-  transform-origin: right center;
-  animation: home-rule-reveal 1.12s cubic-bezier(0.42, 0, 0.22, 1) 820ms both;
-}
-
-.home-copy-english .home-cta::after {
-  right: 0;
-  left: auto;
-  opacity: 0;
-  transform: scale(0.7);
-  animation:
-    home-rule-glint 1.12s cubic-bezier(0.42, 0, 0.22, 1) 820ms both,
-    home-rule-twinkle 260ms ease-in-out 1.94s 2;
-}
-
-.home-journey-english {
-  opacity: 0;
-  animation: home-followup-arrive 640ms cubic-bezier(0.2, 0.72, 0.24, 1) 2.16s both;
-}
-
-.site-header-home.home-header-entrance {
-  opacity: 0;
-  animation: home-header-drop 640ms cubic-bezier(0.2, 0.72, 0.24, 1) 2.16s both;
-}
-
-@keyframes home-copy-arrive {
-  from { opacity: 0; filter: blur(2px); transform: translateY(9px); }
-  to { opacity: 1; filter: blur(0); transform: translateY(0); }
-}
-
-@keyframes home-rule-reveal {
-  from { opacity: 0.35; transform: scaleX(0); }
-  to { opacity: 1; transform: scaleX(1); }
-}
-
-@keyframes home-rule-glint {
-  0% { right: 0; opacity: 0; transform: scale(0.7); }
-  8% { opacity: 1; transform: scale(1); }
-  100% { right: calc(100% - 22px); opacity: 1; transform: scale(1); }
-}
-
-@keyframes home-rule-twinkle {
-  0%, 100% { filter: blur(1.5px) brightness(1); }
-  50% { filter: blur(1px) brightness(2.2); }
-}
-
-@keyframes home-followup-arrive {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes home-header-drop {
-  from { opacity: 0; transform: translateY(-14px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .home-journey {
   position: absolute;
   z-index: 2;
@@ -1390,21 +1327,6 @@ main {
     scroll-behavior: auto;
   }
 
-  .home-copy-english,
-  .home-copy-english .home-cta::before,
-  .home-copy-english .home-cta::after,
-  .home-journey-english,
-  .site-header-home.home-header-entrance {
-    opacity: 1;
-    animation: none;
-    filter: none;
-    transform: none;
-  }
-
-  .home-copy-english .home-cta::before {
-    transform: none;
-  }
-
   *,
   *::before,
   *::after {
@@ -1987,38 +1909,24 @@ html[data-theme="light"] .lab-library-more:hover {
 .phase-pre-mba-tag {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  min-height: 3.1rem;
-  border: 1px solid transparent;
+  border: 1px solid rgba(144, 224, 247, 0.98);
   border-radius: 999px;
-  background:
-    linear-gradient(108deg, #071b55 0%, #1237a9 42%, #273db1 100%) padding-box,
-    linear-gradient(100deg, #67dcff 0%, #48bfff 24%, #2877ff 68%, #566fff 100%) border-box;
-  padding: 0.72rem clamp(1.15rem, 2.4vw, 1.8rem);
-  color: #f8fbff;
+  background: linear-gradient(105deg, #103bb7 0%, #273bbf 58%, #26349e 100%);
+  padding: 0.42rem 1.15rem;
+  color: #f7fbff;
   font-family: var(--font-mono), monospace;
-  font-size: clamp(0.78rem, 1.8vw, 1.2rem);
-  font-weight: 400;
-  letter-spacing: 0.19em;
-  line-height: 1.2;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 1.5;
   text-decoration: none;
-  text-transform: uppercase;
   white-space: nowrap;
-  box-shadow:
-    inset 0 1px 0 rgba(245, 251, 255, 0.32),
-    inset 0 0 17px rgba(80, 132, 255, 0.5),
-    0 0 0 1px rgba(72, 176, 255, 0.45),
-    0 0 12px rgba(35, 169, 255, 0.9),
-    0 0 28px rgba(35, 101, 255, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(105, 193, 255, 0.3), 0 0 9px rgba(39, 161, 255, 0.78), 0 0 24px rgba(39, 106, 255, 0.52);
 }
 
 .phase-pre-mba-tag:hover {
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.46),
-    inset 0 0 19px rgba(91, 148, 255, 0.62),
-    0 0 0 1px rgba(113, 219, 255, 0.78),
-    0 0 16px rgba(35, 189, 255, 1),
-    0 0 34px rgba(35, 101, 255, 0.88);
+  border-color: #d4f6ff;
+  box-shadow: inset 0 0 0 1px rgba(144, 224, 247, 0.5), 0 0 12px rgba(39, 184, 255, 0.95), 0 0 30px rgba(39, 106, 255, 0.68);
 }
 
 .fa-reading-meta { margin-top: 18px; }

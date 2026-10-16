@@ -26,6 +26,7 @@ export const faPhases: Record<PhaseSlug, { name: string; title: string; descript
 };
 
 export const faEntryTitles: Record<string, string> = {
+  'bud-light-and-the-backlash-that-came-from-the-wrong-direction': 'بود لایت و واکنشی که از مسیر دیگری آمد',
   'mud-bay-and-the-hour-that-wasnt-actually-dead': 'ماد بِی و ساعتی که واقعاً مرده نبود',
   'burger-king-and-the-habit-they-were-actually-selling': 'برگر کینگ و عادتی که واقعاً می‌فروخت',
   'espn-and-the-question-underneath-the-question': 'ESPN و پرسشی که زیرِ پرسش اصلی پنهان بود',
@@ -34,6 +35,7 @@ export const faEntryTitles: Record<string, string> = {
   'excel-financial-data-analysis': 'اکسل: تحلیل داده‌های مالی',
   'sql-business-analysis-sales-performance': 'SQL: تحلیل کسب‌وکار و عملکرد فروش',
   'ferraris-bet-against-its-own-roadmap': 'شرط فراری برخلاف نقشهٔ راه خودش',
+  'formula-1-and-the-habit-of-using-what-you-already-know': 'فرمول یک و عادتِ تکیه بر دانسته‌های قبلی',
   'heinz-and-the-problem-of-accusing-the-wrong-culprit': 'هاینز و مشکل متهم‌کردنِ عامل اشتباه',
   'heinz-and-the-problem-with-accusing-the-wrong-culprit': 'هاینز و مشکل متهم‌کردنِ عامل اشتباه',
   'jaguar-and-the-trap-of-convincing-yourself': 'جگوار و دامِ قانع‌کردنِ خود',
@@ -46,10 +48,12 @@ export const faEntryTitles: Record<string, string> = {
   'real-burger-world-and-the-contradiction-built-into-the-name': 'ریل برگر ورلد و تناقضی که در نامش بود',
   'the-ripening-chemical-and-the-case-for-moving-first': 'مادهٔ رسیده‌کننده و استدلالِ پیش‌دستی',
   'value-creation-value-capture-and-the-business-model': 'خلق ارزش، تصاحب ارزش و مدل کسب‌وکار',
+  'venture-southeast-asia-and-the-melting-ice-cube': 'سرمایه‌گذاری در جنوب‌شرق آسیا و مکعب یخی که آب می‌شود',
   'what-do-i-think-about-an-mba-right-before-starting-it-in-2026': 'در آستانهٔ شروع MBA در ۲۰۲۶، واقعاً چه فکری می‌کنم؟',
 };
 
 export const faEntrySummaries: Record<string, string> = {
+  'bud-light-and-the-backlash-that-came-from-the-wrong-direction': 'بررسی کارزار بود لایت در سال ۲۰۲۳ و تفاوت میان درست‌بودن پیش‌بینی و درست‌بودنِ دلیل آن.',
   'mud-bay-and-the-hour-that-wasnt-actually-dead': 'بررسی پیشنهاد تعطیلی زودتر فروشگاه‌ها، محاسبهٔ صرفه‌جویی و ارزشی که دسترسی مشتریان دارد.',
   'burger-king-and-the-habit-they-were-actually-selling': 'بررسی کمپین Whopper Detour و سازوکاری که زیرِ یک حرکت وایرال پنهان بود.',
   'espn-and-the-question-underneath-the-question': 'بررسی چرخش ESPN به سمت پخش آنلاین و قیاسی که با پرسش‌گری دوام نیاورد.',
@@ -58,6 +62,7 @@ export const faEntrySummaries: Record<string, string> = {
   'excel-financial-data-analysis': 'ساخت مدلی مالی در سطح تراکنش برای بررسی الگوی هزینه، جریان نقد و عملکرد مالی.',
   'sql-business-analysis-sales-performance': 'تحلیل فروش آنلاین و حضوری با SQL Server و داده‌های AdventureWorks در بازهٔ ۲۰۱۱ تا ۲۰۱۴.',
   'ferraris-bet-against-its-own-roadmap': 'بررسی راهبرد خودروهای برقی فراری و نتیجه‌ای واقعی که از انتظار نزدیک‌تر بود.',
+  'formula-1-and-the-habit-of-using-what-you-already-know': 'تمرین مصاحبهٔ موردی دربارهٔ رشد فرمول یک و حفظ شواهد محکم تا پاسخ نهایی.',
   'heinz-and-the-problem-with-accusing-the-wrong-culprit': 'بررسی کارزار «تقلب در کچاپ» هاینز و عددی که پیدا شد اما برای استدلال کافی نبود.',
   'jaguar-and-the-trap-of-convincing-yourself': 'بررسی بازبرندسازی جگوار و ایدهٔ جذابی که با منطق خودش سازگار نماند.',
   'netflix-in-india-and-the-wallet-that-only-fits-one-subscription': 'بررسی ورود به بازار هند و عددی که پیش از آزمودن، یک راهبرد کامل را کنار گذاشت.',
@@ -69,6 +74,7 @@ export const faEntrySummaries: Record<string, string> = {
   'real-burger-world-and-the-contradiction-built-into-the-name': 'بررسی شکست یک استارتاپ برگر در بریتانیا و تغییری که بنیان‌گذاران نتوانستند بپذیرند.',
   'the-ripening-chemical-and-the-case-for-moving-first': 'بررسی خرید یک شرکت زیست‌فناوری و تفاوت دلیل واقعی با دلیلی که فقط درست به نظر می‌رسد.',
   'value-creation-value-capture-and-the-business-model': 'چرا ایدهٔ خوب فقط آغاز راه است: از خلق و ارائهٔ ارزش تا درآمد، اجرا و زمانِ کنارگذاشتن ایده.',
+  'venture-southeast-asia-and-the-melting-ice-cube': 'بررسی ارزش‌گذاری سرمایه‌گذاری خصوصی و خطای محاسباتی‌ای که نتیجه را بیش از حد مرتب کرد.',
   'what-do-i-think-about-an-mba-right-before-starting-it-in-2026': 'شرط‌بندی در شرایط عدم‌قطعیت: اگر هوش مصنوعی ساختن را آسان کند، مزیت واقعی چه خواهد بود؟',
 };
 

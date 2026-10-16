@@ -1,7 +1,7 @@
 ---
 title: "Mud Bay and the Hour That Wasn't Actually Dead"
 date: "2026-08-23"
-code: "MBA·LAB·11"
+code: "MBA·LAB·13"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy", "finance"]

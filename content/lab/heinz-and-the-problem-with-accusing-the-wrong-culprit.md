@@ -1,7 +1,7 @@
 ---
 title: "Heinz and the Problem With Accusing the Wrong Culprit"
 date: "2026-08-22"
-code: "MBA·LAB·04"
+code: "MBA·LAB·05"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy"]

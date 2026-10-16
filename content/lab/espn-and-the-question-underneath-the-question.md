@@ -1,7 +1,7 @@
 ---
 title: "ESPN and the Question Underneath the Question"
 date: "2026-08-22"
-code: "MBA·LAB·02"
+code: "MBA·LAB·03"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy"]
@@ -17,6 +17,7 @@ connections:
   - "Real Burger World and the Contradiction Built Into the Name"
   - "Pepsi A.M. and the Room That Already Knew"
   - "Heinz and the Problem With Accusing the Wrong Culprit"
+  - "Bud Light and the Backlash That Came From the Wrong Direction"
 openQuestions:
   - "Can I test how much weight an analogy can carry before I use it, instead of finding its limits when someone pushes back?"
   - "When a real outcome matches my prediction, how do I tell whether my reasoning was right or whether outside events, like the joint venture collapsing, made the decision?"
@@ -54,7 +55,7 @@ My final call held up reasonably well. The more useful lesson is one level below
 
 ## Connections
 
-This case belongs with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), and [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/). Each was worked cold and shows how confident-sounding reasoning can claim more than it proves. This one adds analogy to the list, next to misplaced confidence, dramatic but irrelevant evidence, and a correct verdict with unchecked claims inside it.
+This case belongs with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [Bud Light](../bud-light-and-the-backlash-that-came-from-the-wrong-direction/), and [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), each worked cold, each showing how confident-sounding reasoning can claim more than it proves. This one adds analogy to the list, next to misplaced confidence, dramatic but irrelevant evidence, and a correct verdict with unchecked claims inside it.
 
 ## Questions I still have
 
