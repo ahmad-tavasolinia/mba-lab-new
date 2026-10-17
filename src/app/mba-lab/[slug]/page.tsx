@@ -215,7 +215,7 @@ export default async function LabEntryPage({ params }: { params: { slug: string 
 
       <Container className="py-14 md:py-20">
         <div className="grid gap-14 md:grid-cols-[1fr,300px] md:gap-16">
-          <div className="prose-lab max-w-prose text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
+          <div className="prose-lab max-w-[52rem] text-ink dark:text-dark-ink" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
 
           <aside className="space-y-10 md:sticky md:top-24 md:self-start">
             <div>
