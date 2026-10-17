@@ -1,7 +1,7 @@
 ---
 title: "The Environment Matters More Than the Model"
 date: "2026-08-23"
-code: "MBA·LAB·16"
+code: "MBA·LAB·14"
 journeyPhase: "phase-1"
 category: "essays"
 topics: ["finance", "artificial-intelligence"]

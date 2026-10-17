@@ -1,7 +1,7 @@
 ---
 title: "Pepsi's Fifth Attempt at a Product Nobody Asked For"
 date: "2026-08-22"
-code: "MBA·LAB·09"
+code: "MBA·LAB·08"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["marketing"]

@@ -1,7 +1,7 @@
 ---
 title: "Ferrari's Bet Against Its Own Roadmap"
 date: "2026-08-22"
-code: "MBA·LAB·04"
+code: "MBA·LAB·03"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy"]

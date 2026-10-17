@@ -1,7 +1,7 @@
 ---
 title: "Old Spice and the Answer That Was Already on the Table"
 date: "2026-08-22"
-code: "MBA·LAB·07"
+code: "MBA·LAB·06"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy"]
@@ -14,13 +14,11 @@ keyIdeas:
   - "A clever theory invented under pressure to say something is not a supported one, especially when a simpler, better answer was offered one exchange earlier."
   - "The fix for choosing cleverness over precision is not more creativity. It is to engage fully with the available answer before looking past it."
 connections:
-  - "Venture Southeast Asia and the Melting Ice Cube"
-  - "Real Burger World and the Contradiction Built Into the Name"
-  - "Pepsi A.M. and the Room That Already Knew"
-  - "Heinz and the Problem With Accusing the Wrong Culprit"
-  - "ESPN and the Question Underneath the Question"
-  - "Burger King and the Habit They Were Actually Selling"
-  - "Bud Light and the Backlash That Came From the Wrong Direction"
+  - "real-burger-world-and-the-contradiction-built-into-the-name"
+  - "pepsi-am-and-the-room-that-already-knew"
+  - "heinz-and-the-problem-with-accusing-the-wrong-culprit"
+  - "espn-and-the-question-underneath-the-question"
+  - "burger-king-and-the-habit-they-were-actually-selling"
 openQuestions:
   - "Can I notice in the moment that a better explanation was already offered and skipped, or does that only show once the data confirms which one was right?"
   - "Why does an invented, more interesting theory feel more satisfying to reach for than a simpler correct one that is already available?"
@@ -54,7 +52,7 @@ Two different corrections happened in this case. Rejecting the mother-buys-for-t
 
 ## Connections
 
-This case follows Pepsi A.M., Heinz, Bud Light, Real Burger World, ESPN, Venture Southeast Asia, and Burger King. Each one showed a different way a persuasive read can outrun what it proves. This one runs in the opposite direction from most of them: the problem here was too little confidence in a good idea that was already available, instead of too much confidence in a bad one.
+This case follows [Pepsi A.M.](/mba-lab/pepsi-am-and-the-room-that-already-knew), [Heinz](/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit), [Real Burger World](/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name), [ESPN](/mba-lab/espn-and-the-question-underneath-the-question), and [Burger King](/mba-lab/burger-king-and-the-habit-they-were-actually-selling). Each one showed a different way a persuasive read can outrun what it proves. This one runs in the opposite direction from most of them: the problem here was too little confidence in a good idea that was already available, instead of too much confidence in a bad one.
 
 ## Questions I still have
 
