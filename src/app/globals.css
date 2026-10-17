@@ -2367,6 +2367,63 @@ html[data-theme="light"] .lab-library-more:hover {
 .fa-reading-code { display: inline-flex; align-items: center; }
 .fa-phase-topic { background: rgba(184, 207, 222, 0.07); text-decoration: none; }
 .fa-phase-topic:hover { border-color: var(--site-accent); color: var(--site-text); }
+
+.phase-detail-tag {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border: 1px solid rgba(220, 240, 255, 0.98);
+  border-radius: 9999px;
+  background: linear-gradient(112deg, rgba(19, 25, 57, 0.98), rgba(8, 43, 80, 0.98));
+  box-shadow:
+    0 0 0 1px rgba(191, 226, 255, 0.48),
+    0 0 8px 2px rgba(214, 239, 255, 0.9),
+    0 0 20px 5px rgba(137, 195, 255, 0.58),
+    0 0 36px 9px rgba(81, 147, 240, 0.3),
+    inset 0 0 10px rgba(195, 228, 255, 0.13);
+  color: #f1f7ff;
+  font-family: var(--font-mono), "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 1.35;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: border-color 180ms ease, box-shadow 180ms ease, color 180ms ease;
+}
+
+.phase-detail-tag:hover {
+  border-color: #fff;
+  box-shadow:
+    0 0 0 1px rgba(225, 243, 255, 0.7),
+    0 0 10px 3px rgba(220, 241, 255, 0.98),
+    0 0 24px 7px rgba(145, 204, 255, 0.72),
+    0 0 42px 12px rgba(88, 154, 245, 0.42),
+    inset 0 0 12px rgba(207, 235, 255, 0.18);
+  color: #fff;
+}
+
+.phase-detail-tag:focus-visible {
+  outline: 2px solid rgba(220, 240, 255, 0.9);
+  outline-offset: 5px;
+}
+
+.fa-site .phase-detail-tag {
+  font-family: var(--font-mono), "Courier New", monospace;
+  letter-spacing: 0.2em;
+}
+
+@media (max-width: 480px) {
+  .phase-detail-tag {
+    min-height: 38px;
+    padding: 7px 13px;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+  }
+}
 .fa-reading-topics { margin-top: 16px; }
 .fa-original-note { margin: 30px 0 14px; color: var(--site-accent); font-size: 14px; line-height: 2; }
 .fa-translation-note { width: fit-content; max-width: 100%; margin: 30px 0 14px auto; padding: 1px 5px; border-radius: 3px; background: #e6e9ee; color: #17212b; font-weight: 500; line-height: 1.75; }
