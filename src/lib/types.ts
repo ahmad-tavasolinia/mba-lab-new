@@ -37,7 +37,9 @@ export interface LabEntry extends LabEntryFrontmatter {
 
 export interface EssayFrontmatter {
   title: string;
+  subtitle?: string;
   date: string;
+  journeyPhase?: PhaseSlug;
   topics: TopicSlug[];
   summary: string;
   standalone?: boolean;

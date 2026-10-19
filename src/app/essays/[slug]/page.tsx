@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getEssay, getEssaySlugs } from '@/lib/content';
 import { Container, TopicChip, formatDate } from '@/components/ui';
 import { createPageMetadata } from '@/lib/seo';
+import { getPhase } from '@/lib/phases';
 
 export async function generateStaticParams() {
   return getEssaySlugs().map((slug) => ({ slug }));
@@ -31,6 +32,7 @@ export default async function EssayPage({ params }: { params: { slug: string } }
   const slugs = getEssaySlugs();
   if (!slugs.includes(params.slug)) notFound();
   const essay = await getEssay(params.slug);
+  const phase = essay.journeyPhase ? getPhase(essay.journeyPhase) : undefined;
 
   return (
     <article className="reader-page">
@@ -47,10 +49,14 @@ export default async function EssayPage({ params }: { params: { slug: string } }
           <h1 className="mt-6 max-w-3xl font-serif text-4xl font-medium leading-tight tracking-tight text-ink dark:text-dark-ink md:text-5xl">
             {essay.title}
           </h1>
+          {essay.subtitle && (
+            <p className="mt-3 max-w-2xl text-lg text-ink/60 dark:text-dark-soft">{essay.subtitle}</p>
+          )}
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-ink/50 dark:text-dark-soft">
             <span>{formatDate(essay.date)}</span>
             <span>·</span>
             <span>{essay.readingTime}</span>
+            {phase?.slug === 'phase-1' && <span className="phase-pre-mba-tag">{phase.pageTitle}</span>}
           </div>
           <div className="mt-5 flex flex-wrap gap-2">
             {essay.topics.map((t) => (

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getAllSources, getAllLabEntries } from '@/lib/content';
+import { getAllSources, getAllLabEntries, getAllEssays } from '@/lib/content';
 import { getTopic } from '@/lib/topics';
 import { Container } from '@/components/ui';
 import SourceFlow from '@/components/SourceFlow';
@@ -15,7 +15,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default async function CoursesPage() {
   const sources = getAllSources();
-  const labEntries = await getAllLabEntries();
+  const [labEntries, essays] = await Promise.all([getAllLabEntries(), getAllEssays()]);
 
   return (
     <div className="library-reference-page topics-reference-page">
@@ -50,7 +50,9 @@ export default async function CoursesPage() {
           </div>
           <div>
             {sources.map((s) => {
-              const outputs = labEntries.filter((e) => s.outputs.includes(e.slug));
+              const outputCount =
+                labEntries.filter((entry) => s.outputs.includes(entry.slug)).length +
+                essays.filter((essay) => s.outputs.includes(essay.slug)).length;
               const topic = getTopic(s.subject);
               return (
                 <Link
@@ -71,9 +73,9 @@ export default async function CoursesPage() {
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
                     {s.why}
                   </p>
-                  {outputs.length > 0 && (
+                  {outputCount > 0 && (
                     <p className="mt-2 text-xs text-ink/40 dark:text-dark-soft/50">
-                      {outputs.length} related MBA Lab {outputs.length === 1 ? 'entry' : 'entries'}
+                      {outputCount} related {outputCount === 1 ? 'piece' : 'pieces'}
                     </p>
                   )}
                 </Link>

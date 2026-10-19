@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getPersianMetadata, renderPersianPage } from '@/lib/persian-routes';
 
-const path = ["mba-lab","Mud-Bay-and-the-Hour-That-Wasn't-Actually-Dead"];
+const path = ["mba-lab", "mud-bay-and-the-hour-that-wasnt-actually-dead"];
 
 export function generateMetadata(): Metadata {
   return getPersianMetadata(path);

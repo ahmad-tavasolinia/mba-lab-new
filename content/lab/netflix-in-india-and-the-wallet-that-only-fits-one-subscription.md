@@ -14,8 +14,8 @@ keyIdeas:
   - "With price parity closed off, differentiation was the remaining lever: a lower-cost, mobile-first tier paired with local content strong enough to win that one paid slot."
   - "Presenting a case backward, walking through the discovery process before stating the answer, is a natural first-draft habit. The better order is recommendation, reasons, risk, next step."
 connections:
-  - "the-ripening-chemical-and-the-case-for-moving-first"
-  - "ferraris-bet-against-its-own-roadmap"
+  - "The Ripening Chemical and the Case for Moving First"
+  - "Ferrari's Bet Against Its Own Roadmap"
 openQuestions:
   - "Is there a reliable way to test whether a market's willingness to pay has a hard ceiling before building a strategy on the assumption that it does?"
   - "When unit economics rule out an option, how much of that certainty rests on cost assumptions, like content licensing or acquisition cost, that could shift over the life of the strategy?"
@@ -51,7 +51,7 @@ One habit I'm working on is the order of my answer. I want to state the recommen
 
 ## Connections
 
-This case sits with [Ferrari](/mba-lab/ferraris-bet-against-its-own-roadmap) and [The Ripening Chemical](/mba-lab/the-ripening-chemical-and-the-case-for-moving-first). Each one is a reminder that a clean-sounding strategic instinct only earns its place once it survives contact with the numbers.
+This case sits with [Ferrari](../ferraris-bet-against-its-own-roadmap/) and [The Ripening Chemical](../the-ripening-chemical-and-the-case-for-moving-first/). Each one is a reminder that a clean-sounding strategic instinct only earns its place once it survives contact with the numbers.
 
 ## Questions I still have
 

@@ -14,9 +14,9 @@ keyIdeas:
   - "An analogy can carry an argument further than the argument goes, so check that the comparison holds before relying on it."
   - "A decision that matches what a company later did is not the same as the company choosing it cleanly. Disney was pushed by the collapse of its backup plan."
 connections:
-  - "real-burger-world-and-the-contradiction-built-into-the-name"
-  - "pepsi-am-and-the-room-that-already-knew"
-  - "heinz-and-the-problem-with-accusing-the-wrong-culprit"
+  - "Real Burger World and the Contradiction Built Into the Name"
+  - "Pepsi A.M. and the Room That Already Knew"
+  - "Heinz and the Problem With Accusing the Wrong Culprit"
 openQuestions:
   - "Can I test how much weight an analogy can carry before I use it, instead of finding its limits when someone pushes back?"
   - "When a real outcome matches my prediction, how do I tell whether my reasoning was right or whether outside events, like the joint venture collapsing, made the decision?"
@@ -54,7 +54,7 @@ My final call held up reasonably well. The more useful lesson is one level below
 
 ## Connections
 
-This case belongs with [Pepsi A.M.](/mba-lab/pepsi-am-and-the-room-that-already-knew), [Heinz](/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit), and [Real Burger World](/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name), each worked cold, each showing how confident-sounding reasoning can claim more than it proves. This one adds analogy to the list, next to misplaced confidence, dramatic but irrelevant evidence, and a correct verdict with unchecked claims inside it.
+This case belongs with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), and [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/). Each was worked cold and shows how confident-sounding reasoning can claim more than it proves. This one adds analogy to the list, next to misplaced confidence, dramatic but irrelevant evidence, and a correct verdict with unchecked claims inside it.
 
 ## Questions I still have
 

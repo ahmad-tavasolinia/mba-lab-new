@@ -14,9 +14,17 @@ export default function EssayCard({ essay }: { essay: Essay }) {
       <h3 className="mt-3 font-serif text-2xl font-medium text-ink transition-colors group-hover:text-gold dark:text-dark-ink md:text-[1.75rem]">
         {essay.title}
       </h3>
+      {essay.subtitle && (
+        <p className="mt-1 text-sm text-ink/50 dark:text-dark-soft/70">{essay.subtitle}</p>
+      )}
       <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-ink/60 dark:text-dark-soft">
         {essay.summary}
       </p>
+      {essay.journeyPhase === 'phase-1' && (
+        <div className="mt-4">
+          <span className="phase-pre-mba-tag">Phase 01, Pre-MBA</span>
+        </div>
+      )}
       <div className="mt-4 flex flex-wrap gap-2">
         {essay.topics.map((t) => (
           <TopicChip key={t} slug={t} />
