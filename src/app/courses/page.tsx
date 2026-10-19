@@ -22,7 +22,7 @@ export default async function CoursesPage() {
       <section className="topics-reference-hero library-reference-hero">
         <img
           className="topics-reference-image"
-          src={basePath + '/library/library-room-reference.png'}
+          src={basePath + '/library/library-room-reference.webp'}
           alt=""
           aria-hidden="true"
         />

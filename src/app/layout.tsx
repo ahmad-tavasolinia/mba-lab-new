@@ -53,10 +53,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '--font-mono': fontVariables.mono,
         '--font-nav': fontVariables.nav,
         '--font-persian': fontVariables.persian,
-        '--asset-home': 'url("' + basePath + '/images/home-lab-bg.png")',
-        '--asset-lab': 'url("' + basePath + '/mba-lab/lab-room-reference.png")',
-        '--asset-topics': 'url("' + basePath + '/topcis/topics-room-reference.png")',
-        '--asset-library': 'url("' + basePath + '/library/library-room-reference.png")',
+        '--asset-home': 'url("' + basePath + '/images/home-lab-bg.webp")',
+        '--asset-lab': 'url("' + basePath + '/mba-lab/lab-room-reference.webp")',
+        '--asset-topics': 'url("' + basePath + '/topcis/topics-room-reference.webp")',
+        '--asset-library': 'url("' + basePath + '/library/library-room-reference.webp")',
       } as CSSProperties}
     >
       <head>

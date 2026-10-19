@@ -19,7 +19,7 @@ export default async function TopicsPage() {
       <section className="topics-reference-hero">
         <img
           className="topics-reference-image"
-          src={basePath + '/topcis/topics-room-reference.png'}
+          src={basePath + '/topcis/topics-room-reference.webp'}
           alt=""
           aria-hidden="true"
         />
