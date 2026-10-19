@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getEssay, getEssaySlugs } from '@/lib/content';
+import { getAllSources, getEssay, getEssaySlugs } from '@/lib/content';
 import { Container, TopicChip, formatDate } from '@/components/ui';
 import { createPageMetadata } from '@/lib/seo';
+import { getPhase } from '@/lib/phases';
 
 export async function generateStaticParams() {
   return getEssaySlugs().map((slug) => ({ slug }));
@@ -31,6 +32,8 @@ export default async function EssayPage({ params }: { params: { slug: string } }
   const slugs = getEssaySlugs();
   if (!slugs.includes(params.slug)) notFound();
   const essay = await getEssay(params.slug);
+  const journeyPhase = essay.journeyPhase ? getPhase(essay.journeyPhase) : undefined;
+  const relatedSources = getAllSources().filter((source) => essay.sources?.includes(source.slug));
 
   return (
     <article className="reader-page">
@@ -57,6 +60,13 @@ export default async function EssayPage({ params }: { params: { slug: string } }
               <TopicChip key={t} slug={t} />
             ))}
           </div>
+          {journeyPhase && (
+            <div className="mt-5">
+              <Link href={`/mba-lab/phase/${journeyPhase.slug}`} className="phase-detail-tag">
+                {journeyPhase.pageTitle}
+              </Link>
+            </div>
+          )}
         </Container>
       </section>
       <Container className="py-14 md:py-20">
@@ -64,6 +74,20 @@ export default async function EssayPage({ params }: { params: { slug: string } }
           className="prose-lab mx-auto max-w-prose text-ink dark:text-dark-ink"
           dangerouslySetInnerHTML={{ __html: essay.contentHtml }}
         />
+        {relatedSources.length > 0 && (
+          <section className="mx-auto mt-12 max-w-prose border-t border-rule pt-6 dark:border-dark-rule">
+            <p className="font-mono text-[11px] uppercase tracking-widest text-ink/40 dark:text-dark-soft/60">
+              Related course
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2">
+              {relatedSources.map((source) => (
+                <Link key={source.slug} href={`/courses/${source.slug}`} className="text-sm text-ink/70 underline decoration-rule underline-offset-4 hover:text-gold dark:text-dark-soft">
+                  {source.course}
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
       </Container>
     </article>
   );

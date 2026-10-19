@@ -5,7 +5,7 @@ import { createPageMetadata } from '@/lib/seo';
 
 export const metadata = createPageMetadata({
   title: 'Essays',
-  description: 'Independent, broader essays on business, technology, and the future of work.',
+  description: 'Long-form reflections on business, strategy, technology, and the future of work.',
   path: '/essays/',
 });
 
@@ -20,8 +20,8 @@ export default async function EssaysPage() {
             Essays
           </h1>
           <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-ink/70 dark:text-dark-soft">
-            Broader, independent essays that don't come from a single course, a serious personal
-            publication on business, technology, and the future of work.
+            Longer reflections on business, strategy, technology, and the future of work, shaped by
+            study, experience, and the ideas worth examining more closely.
           </p>
         </Container>
       </section>
