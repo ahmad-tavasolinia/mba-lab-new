@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getSource, getSourceSlugs, getAllLabEntries, getAllEssays } from '@/lib/content';
+import { getSource, getSourceSlugs, getAllLabEntries } from '@/lib/content';
 import { getTopic } from '@/lib/topics';
 import { Container, Eyebrow, formatDate } from '@/components/ui';
 import SourceFlow from '@/components/SourceFlow';
@@ -36,7 +36,6 @@ export default async function SourcePage({ params }: { params: { slug: string } 
   const source = getSource(params.slug);
   const topic = getTopic(source.subject);
   const outputs = (await getAllLabEntries()).filter((e) => source.outputs.includes(e.slug));
-  const relatedEssays = (await getAllEssays()).filter((essay) => source.relatedEssays?.includes(essay.slug));
 
   return (
     <div>
@@ -106,7 +105,7 @@ export default async function SourcePage({ params }: { params: { slug: string } 
         <Container className="py-14">
           <Eyebrow>What emerged from it</Eyebrow>
           <h2 className="mt-2 font-serif text-3xl font-medium tracking-tight text-ink dark:text-dark-ink">
-            Related MBA Lab entries and essays
+            Related MBA Lab outputs
           </h2>
           <div className="mt-8">
             {outputs.map((e) => (
@@ -123,23 +122,6 @@ export default async function SourcePage({ params }: { params: { slug: string } 
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
                   {e.summary}
-                </p>
-              </Link>
-            ))}
-            {relatedEssays.map((essay) => (
-              <Link
-                key={essay.slug}
-                href={`/essays/${essay.slug}`}
-                className="group block border-t border-rule py-6 first:border-t-0 dark:border-dark-rule"
-              >
-                <span className="font-mono text-[11px] uppercase tracking-widest text-ink/40 dark:text-dark-soft/60">
-                  {formatDate(essay.date)} Â· Essay
-                </span>
-                <h3 className="mt-2 font-serif text-xl font-medium text-ink transition-colors group-hover:text-gold dark:text-dark-ink">
-                  {essay.title}
-                </h3>
-                <p className="mt-1 text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
-                  {essay.summary}
                 </p>
               </Link>
             ))}

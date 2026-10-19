@@ -40,8 +40,6 @@ export interface EssayFrontmatter {
   date: string;
   topics: TopicSlug[];
   summary: string;
-  journeyPhase?: PhaseSlug;
-  sources?: string[]; // course source slugs
   standalone?: boolean;
 }
 
@@ -60,7 +58,6 @@ export interface SourceFrontmatter {
   subject: TopicSlug;
   why: string;
   outputs: string[]; // lab entry slugs
-  relatedEssays?: string[]; // essay slugs
 }
 
 export interface Source extends SourceFrontmatter {

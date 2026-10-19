@@ -30,6 +30,7 @@ export const faEntryTitles: Record<string, string> = {
   'burger-king-and-the-habit-they-were-actually-selling': 'برگر کینگ و عادتی که واقعاً می‌فروخت',
   'espn-and-the-question-underneath-the-question': 'ESPN و پرسشی که زیرِ پرسش اصلی پنهان بود',
   'when-a-working-business-is-still-the-wrong-business': 'وقتی یک کسب‌وکارِ فعال، کسب‌وکارِ درستی نیست',
+  'adaptive-but-selective-honda-american-motorcycle-market': 'سازگار، اما گزینشی!',
   'same-macro-economy-different-businesses': 'اقتصاد کلان یکسان، کسب‌وکارهای متفاوت',
   'excel-financial-data-analysis': 'اکسل: تحلیل داده‌های مالی',
   'sql-business-analysis-sales-performance': 'SQL: تحلیل کسب‌وکار و عملکرد فروش',
@@ -54,6 +55,7 @@ export const faEntrySummaries: Record<string, string> = {
   'burger-king-and-the-habit-they-were-actually-selling': 'بررسی کمپین Whopper Detour و سازوکاری که زیرِ یک حرکت وایرال پنهان بود.',
   'espn-and-the-question-underneath-the-question': 'بررسی چرخش ESPN به سمت پخش آنلاین و قیاسی که با پرسش‌گری دوام نیاورد.',
   'when-a-working-business-is-still-the-wrong-business': 'گفت‌وگو با محمدحسین نداف، بنیان‌گذار نیمرو، دربارهٔ تقاضای اولیه، ساختار بازار، تناسب بنیان‌گذار و انتخاب کسب‌وکاری که ارزش ساختن دارد.',
+  'adaptive-but-selective-honda-american-motorcycle-market': 'تجربهٔ هوندا در بازار موتورسیکلت آمریکا نشان می‌دهد چرا سازگاری راهبردی یعنی انتخاب فرصت‌هایی که باید دنبال کرد و اولویت‌هایی که باید حفظ کرد.',
   'same-macro-economy-different-businesses': 'درس‌هایی از گفت‌وگو با بنیان‌گذار یواسپیس دربارهٔ تمرکز، فروش زودهنگام، بازارهای دوسویه، اقتصاد کلان و ساخت کسب‌وکار در شرایط عدم‌قطعیت.',
   'excel-financial-data-analysis': 'ساخت مدلی مالی در سطح تراکنش برای بررسی الگوی هزینه، جریان نقد و عملکرد مالی.',
   'sql-business-analysis-sales-performance': 'تحلیل فروش آنلاین و حضوری با SQL Server و داده‌های AdventureWorks در بازهٔ ۲۰۱۱ تا ۲۰۱۴.',
@@ -76,14 +78,12 @@ export const faEssayTitles: Record<string, string> = {
   'is-an-mba-still-worth-it-in-the-age-of-ai': 'آیا MBA در عصر هوش مصنوعی هنوز ارزش دارد؟',
   'the-amateur-founder-problem': 'مسئلهٔ بنیان‌گذارِ تازه‌کار',
   'when-knowledge-becomes-cheap-what-becomes-valuable': 'وقتی دانش ارزان می‌شود، چه چیزی ارزشمند می‌ماند؟',
-  'adaptive-but-selective-honda-american-motorcycle-market': 'سازگار، اما گزینشی!',
 };
 
 export const faEssaySummaries: Record<string, string> = {
   'is-an-mba-still-worth-it-in-the-age-of-ai': 'پرسش اصلی این نیست که MBA چه می‌آموزد؛ این است که آیا همان مهارت‌ها در جهانی که هوش مصنوعی کارهای تحلیلی را ارزان می‌کند کمیاب‌تر می‌شوند یا نه.',
   'the-amateur-founder-problem': 'هوش مصنوعی مانع فنیِ ساخت محصول را برمی‌دارد؛ این اتفاق فرصت‌ساز است، اما مسئلهٔ تازه‌ای هم ایجاد می‌کند.',
   'when-knowledge-becomes-cheap-what-becomes-valuable': 'هر بار که دانشی ارزان و فراگیر می‌شود، گلوگاه تازه‌ای پدید می‌آید؛ بهتر است از پیش بپرسیم این بار چه چیزی کمیاب خواهد شد.',
-  'adaptive-but-selective-honda-american-motorcycle-market': 'تجربهٔ هوندا در بازار موتورسیکلت آمریکا نشان می‌دهد چرا سازگاری راهبردی یعنی انتخاب فرصت‌هایی که باید دنبال کرد و اولویت‌هایی که باید حفظ کرد.',
 };
 
 export const faSourceNames: Record<string, { course: string; why: string }> = {

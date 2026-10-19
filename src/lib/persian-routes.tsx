@@ -286,7 +286,6 @@ async function FaPage({ path }: { path: string[] }) {
   if (!route) return <FaHome />;
 
   const allEntries = await getAllLabEntries();
-  const allEssays = await getAllEssays();
   // Keep the current Mud Bay case in Persian; omit only the duplicate legacy file.
   const entries = allEntries.filter((entry) => entry.slug !== "Mud-Bay-and-the-Hour-That-Wasn't-Actually-Dead");
   if (route === 'topics') return <FaTopicIndex entries={entries} />;
@@ -381,8 +380,7 @@ async function FaPage({ path }: { path: string[] }) {
         <div className="fa-entry-list fa-source-list">
           {sources.map((source) => {
             const faSource = faSourceNames[source.slug];
-            const outputCount = labEntries.filter((entry) => source.outputs.includes(entry.slug)).length
-              + allEssays.filter((essay) => source.relatedEssays?.includes(essay.slug)).length;
+            const outputCount = labEntries.filter((entry) => source.outputs.includes(entry.slug)).length;
             return (
               <article className="fa-entry-card fa-source-card" key={source.slug}>
                 <span className="fa-meta">{source.institution}</span>
@@ -494,20 +492,11 @@ async function FaPage({ path }: { path: string[] }) {
   if (path[0] === 'essays' && path.length === 2 && getEssaySlugs().includes(path[1])) {
     const essay = await getEssay(path[1]);
     const persianContent = await getPersianEssayContent(essay.slug);
-    const relatedSources = getAllSources().filter((source) => essay.sources?.includes(source.slug));
-    const essayPhase = essay.journeyPhase ? phases.find((phase) => phase.slug === essay.journeyPhase) : undefined;
     return (
       <PageFrame
         eyebrow="جستار"
         title={faEssayTitles[essay.slug] ?? essay.title}
         intro={faEssaySummaries[essay.slug] ?? essay.summary}
-        headerBeforeTitle={essayPhase ? (
-          <div className="fa-reading-tag-row">
-            <Link href={`/fa/mba-lab/phase/${essayPhase.slug}`} className="phase-detail-tag">
-              {faPhases[essayPhase.slug].title}
-            </Link>
-          </div>
-        ) : undefined}
         headerAfterIntro={(
           <>
             <div className="fa-meta fa-reading-meta">
@@ -535,18 +524,6 @@ async function FaPage({ path }: { path: string[] }) {
             <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: essay.contentHtml }} />
           </>
         )}
-        {relatedSources.length > 0 && (
-          <div className="fa-entry-card fa-source-card">
-            <span className="fa-meta">دورهٔ مرتبط</span>
-            {relatedSources.map((source) => (
-              <p key={source.slug}>
-                <Link href={`/fa/courses/${source.slug}`} className="fa-inline-link">
-                  {faSourceNames[source.slug]?.course ?? source.course}
-                </Link>
-              </p>
-            ))}
-          </div>
-        )}
       </PageFrame>
     );
   }
@@ -555,7 +532,6 @@ async function FaPage({ path }: { path: string[] }) {
     const source = getSource(path[1]);
     const faSource = faSourceNames[source.slug];
     const outputEntries = entries.filter((entry) => source.outputs.includes(entry.slug));
-    const relatedEssays = allEssays.filter((essay) => source.relatedEssays?.includes(essay.slug));
     return (
       <PageFrame eyebrow={source.institution} title={faSource?.course ?? source.course} intro={faSource?.why ?? source.why}>
         <p className="fa-prose">مدرس: {source.instructor ?? '—'} · موضوع: {faTopics[source.subject]?.name ?? source.subject}</p>
@@ -563,11 +539,8 @@ async function FaPage({ path }: { path: string[] }) {
         <h2 className="fa-section-title">فرآیند مطالعه</h2>
         <PersianSourceFlow />
         <h2 className="fa-section-title fa-related-title">یادداشت‌های مرتبط</h2>
-        {outputEntries.length || relatedEssays.length ? (
-          <div className="fa-entry-list">
-            {outputEntries.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}
-            {relatedEssays.map((essay) => <FaEssayLink key={essay.slug} essay={essay} />)}
-          </div>
+        {outputEntries.length ? (
+          <div className="fa-entry-list">{outputEntries.map((entry) => <FaEntryLink key={entry.slug} entry={entry} />)}</div>
         ) : (
           <p className="fa-library-empty">هنوز یادداشتی بر پایهٔ این منبع منتشر نشده است.</p>
         )}
