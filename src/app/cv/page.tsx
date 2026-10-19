@@ -53,9 +53,6 @@ export default function CvPage() {
           <h1 className="mt-3 font-serif text-5xl font-medium tracking-tight text-ink dark:text-dark-ink md:text-6xl">
             CV
           </h1>
-          <p className="mt-5 max-w-3xl text-base leading-relaxed text-ink/70 dark:text-dark-soft md:text-lg">
-            Prospective MBA student in Tehran with a bachelor’s degree in Architectural Engineering. Interested in business analysis and development, and seeking an opportunity to apply my skills and gain professional experience in a business environment.
-          </p>
           <a
             href={basePath + '/cv-en.pdf'}
             download
@@ -98,17 +95,9 @@ export default function CvPage() {
             <div className="border-t border-rule pt-6 dark:border-dark-rule">
               <SectionHeading>Education</SectionHeading>
               <div className="mt-4">
+                <Entry role="Master of Business Administration (MBA), Marketing" place="Kharazmi University" time="Oct 2026 – Present" />
                 <Entry role="Bachelor’s Degree, Architectural Engineering" place="Islamic Azad University" time="2017 – 2021" />
                 <Entry role="High School Diploma, Mathematics" place="Sampad" time="2012 – 2016" />
-              </div>
-            </div>
-
-            <div className="border-t border-rule pt-6 dark:border-dark-rule">
-              <SectionHeading>Courses</SectionHeading>
-              <div className="mt-4">
-                <Entry role="Strategic Management" place="Wharton School" />
-                <Entry role="Startup Business Mechanisms" place="MIT" />
-                <Entry role="Comparative Financial Markets" place="MIT" />
               </div>
             </div>
 
@@ -126,6 +115,7 @@ export default function CvPage() {
             <div className="border-t border-rule pt-6 dark:border-dark-rule">
               <SectionHeading>Languages</SectionHeading>
               <div className="mt-4">
+                <Entry role="English (Advanced)" />
                 <Entry role="IELTS Academic: Overall Band 7.0" place="CEFR Level C1" time="Feb 2022" />
               </div>
             </div>
