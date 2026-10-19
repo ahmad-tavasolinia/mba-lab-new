@@ -76,20 +76,17 @@ export const faEssayTitles: Record<string, string> = {
   'is-an-mba-still-worth-it-in-the-age-of-ai': 'آیا MBA در عصر هوش مصنوعی هنوز ارزش دارد؟',
   'the-amateur-founder-problem': 'مسئلهٔ بنیان‌گذارِ تازه‌کار',
   'when-knowledge-becomes-cheap-what-becomes-valuable': 'وقتی دانش ارزان می‌شود، چه چیزی ارزشمند می‌ماند؟',
-  'adaptive-but-selective': 'سازگار، اما گزینشی!',
 };
 
 export const faEssaySummaries: Record<string, string> = {
   'is-an-mba-still-worth-it-in-the-age-of-ai': 'پرسش اصلی این نیست که MBA چه می‌آموزد؛ این است که آیا همان مهارت‌ها در جهانی که هوش مصنوعی کارهای تحلیلی را ارزان می‌کند کمیاب‌تر می‌شوند یا نه.',
   'the-amateur-founder-problem': 'هوش مصنوعی مانع فنیِ ساخت محصول را برمی‌دارد؛ این اتفاق فرصت‌ساز است، اما مسئلهٔ تازه‌ای هم ایجاد می‌کند.',
   'when-knowledge-becomes-cheap-what-becomes-valuable': 'هر بار که دانشی ارزان و فراگیر می‌شود، گلوگاه تازه‌ای پدید می‌آید؛ بهتر است از پیش بپرسیم این بار چه چیزی کمیاب خواهد شد.',
-  'adaptive-but-selective': 'تجربهٔ هوندا در بازار آمریکا نشان می‌دهد سازگاری زمانی به مزیت تبدیل می‌شود که با اولویت‌های روشن راهبردی هدایت شود.',
 };
 
 export const faSourceNames: Record<string, { course: string; why: string }> = {
   'mit-adaptive-markets': { course: 'بازارهای تطبیقی: پویایی بازارهای مالی و رفتار انسان', why: 'می‌خواستم از همان ابتدا ذهنیتی سازگار با تغییر در خودم بسازم. این نخستین درسی بود که پیش از MBA انتخاب کردم؛ چون بازارهای عصر هوش مصنوعی آن‌قدر سریع تغییر می‌کنند که مدل‌های کلاسیکِ کنشگر عقلانی همیشه پاسخ‌گو نیستند.' },
   'mit-nuts-and-bolts-of-new-ventures': { course: 'سازوکارهای عملیِ کسب‌وکارهای نوپا', why: 'می‌خواستم فیلترهای عملی، منطق مدل کسب‌وکار، اجرا و برنامه‌ریزی مالیِ میانِ داشتن یک ایده و ساختن یک کسب‌وکار را بفهمم.' },
-  'wharton-business-strategy-competitive-advantage': { course: 'استراتژی کسب‌وکار از وارتون: مزیت رقابتی', why: 'این یکی از چشم‌گیرترین و آموزنده‌ترین دوره‌هایی است که در حوزهٔ استراتژی گذرانده‌ام. تدریس درخشان نیکولای سیگِل‌کُو باعث می‌شود آدم بخواهد همچنان گوش دهد و یاد بگیرد. این دوره را یکی از اثرگذارترین تجربه‌ها در شکل‌گیری نگاه راهبردی‌ام می‌دانم.' },
 };
 
 export function faEntryTitle(slug: string, fallback: string) { return faEntryTitles[slug.toLowerCase()] ?? fallback; }

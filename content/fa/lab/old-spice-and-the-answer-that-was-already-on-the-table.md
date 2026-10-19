@@ -22,7 +22,7 @@
 
 ## پیوندها
 
-این مورد در ادامهٔ Pepsi A.M.، Heinz، Real Burger World، ESPN و Burger King است. هرکدام نشان می‌دادند برداشت قانع‌کننده چطور از چیزی که واقعاً ثابت می‌کند جلو می‌زند. این مورد از بیشترشان جهت مخالف دارد: مشکل، اعتمادبه‌نفس بیش از حد به ایدهٔ بد نبود؛ اعتماد کم به ایدهٔ خوبی بود که از قبل حاضر بود.
+این مورد در ادامهٔ [Pepsi A.M.](/fa/mba-lab/pepsi-am-and-the-room-that-already-knew)، [Heinz](/fa/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit)، [Real Burger World](/fa/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name)، [ESPN](/fa/mba-lab/espn-and-the-question-underneath-the-question) و [Burger King](/fa/mba-lab/burger-king-and-the-habit-they-were-actually-selling) است. هرکدام نشان می‌دادند برداشت قانع‌کننده چطور از چیزی که واقعاً ثابت می‌کند جلو می‌زند. این مورد از بیشترشان جهت مخالف دارد: مشکل، اعتمادبه‌نفس بیش از حد به ایدهٔ بد نبود؛ اعتماد کم به ایدهٔ خوبی بود که از قبل حاضر بود.
 
 ## پرسش‌هایی که هنوز دارم
 

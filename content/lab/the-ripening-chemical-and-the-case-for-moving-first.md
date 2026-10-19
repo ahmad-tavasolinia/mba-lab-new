@@ -14,12 +14,12 @@ keyIdeas:
   - "A once-a-year harvest window is a structural deadline built into the product category, not a general instinct about speed."
   - "A pilot's numbers only confirm a decision when they are tied to the mechanism argued for it, not used to validate whichever instinct came first."
 connections:
-  - "Real Burger World and the Contradiction Built Into the Name"
-  - "Pepsi A.M. and the Room That Already Knew"
-  - "Old Spice and the Answer That Was Already on the Table"
-  - "Heinz and the Problem With Accusing the Wrong Culprit"
-  - "ESPN and the Question Underneath the Question"
-  - "Burger King and the Habit They Were Actually Selling"
+  - "real-burger-world-and-the-contradiction-built-into-the-name"
+  - "pepsi-am-and-the-room-that-already-knew"
+  - "old-spice-and-the-answer-that-was-already-on-the-table"
+  - "heinz-and-the-problem-with-accusing-the-wrong-culprit"
+  - "espn-and-the-question-underneath-the-question"
+  - "burger-king-and-the-habit-they-were-actually-selling"
 openQuestions:
   - "Can I notice in the moment that a reflexive answer like 'sooner is better' is a slogan and not a mechanism, or does that only show when someone pushes for a sharper reason?"
   - "How often does scope confusion, arguing against a decision already made instead of the narrower one being asked, derail an otherwise sound analysis?"
@@ -51,7 +51,7 @@ My call held: commercialize, on the condition that the seasonal argument is the 
 
 ## Connections
 
-This case sits with [Real Burger World](../real-burger-world-and-the-contradiction-built-into-the-name/), [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/), [Old Spice](../old-spice-and-the-answer-that-was-already-on-the-table/), [Heinz](../heinz-and-the-problem-with-accusing-the-wrong-culprit/), [ESPN](../espn-and-the-question-underneath-the-question/), and [Burger King](../burger-king-and-the-habit-they-were-actually-selling/). Each one showed a different way a plausible read can outrun what it proves. This one adds two: a true-sounding generality mistaken for a specific mechanism, and a scope error mistaken for a strategic insight.
+This case sits with [Real Burger World](/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name), [Pepsi A.M.](/mba-lab/pepsi-am-and-the-room-that-already-knew), [Old Spice](/mba-lab/old-spice-and-the-answer-that-was-already-on-the-table), [Heinz](/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit), [ESPN](/mba-lab/espn-and-the-question-underneath-the-question), and [Burger King](/mba-lab/burger-king-and-the-habit-they-were-actually-selling). Each one showed a different way a plausible read can outrun what it proves. This one adds two: a true-sounding generality mistaken for a specific mechanism, and a scope error mistaken for a strategic insight.
 
 ## Questions I still have
 

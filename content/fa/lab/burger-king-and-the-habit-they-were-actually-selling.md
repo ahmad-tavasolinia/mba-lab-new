@@ -26,7 +26,7 @@
 
 ## پیوندها
 
-این مورد همان الگویی را دنبال می‌کند که در Pepsi A.M.، Heinz، Real Burger World و ESPN دیدیم: برداشتی خوش‌بیان می‌تواند کمتر از آنچه به نظر می‌رسد توضیح دهد. اینجا درس دیگری هم هست: دانستن اینکه چیزی جواب می‌دهد با دانستن اینکه کدام جزء مسئول نتیجه است فرق دارد.
+این مورد همان الگویی را دنبال می‌کند که در [Pepsi A.M.](/fa/mba-lab/pepsi-am-and-the-room-that-already-knew)، [Heinz](/fa/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit)، [Real Burger World](/fa/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name) و [ESPN](/fa/mba-lab/espn-and-the-question-underneath-the-question) دیدیم: برداشتی خوش‌بیان می‌تواند کمتر از آنچه به نظر می‌رسد توضیح دهد. اینجا درس دیگری هم هست: دانستن اینکه چیزی جواب می‌دهد با دانستن اینکه کدام جزء مسئول نتیجه است فرق دارد.
 
 ## پرسش‌هایی که هنوز دارم
 

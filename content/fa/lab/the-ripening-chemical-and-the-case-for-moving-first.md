@@ -22,7 +22,7 @@
 
 ## پیوندها
 
-این مورد کنار Real Burger World، Pepsi A.M.، Old Spice، Heinz، ESPN و Burger King قرار می‌گیرد. هرکدام نشان می‌دادند برداشتی محتمل می‌تواند بیش از آنچه ثابت می‌کند ادعا کند. اینجا دو خطا اضافه می‌شود: کلی‌گوییِ درست‌نما که جای سازوکار مشخص را می‌گیرد و اشتباه در دامنه که با بینش راهبردی اشتباه گرفته می‌شود.
+این مورد کنار [Real Burger World](/fa/mba-lab/real-burger-world-and-the-contradiction-built-into-the-name)، [Pepsi A.M.](/fa/mba-lab/pepsi-am-and-the-room-that-already-knew)، [Old Spice](/fa/mba-lab/old-spice-and-the-answer-that-was-already-on-the-table)، [Heinz](/fa/mba-lab/heinz-and-the-problem-with-accusing-the-wrong-culprit)، [ESPN](/fa/mba-lab/espn-and-the-question-underneath-the-question) و [Burger King](/fa/mba-lab/burger-king-and-the-habit-they-were-actually-selling) قرار می‌گیرد. هرکدام نشان می‌دادند برداشتی محتمل می‌تواند بیش از آنچه ثابت می‌کند ادعا کند. اینجا دو خطا اضافه می‌شود: کلی‌گوییِ درست‌نما که جای سازوکار مشخص را می‌گیرد و اشتباه در دامنه که با بینش راهبردی اشتباه گرفته می‌شود.
 
 ## پرسش‌هایی که هنوز دارم
 

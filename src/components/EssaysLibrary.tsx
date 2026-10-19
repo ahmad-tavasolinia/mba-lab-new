@@ -16,9 +16,7 @@ export default function EssaysLibrary({ essays }: { essays: Essay[] }) {
       const matchesTopic = activeTopic ? e.topics.includes(activeTopic as any) : true;
       const q = query.trim().toLowerCase();
       const matchesQuery = q
-        ? e.title.toLowerCase().includes(q) ||
-          e.subtitle?.toLowerCase().includes(q) ||
-          e.summary.toLowerCase().includes(q)
+        ? e.title.toLowerCase().includes(q) || e.summary.toLowerCase().includes(q)
         : true;
       return matchesTopic && matchesQuery;
     });

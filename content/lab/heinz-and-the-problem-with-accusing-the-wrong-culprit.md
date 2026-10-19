@@ -14,7 +14,7 @@ keyIdeas:
   - "A striking number found in passing, like a stock price drop, is not evidence for a specific claim just because it is dramatic and close in time."
   - "Earned media and attention are not the same measurement as the behavior a campaign was built to change."
 connections:
-  - "Pepsi A.M. and the Room That Already Knew"
+  - "pepsi-am-and-the-room-that-already-knew"
 openQuestions:
   - "Can I test before launch whether a campaign's named villain matches the underlying cause, or does the gap only show once the outcome is known?"
   - "How much should earned media count as evidence of success when the behavior the campaign was built to change was never measured?"
@@ -48,7 +48,7 @@ The campaign won on visibility. My read is that it was aimed at the wrong cause,
 
 ## Connections
 
-This pairs with [Pepsi A.M.](../pepsi-am-and-the-room-that-already-knew/). Both cases were worked cold, before seeing the outcome, and both turn on the same failure: a confident, well-told story (a marketing goal restated as a plan, an accusation restated as a fix) that doesn't hold up against the underlying constraint.
+This pairs with [Pepsi A.M.](/mba-lab/pepsi-am-and-the-room-that-already-knew). Both cases were worked cold, before seeing the outcome, and both turn on the same failure: a confident, well-told story (a marketing goal restated as a plan, an accusation restated as a fix) that doesn't hold up against the underlying constraint.
 
 ## Questions I still have
 

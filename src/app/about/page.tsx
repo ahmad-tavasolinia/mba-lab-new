@@ -25,7 +25,7 @@ export default function AboutPage() {
 
       <section>
         <Container className="grid gap-14 py-16 md:grid-cols-[1fr,320px]">
-          <div className="prose-lab max-w-prose text-ink dark:text-dark-ink">
+          <div className="prose-lab max-w-[52rem] text-ink dark:text-dark-ink">
             <p>
               I’ve always wondered why some businesses find their footing and grow while others
               struggle despite good ideas and a lot of effort. It’s rarely one thing. Markets,

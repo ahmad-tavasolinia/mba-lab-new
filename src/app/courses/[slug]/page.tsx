@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getSource, getSourceSlugs, getAllLabEntries, getAllEssays } from '@/lib/content';
+import { getSource, getSourceSlugs, getAllLabEntries } from '@/lib/content';
 import { getTopic } from '@/lib/topics';
 import { Container, Eyebrow, formatDate } from '@/components/ui';
 import SourceFlow from '@/components/SourceFlow';
@@ -35,25 +35,7 @@ export default async function SourcePage({ params }: { params: { slug: string } 
 
   const source = getSource(params.slug);
   const topic = getTopic(source.subject);
-  const [labEntries, essays] = await Promise.all([getAllLabEntries(), getAllEssays()]);
-  const outputs = [
-    ...labEntries
-      .filter((entry) => source.outputs.includes(entry.slug))
-      .map((entry) => ({
-        href: `/mba-lab/${entry.slug}`,
-        date: entry.date,
-        title: entry.title,
-        summary: entry.summary,
-      })),
-    ...essays
-      .filter((essay) => source.outputs.includes(essay.slug))
-      .map((essay) => ({
-        href: `/essays/${essay.slug}`,
-        date: essay.date,
-        title: essay.title,
-        summary: essay.summary,
-      })),
-  ].sort((a, b) => b.date.localeCompare(a.date));
+  const outputs = (await getAllLabEntries()).filter((e) => source.outputs.includes(e.slug));
 
   return (
     <div>
@@ -123,13 +105,13 @@ export default async function SourcePage({ params }: { params: { slug: string } 
         <Container className="py-14">
           <Eyebrow>What emerged from it</Eyebrow>
           <h2 className="mt-2 font-serif text-3xl font-medium tracking-tight text-ink dark:text-dark-ink">
-            Related work
+            Related MBA Lab outputs
           </h2>
           <div className="mt-8">
             {outputs.map((e) => (
               <Link
                 key={e.slug}
-                href={e.href}
+                href={`/mba-lab/${e.slug}`}
                 className="group block border-t border-rule py-6 first:border-t-0 dark:border-dark-rule"
               >
                 <span className="font-mono text-[11px] uppercase tracking-widest text-ink/40 dark:text-dark-soft/60">
