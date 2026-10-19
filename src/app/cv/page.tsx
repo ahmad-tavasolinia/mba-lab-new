@@ -104,7 +104,7 @@ export default function CvPage() {
             <div className="border-t border-rule pt-6 dark:border-dark-rule">
               <SectionHeading>Skills</SectionHeading>
               <div className="mt-4 flex flex-wrap gap-2">
-                {['Product Development', 'Customer Discovery', 'Business Development', 'Project & Team Coordination', 'Communication', 'Excel', 'PowerPoint', 'SQL (Basic)'].map((skill) => (
+                {['Market Analysis & Customer Insights', 'Product Development', 'Business Development', 'Customer Needs & Behavior', 'Project & Team Coordination', 'Communication & Negotiation', 'Microsoft Excel', 'Microsoft PowerPoint', 'SQL (Beginner)'].map((skill) => (
                   <span key={skill} className="rounded-full border border-rule px-4 py-1.5 text-sm text-ink/70 dark:border-dark-rule dark:text-dark-soft">
                     {skill}
                   </span>

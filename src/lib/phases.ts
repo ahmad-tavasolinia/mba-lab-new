@@ -40,7 +40,7 @@ export const phases: Phase[] = [
 // day you graduate. Everything else (the homepage chart, the hero log line,
 // which circles look "done") reads from this single value.
 // ---------------------------------------------------------------------------
-export const activePhase: PhaseSlug = 'phase-1';
+export const activePhase: PhaseSlug = 'phase-2';
 
 export function getPhase(slug: string): Phase | undefined {
   return phases.find((p) => p.slug === slug);

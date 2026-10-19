@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getAllEssays, getAllLabEntries, getAllSources, getEssay, getEssaySlugs, getLabEntry, getLabSlugs, getPersianEssayContent, getPersianLabContent, getSource, getSourceSlugs } from '@/lib/content';
 import { categories } from '@/lib/categories';
-import { phases } from '@/lib/phases';
+import { activePhase, phases } from '@/lib/phases';
 import { topics } from '@/lib/topics';
 import PersianLabLibrary from '@/components/PersianLabLibrary';
 import SqlCodeBlock from '@/components/SqlCodeBlock';
@@ -55,7 +55,7 @@ function FaHome() {
           <p className="journey-title">مسیر یادگیری</p>
           <div className="fa-journey-track">
             {phases.map((phase, index) => (
-              <Link key={phase.slug} href={`/fa/mba-lab/phase/${phase.slug}`} className={phase.slug === 'phase-1' ? 'fa-journey-phase active' : 'fa-journey-phase'}>
+              <Link key={phase.slug} href={`/fa/mba-lab/phase/${phase.slug}`} className={phase.slug === activePhase ? 'fa-journey-phase active' : 'fa-journey-phase'}>
                 <span>{String(index + 1).padStart(2, '0')}</span><small>{faPhases[phase.slug].name}</small>
               </Link>
             ))}
@@ -358,7 +358,7 @@ async function FaPage({ path }: { path: string[] }) {
         <h3>دیپلم ریاضی</h3>
         <p>۲۰۱۲ تا ۲۰۱۶</p>
         <h2 className="fa-section-title">مهارت‌ها</h2>
-        <p>توسعهٔ محصول، شناخت نیاز مشتری، توسعهٔ کسب‌وکار، هماهنگی پروژه و تیم، ارتباط مؤثر، اکسل، پاورپوینت و آشنایی مقدماتی با SQL.</p>
+        <p>تحلیل بازار و بینش مشتری، توسعهٔ محصول، توسعهٔ کسب‌وکار، نیازها و رفتار مشتری، هماهنگی پروژه و تیم، ارتباطات و مذاکره، مایکروسافت اکسل، مایکروسافت پاورپوینت و SQL (مقدماتی).</p>
         <h2 className="fa-section-title">زبان‌ها</h2>
         <p dir="ltr">English (Advanced)</p>
         <p>آیلتس آکادمیک: نمرهٔ ۷٫۰، سطح C1، فوریهٔ ۲۰۲۲</p>
