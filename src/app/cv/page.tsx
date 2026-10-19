@@ -24,7 +24,7 @@ function Entry({
   children,
 }: {
   role: string;
-  place: string;
+  place?: string;
   time?: string;
   children?: React.ReactNode;
 }) {
@@ -38,7 +38,7 @@ function Entry({
           </span>
         )}
       </div>
-      <p className="text-sm text-ink/50 dark:text-dark-soft/70">{place}</p>
+      {place && <p className="text-sm text-ink/50 dark:text-dark-soft/70">{place}</p>}
       {children && <div className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/70 dark:text-dark-soft">{children}</div>}
     </div>
   );
