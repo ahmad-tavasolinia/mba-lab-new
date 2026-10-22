@@ -26,6 +26,7 @@ export const faPhases: Record<PhaseSlug, { name: string; title: string; descript
 };
 
 export const faEntryTitles: Record<string, string> = {
+  'why-am-i-receiving-this-message': 'چرا این پیامک به دست من رسید؟',
   'mud-bay-and-the-hour-that-wasnt-actually-dead': 'ماد بِی و ساعتی که واقعاً مرده نبود',
   'burger-king-and-the-habit-they-were-actually-selling': 'برگر کینگ و عادتی که واقعاً می‌فروخت',
   'espn-and-the-question-underneath-the-question': 'ESPN و پرسشی که زیرِ پرسش اصلی پنهان بود',
@@ -52,6 +53,7 @@ export const faEntryTitles: Record<string, string> = {
 };
 
 export const faEntrySummaries: Record<string, string> = {
+  'why-am-i-receiving-this-message': 'تأملی دربارهٔ پیامک پیشنهادی نامرتبط، واحد تصمیم‌گیری مشتری و این‌که یک کارزار باید به چه کسانی برسد.',
   'mud-bay-and-the-hour-that-wasnt-actually-dead': 'بررسی پیشنهاد تعطیلی زودتر فروشگاه‌ها، محاسبهٔ صرفه‌جویی و ارزشی که دسترسی مشتریان دارد.',
   'burger-king-and-the-habit-they-were-actually-selling': 'بررسی کمپین Whopper Detour و سازوکاری که زیرِ یک حرکت وایرال پنهان بود.',
   'espn-and-the-question-underneath-the-question': 'بررسی چرخش ESPN به سمت پخش آنلاین و قیاسی که با پرسش‌گری دوام نیاورد.',
@@ -89,6 +91,7 @@ export const faEssaySummaries: Record<string, string> = {
 };
 
 export const faSourceNames: Record<string, { course: string; why: string }> = {
+  'dolan-note-on-marketing-strategy': { course: 'یادداشت دربارهٔ راهبرد بازاریابی', why: 'این منبع چارچوبی برای بررسی واحد تصمیم‌گیری مشتری و نقش هر یک از اعضای آن در خرید فراهم می‌کند.' },
   'mit-adaptive-markets': { course: 'بازارهای تطبیقی: پویایی بازارهای مالی و رفتار انسان', why: 'می‌خواستم از همان ابتدا ذهنیتی سازگار با تغییر در خودم بسازم. این نخستین درسی بود که پیش از MBA انتخاب کردم؛ چون بازارهای عصر هوش مصنوعی آن‌قدر سریع تغییر می‌کنند که مدل‌های کلاسیکِ کنشگر عقلانی همیشه پاسخ‌گو نیستند.' },
   'mit-nuts-and-bolts-of-new-ventures': { course: 'سازوکارهای عملیِ کسب‌وکارهای نوپا', why: 'می‌خواستم فیلترهای عملی، منطق مدل کسب‌وکار، اجرا و برنامه‌ریزی مالیِ میانِ داشتن یک ایده و ساختن یک کسب‌وکار را بفهمم.' },
   'wharton-business-strategy-competitive-advantage': { course: 'راهبرد کسب‌وکار از وارتون: مزیت رقابتی', why: 'یکی از روشنگرترین و عمیق‌ترین دوره‌هایی که در زمینهٔ راهبرد گذرانده‌ام. تدریس درخشان نیکولای سیگِلکُو آدم را به ادامه‌دادن و یادگیری بیشتر ترغیب می‌کند. این دوره را یکی از اثرگذارترین دوره‌ها در شکل‌گیری نگاه راهبردی‌ام می‌دانم.' },

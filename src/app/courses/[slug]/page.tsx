@@ -61,10 +61,10 @@ export default async function SourcePage({ params }: { params: { slug: string } 
           </h1>
           <p className="mt-3 text-sm text-ink/50 dark:text-dark-soft/70">
             {topic?.name}
-            {source.instructor ? (
+            {source.author || source.instructor ? (
               <>
                 {' · '}
-                {source.instructorUrl ? (
+                {source.instructorUrl && source.instructor ? (
                   <a
                     href={source.instructorUrl}
                     target="_blank"
@@ -74,13 +74,18 @@ export default async function SourcePage({ params }: { params: { slug: string } 
                     {source.instructor}
                   </a>
                 ) : (
-                  source.instructor
+                  source.author ?? source.instructor
                 )}
               </>
             ) : (
               ''
             )}
           </p>
+          {source.publication && (
+            <p className="mt-1 text-xs text-ink/40 dark:text-dark-soft/60">
+              {source.publication}
+            </p>
+          )}
         </Container>
       </section>
 

@@ -44,7 +44,7 @@ export default async function CoursesPage() {
           <div className="mb-6">
             <SourceFlow />
             <p className="mt-4 max-w-xl text-[13px] leading-relaxed text-ink/50 dark:text-dark-soft/60">
-              Academic sources are credited for context. No university named below has reviewed,
+              Academic sources are credited for context. No institution named below has reviewed,
               endorsed, or is otherwise affiliated with MBA Lab.
             </p>
           </div>
@@ -66,8 +66,13 @@ export default async function CoursesPage() {
                   </h2>
                   <p className="mt-1 text-sm text-ink/50 dark:text-dark-soft/70">
                     {topic?.name}
-                    {s.instructor ? ` · ${s.instructor}` : ''}
+                    {s.author || s.instructor ? ` · ${s.author ?? s.instructor}` : ''}
                   </p>
+                  {s.publication && (
+                    <p className="mt-1 text-xs text-ink/40 dark:text-dark-soft/60">
+                      {s.publication}
+                    </p>
+                  )}
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
                     {s.why}
                   </p>

@@ -380,7 +380,8 @@ async function FaPage({ path }: { path: string[] }) {
               <article className="fa-entry-card fa-source-card" key={source.slug}>
                 <span className="fa-meta">{source.institution}</span>
                 <h2><Link href={`/fa/courses/${source.slug}`}>{faSource?.course ?? source.course}</Link></h2>
-                <p>{source.instructor && <>{source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p>
+                <p>{(source.author ?? source.instructor) && <>{source.author ?? source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p>
+                {source.publication && <p className="fa-meta">{source.publication}</p>}
                 <p>{faSource?.why ?? source.why}</p>
                 <div className="fa-source-actions">
                   <Link href={`/fa/courses/${source.slug}`} className="fa-inline-link">
@@ -392,7 +393,7 @@ async function FaPage({ path }: { path: string[] }) {
             );
           })}
         </div>
-        <p className="fa-disclaimer">منابع دانشگاهی برای شفافیت ذکر شده‌اند؛ هیچ‌یک از دانشگاه‌های نام‌برده این کارگاه را بررسی یا تأیید نکرده‌اند.</p>
+        <p className="fa-disclaimer">منابع و ناشران برای شفافیت ذکر شده‌اند؛ هیچ‌یک از نهادهای نام‌برده این کارگاه را بررسی یا تأیید نکرده‌اند.</p>
       </PageFrame>
     );
   }
@@ -440,6 +441,7 @@ async function FaPage({ path }: { path: string[] }) {
     if (entry.slug === 'excel-financial-data-analysis') return <FaExcelProject entry={entry} />;
     if (entry.slug === 'sql-business-analysis-sales-performance') return await FaSqlProject({ entry });
     const persianContent = await getPersianLabContent(entry.slug);
+    const relatedSources = getAllSources().filter((source) => entry.sources.includes(source.slug));
     return (
       <PageFrame
         eyebrow={faCategories[entry.category].name}
@@ -479,6 +481,21 @@ async function FaPage({ path }: { path: string[] }) {
             <p className="fa-original-note">{entry.category === 'interviews' ? 'نسخهٔ فارسی این گفت‌وگو هنوز آماده نیست؛ فعلاً متن انگلیسی در دسترس است.' : 'متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.'}</p>
             <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
           </>
+        )}
+        {relatedSources.length > 0 && (
+          <section className="mt-10 border-t border-rule pt-6 dark:border-dark-rule" dir="rtl">
+            <h2 className="fa-section-title">منبع مرتبط</h2>
+            <ul className="mt-3 space-y-2">
+              {relatedSources.map((source) => (
+                <li key={source.slug}>
+                  <Link href={`/fa/courses/${source.slug}`} className="fa-inline-link">
+                    {faSourceNames[source.slug]?.course ?? source.course} ←
+                  </Link>
+                  <p className="fa-meta">{source.institution}{source.author ? ` · ${source.author}` : ''}</p>
+                </li>
+              ))}
+            </ul>
+          </section>
         )}
       </PageFrame>
     );
@@ -529,7 +546,8 @@ async function FaPage({ path }: { path: string[] }) {
     const outputEntries = entries.filter((entry) => source.outputs.includes(entry.slug));
     return (
       <PageFrame eyebrow={source.institution} title={faSource?.course ?? source.course} intro={faSource?.why ?? source.why}>
-        <p className="fa-prose">مدرس: {source.instructor ?? '—'} · موضوع: {faTopics[source.subject]?.name ?? source.subject}</p>
+        <p className="fa-prose">{source.author ? `نویسنده: ${source.author}` : `مدرس: ${source.instructor ?? '—'}`} · موضوع: {faTopics[source.subject]?.name ?? source.subject}</p>
+        {source.publication && <p className="fa-meta">{source.publication}</p>}
         {source.courseUrl && <a className="fa-action" href={source.courseUrl} target="_blank" rel="noreferrer">مشاهدهٔ دوره در وب‌سایت اصلی ←</a>}
         <h2 className="fa-section-title">فرآیند مطالعه</h2>
         <PersianSourceFlow />
@@ -539,7 +557,7 @@ async function FaPage({ path }: { path: string[] }) {
         ) : (
           <p className="fa-library-empty">هنوز یادداشتی بر پایهٔ این منبع منتشر نشده است.</p>
         )}
-        <p className="fa-disclaimer">این صفحه برای شفافیت، منبع دانشگاهی را معرفی می‌کند. تحلیل و نتیجه‌گیری‌ها متعلق به نویسنده‌اند و این دانشگاه کارگاه را بررسی یا تأیید نکرده است.</p>
+        <p className="fa-disclaimer">این صفحه برای شفافیت، منبع را معرفی می‌کند. تحلیل و نتیجه‌گیری‌ها متعلق به نویسنده‌اند و نهاد یا ناشر معرفی‌شده این کارگاه را بررسی یا تأیید نکرده است.</p>
       </PageFrame>
     );
   }

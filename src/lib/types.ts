@@ -55,6 +55,8 @@ export interface SourceFrontmatter {
   courseUrl?: string;
   instructor?: string;
   instructorUrl?: string;
+  author?: string;
+  publication?: string;
   subject: TopicSlug;
   why: string;
   outputs: string[]; // lab entry slugs
