@@ -1,6 +1,6 @@
 ---
 title: "Why Am I Receiving This Message?"
-date: "2026-09-02"
+date: "2026-10-22"
 code: "MBA·LAB·23"
 category: "essays"
 journeyPhase: "phase-2"
@@ -19,7 +19,7 @@ finalPerspective: "A campaign should have a clear rationale for whom it reaches 
 sources: ["dolan-note-on-marketing-strategy"]
 ---
 
-Today, I received a text message from a telecommunications company offering free SIM cards to people celebrating their 20th birthday. My first reaction was: Why me? I am not 20 years old. I have no siblings of that age, and none of my friends or coworkers are 20 either. So why did the company waste a text message on me, and probably on millions of other people in the same situation, who have no one around them to even inform about this offer?
+Today, I received a text message from a telecommunications company offering free SIM cards to people celebrating their 18th birthday. My first reaction was: Why me? I am not 18 years old. I have no siblings of that age, and none of my friends or coworkers are 18 either. So why did the company waste a text message on me, and probably on millions of other people in the same situation, who have no one around them to even inform about this offer?
 
 Then I started asking myself some business questions. How much did this campaign cost? How much did each message cost the company, and how much revenue did it generate? Did the campaign even break even? Maybe it did, maybe it didn't. Perhaps the company knows exactly what it is doing, and perhaps it doesn't. Hopefully, it does! Still, I cannot help asking the same question: Why did I receive this message if I am not part of the target audience?
 
@@ -29,6 +29,6 @@ A good marketing strategist should therefore ask a few important questions about
 
 In the case of the free SIM cards, I am none of these people, at least in the situation I described. I am not part of the intended target segment, nor do I have a meaningful role in the purchasing decision of someone who might qualify for the offer. If we assume that the company is not doing this deliberately for some reason we do not know, this could be a waste of resources and a problem with its targeting strategy.
 
-When a company sends messages to a large number of people, hoping that some of them happen to know someone turning 20, it risks spending money reaching people who are unlikely to contribute to the intended outcome. For a campaign of this kind, the company could consider a more direct approach. For example, there are providers that offer phone numbers grouped into different segments for a fee. Instead of spending money reaching an unnecessarily broad audience, the company could target university students, for instance, and identify the relevant members of the decision-making unit. Even if it does not want to spend additional time and money developing different advertisements or communication methods for different DMU members, sending the offer directly to potential users would make more sense than sending it to people who have no apparent connection to them.
+When a company sends messages to a large number of people, hoping that some of them happen to know someone turning 18, it risks spending money reaching people who are unlikely to contribute to the intended outcome. For a campaign of this kind, the company could consider a more direct approach. For example, there are providers that offer phone numbers grouped into different segments for a fee. Instead of spending money reaching an unnecessarily broad audience, the company could target university students, for instance, and identify the relevant members of the decision-making unit. Even if it does not want to spend additional time and money developing different advertisements or communication methods for different DMU members, sending the offer directly to potential users would make more sense than sending it to people who have no apparent connection to them.
 
 This is a trap that large companies with substantial resources may sometimes overlook because the cost of an individual message seems insignificant. Perhaps they are right, and the campaign is profitable despite reaching people like me. But I believe a good marketing manager should not gamble with company resources, no matter how wealthy the company is. A campaign should have a clear rationale for whom it reaches and why, rather than relying on the assumption that a small amount of wasted money does not matter.
