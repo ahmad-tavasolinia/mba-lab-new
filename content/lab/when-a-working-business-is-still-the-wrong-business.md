@@ -1,7 +1,7 @@
 ---
 title: "When a Working Business Is Still the Wrong Business"
 date: "2026-10-07"
-code: "MBA·LAB·19"
+code: "MBA·LAB·20"
 journeyPhase: "phase-1"
 category: "interviews"
 topics: ["entrepreneurship", "strategy", "finance", "artificial-intelligence"]

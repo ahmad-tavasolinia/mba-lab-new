@@ -1,7 +1,7 @@
 ---
 title: "Netflix in India and the Wallet That Only Fits One Subscription"
 date: "2026-09-08"
-code: "MBA·LAB·15"
+code: "MBA·LAB·16"
 category: "cases"
 journeyPhase: "phase-1"
 topics: ["strategy", "finance"]

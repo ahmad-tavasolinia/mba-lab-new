@@ -1,7 +1,7 @@
 ---
 title: "Value Creation, Value Capture, and the Business Model"
 date: "2026-09-15"
-code: "MBA·LAB·16"
+code: "MBA·LAB·17"
 journeyPhase: "phase-1"
 category: "essays"
 topics: ["entrepreneurship", "strategy", "finance"]
