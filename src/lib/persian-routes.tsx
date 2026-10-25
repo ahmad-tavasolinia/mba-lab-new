@@ -491,7 +491,7 @@ async function FaPage({ path }: { path: string[] }) {
           </>
         )}
         {entry.slug === 'honda-vs-triumph-quantifying-competitive-advantage' && persianContent && (
-          <HondaTriumphAnalysis locale="fa" />
+          <HondaTriumphAnalysis locale="en" />
         )}
         {relatedSources.length > 0 && (
           <section className="mt-10 border-t border-rule pt-6 dark:border-dark-rule" dir="rtl">
