@@ -90,7 +90,6 @@ export default function PersianLabLibrary({
                   <img
                     src={item.logo}
                     alt=""
-                    className={item.logo.endsWith('/ferrari.png') ? 'is-ferrari' : undefined}
                     loading="lazy"
                   />
                 </span>

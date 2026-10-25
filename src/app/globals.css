@@ -2251,12 +2251,10 @@ html[data-theme="light"] .lab-library-more:hover {
   object-fit: contain;
 }
 
-.case-card-logo-image.is-ferrari { object-fit: cover; }
-.fa-case-logo-tile img.is-ferrari { object-fit: cover; }
 .fa-case-result-card {
   display: grid;
   grid-template-columns: 96px minmax(0, 1fr);
-  align-items: start;
+  align-items: center;
   gap: 20px;
   direction: ltr;
 }

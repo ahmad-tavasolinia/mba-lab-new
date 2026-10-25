@@ -10,13 +10,13 @@ export default function LabEntryCard({ entry }: { entry: LabEntry }) {
       href={`/mba-lab/${entry.slug}`}
       className="group block border-t border-rule py-8 first:border-t-0 dark:border-dark-rule"
     >
-      <div className={caseLogo ? 'flex items-start gap-5' : undefined}>
+      <div className={caseLogo ? 'flex items-center gap-5' : undefined}>
         {caseLogo && (
           <span className="case-card-logo" aria-hidden="true">
             <img
               src={caseLogo}
               alt=""
-              className={`case-card-logo-image${entry.slug === 'ferraris-bet-against-its-own-roadmap' ? ' is-ferrari' : ''}`}
+              className="case-card-logo-image"
               loading="lazy"
             />
           </span>
