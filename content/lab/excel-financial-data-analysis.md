@@ -1,7 +1,7 @@
 ---
 title: "Excel: Financial Data Analysis"
 date: "2026-09-18"
-code: "MBA·LAB·18"
+code: "MBA·LAB·17"
 journeyPhase: "phase-1"
 category: "projects"
 topics: ["finance"]

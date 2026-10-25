@@ -1,7 +1,7 @@
 ---
 title: "Adaptive, but Selective!"
 date: "2026-10-19"
-code: "MBA·LAB·22"
+code: "MBA·LAB·21"
 journeyPhase: "phase-1"
 category: "essays"
 topics: ["strategy"]

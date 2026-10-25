@@ -1,7 +1,7 @@
 ---
 title: "Tropicana and the Carton Customers Knew by Heart"
 date: "2026-09-02"
-code: "MBA·LAB·15"
+code: "MBA·LAB·14"
 category: "cases"
 logo: "/images/case-logos/tropicana.png"
 journeyPhase: "phase-1"

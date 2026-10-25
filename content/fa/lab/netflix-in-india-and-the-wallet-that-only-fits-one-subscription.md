@@ -26,7 +26,7 @@
 
 ## پیوندها
 
-این مورد کنار [Ferrari](/fa/mba-lab/ferraris-bet-against-its-own-roadmap) و [The Ripening Chemical](/fa/mba-lab/the-ripening-chemical-and-the-case-for-moving-first) قرار می‌گیرد. هرکدام یادآورند که غریزهٔ راهبردی خوش‌بیان تا وقتی با اعداد روبه‌رو نشده، شایستهٔ اتکا نیست.
+این مورد کنار [Ferrari](/fa/mba-lab/ferraris-bet-against-its-own-roadmap) قرار می‌گیرد. هرکدام یادآورند که غریزهٔ راهبردی خوش‌بیان تا وقتی با اعداد روبه‌رو نشده، شایستهٔ اتکا نیست.
 
 ## پرسش‌هایی که هنوز دارم
 

@@ -1,7 +1,7 @@
 ---
 title: "Same Macro Economy. Different Businesses."
 date: "2026-09-25"
-code: "MBA·LAB·19"
+code: "MBA·LAB·18"
 journeyPhase: "phase-1"
 category: "interviews"
 topics: ["strategy", "finance", "entrepreneurship"]

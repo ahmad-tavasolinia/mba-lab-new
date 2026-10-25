@@ -1,7 +1,7 @@
 ---
 title: "Why Am I Receiving This Message?"
 date: "2026-10-22"
-code: "MBA·LAB·23"
+code: "MBA·LAB·22"
 category: "essays"
 journeyPhase: "phase-2"
 topics: ["marketing"]

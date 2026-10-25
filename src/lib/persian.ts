@@ -47,7 +47,6 @@ export const faEntryTitles: Record<string, string> = {
   'pepsi-am-and-the-room-that-already-knew': 'پپسی اِی‌اِم و اتاقی که از قبل پاسخ را می‌دانست',
   'pepsis-fifth-attempt-at-a-product-nobody-asked-for': 'پنجمین تلاش پپسی برای محصولی که کسی نخواسته بود',
   'real-burger-world-and-the-contradiction-built-into-the-name': 'ریل برگر ورلد و تناقضی که در نامش بود',
-  'the-ripening-chemical-and-the-case-for-moving-first': 'مادهٔ رسیده‌کننده و استدلالِ پیش‌دستی',
   'value-creation-value-capture-and-the-business-model': 'خلق ارزش، تصاحب ارزش و مدل کسب‌وکار',
   'what-do-i-think-about-an-mba-right-before-starting-it-in-2026': 'در آستانهٔ شروع MBA در ۲۰۲۶، واقعاً چه فکری می‌کنم؟',
 };
@@ -73,7 +72,6 @@ export const faEntrySummaries: Record<string, string> = {
   'notes-from-a-science-park-what-an-incubator-director-actually-worries-about': 'گفت‌وگو با معاون یک پارک فناوری دربارهٔ کارکرد واقعی مراکز رشد و کاستی‌هایشان.',
   'pepsis-fifth-attempt-at-a-product-nobody-asked-for': 'بررسی پپسی نکست و لحظه‌ای که داده‌های خوش‌ظاهر نزدیک بود شهود معقول را کنار بزند.',
   'real-burger-world-and-the-contradiction-built-into-the-name': 'بررسی شکست یک استارتاپ برگر در بریتانیا و تغییری که بنیان‌گذاران نتوانستند بپذیرند.',
-  'the-ripening-chemical-and-the-case-for-moving-first': 'بررسی خرید یک شرکت زیست‌فناوری و تفاوت دلیل واقعی با دلیلی که فقط درست به نظر می‌رسد.',
   'value-creation-value-capture-and-the-business-model': 'چرا ایدهٔ خوب فقط آغاز راه است: از خلق و ارائهٔ ارزش تا درآمد، اجرا و زمانِ کنارگذاشتن ایده.',
   'what-do-i-think-about-an-mba-right-before-starting-it-in-2026': 'شرط‌بندی در شرایط عدم‌قطعیت: اگر هوش مصنوعی ساختن را آسان کند، مزیت واقعی چه خواهد بود؟',
 };

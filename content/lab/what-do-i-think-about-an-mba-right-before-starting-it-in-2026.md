@@ -1,7 +1,7 @@
 ---
 title: "What Do I Think About an MBA, Right Before Starting It in 2026?"
 date: "2026-08-22"
-code: "MBA·LAB·13"
+code: "MBA·LAB·12"
 journeyPhase: "phase-1"
 category: "essays"
 topics: ["artificial-intelligence"]
