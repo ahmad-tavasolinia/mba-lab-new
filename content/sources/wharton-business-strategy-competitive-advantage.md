@@ -7,5 +7,5 @@ instructor: "Nicolaj Siggelkow"
 instructorUrl: "https://nicolajsiggelkow.com/"
 subject: "strategy"
 why: "One of the most eye-opening and insightful courses I have taken on strategy. Nicolaj Siggelkow's brilliant teaching makes you want to keep listening and learning. I regard this course as one of the most influential in shaping my strategic thinking."
-outputs: ["adaptive-but-selective-honda-american-motorcycle-market"]
+outputs: ["adaptive-but-selective-honda-american-motorcycle-market", "honda-vs-triumph-quantifying-competitive-advantage"]
 ---

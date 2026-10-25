@@ -6,6 +6,7 @@ import { getPhase } from '@/lib/phases';
 import { Container, Eyebrow, TopicChip, CodeChip, formatDate } from '@/components/ui';
 import { createPageMetadata } from '@/lib/seo';
 import SqlCodeBlock from '@/components/SqlCodeBlock';
+import HondaTriumphAnalysis from '@/components/HondaTriumphAnalysis';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -82,6 +83,10 @@ function ProjectDetails({ entry }: { entry: Awaited<ReturnType<typeof getLabEntr
 
       <Container className="py-6 md:py-8">
         <div className={`prose-lab text-ink dark:text-dark-ink ${isSqlProject ? 'sql-project-copy' : ''}`} dangerouslySetInnerHTML={{ __html: isSqlProject ? sqlIntroHtml : entry.contentHtml }} />
+
+        {entry.slug === 'honda-vs-triumph-quantifying-competitive-advantage' && (
+          <HondaTriumphAnalysis locale="en" />
+        )}
 
         {isSqlProject && (
           <section className="mt-4 border-t border-rule pt-4 dark:border-dark-rule">

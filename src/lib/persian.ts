@@ -26,6 +26,7 @@ export const faPhases: Record<PhaseSlug, { name: string; title: string; descript
 };
 
 export const faEntryTitles: Record<string, string> = {
+  'honda-vs-triumph-quantifying-competitive-advantage': 'هوندا در برابر تریومف: سنجش مزیت رقابتی',
   'why-am-i-receiving-this-message': 'چرا این پیامک به دست من رسید؟',
   'mud-bay-and-the-hour-that-wasnt-actually-dead': 'ماد بِی و ساعتی که واقعاً مرده نبود',
   'burger-king-and-the-habit-they-were-actually-selling': 'برگر کینگ و عادتی که واقعاً می‌فروخت',
@@ -52,6 +53,7 @@ export const faEntryTitles: Record<string, string> = {
 };
 
 export const faEntrySummaries: Record<string, string> = {
+  'honda-vs-triumph-quantifying-competitive-advantage': 'تحلیل چارچوب Wharton برای برآورد مزیت هزینه‌ای و ارزش مشتری هوندا در برابر تریومف/NVT، در حدود ۷۱۰ دلار برای هر موتورسیکلت.',
   'why-am-i-receiving-this-message': 'تأملی دربارهٔ پیامک پیشنهادی نامرتبط، واحد تصمیم‌گیری مشتری و این‌که یک کارزار باید به چه کسانی برسد.',
   'mud-bay-and-the-hour-that-wasnt-actually-dead': 'بررسی پیشنهاد تعطیلی زودتر فروشگاه‌ها، محاسبهٔ صرفه‌جویی و ارزشی که دسترسی مشتریان دارد.',
   'burger-king-and-the-habit-they-were-actually-selling': 'بررسی کمپین Whopper Detour و سازوکاری که زیرِ یک حرکت وایرال پنهان بود.',

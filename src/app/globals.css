@@ -2577,3 +2577,292 @@ html[data-theme="light"] .lab-library-more:hover {
   .fa-library-search { width: 100%; }
 }
 
+.honda-triumph-analysis .mba-cost-table {
+  --ink: #17243a;
+  --muted: #667085;
+  --line: #e4e8ef;
+  --paper: #ffffff;
+  --soft: #f5f7fa;
+  --accent: #b9c7d8;
+  max-width: 920px;
+  margin: 2rem auto;
+  color: var(--ink);
+  font-family: var(--font-reading), Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.honda-triumph-analysis .mba-cost-table * { box-sizing: border-box; }
+.honda-triumph-analysis .mba-cost-table .table-frame {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: 0 12px 32px rgba(23, 36, 58, .07);
+}
+.honda-triumph-analysis .mba-cost-table .table-heading {
+  padding: 1.45rem 1.5rem 1.2rem;
+  background: var(--ink);
+  color: #fff;
+  border-bottom: 3px solid var(--accent);
+}
+.honda-triumph-analysis .mba-cost-table .eyebrow {
+  margin: 0 0 .45rem;
+  color: #bdc9d8;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.honda-triumph-analysis .mba-cost-table h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  font-weight: 650;
+  letter-spacing: -.025em;
+  line-height: 1.3;
+}
+.honda-triumph-analysis .mba-cost-table .subtitle {
+  margin: .45rem 0 0;
+  color: #d2d9e3;
+  font-size: .88rem;
+}
+.honda-triumph-analysis .mba-cost-table .scroll-area { overflow-x: auto; }
+.honda-triumph-analysis .mba-cost-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .92rem;
+  font-variant-numeric: tabular-nums;
+}
+.honda-triumph-analysis .mba-cost-table thead th {
+  padding: .9rem 1.25rem;
+  background: #edf1f6;
+  color: #34445b;
+  font-size: .73rem;
+  font-weight: 750;
+  letter-spacing: .07em;
+  text-align: right;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.honda-triumph-analysis .mba-cost-table thead th:first-child { text-align: left; width: 54%; }
+.honda-triumph-analysis .mba-cost-table tbody th,
+.honda-triumph-analysis .mba-cost-table tbody td {
+  padding: .78rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+}
+.honda-triumph-analysis .mba-cost-table tbody th {
+  color: #344054;
+  font-weight: 520;
+  text-align: left;
+}
+.honda-triumph-analysis .mba-cost-table tbody td {
+  color: #27364b;
+  text-align: right;
+  white-space: nowrap;
+}
+.honda-triumph-analysis .mba-cost-table tbody tr:nth-child(even) { background: #fafbfd; }
+.honda-triumph-analysis .mba-cost-table tbody tr.price-row th,
+.honda-triumph-analysis .mba-cost-table tbody tr.price-row td { font-weight: 650; color: var(--ink); }
+.honda-triumph-analysis .mba-cost-table tbody tr.wholesale-row { background: #f0f4f8; }
+.honda-triumph-analysis .mba-cost-table tbody tr.wholesale-row th,
+.honda-triumph-analysis .mba-cost-table tbody tr.wholesale-row td {
+  color: var(--ink);
+  font-weight: 750;
+  border-bottom: 1px solid #d5dde7;
+}
+.honda-triumph-analysis .mba-cost-table tbody tr.total-row { background: var(--ink); }
+.honda-triumph-analysis .mba-cost-table tbody tr.total-row th,
+.honda-triumph-analysis .mba-cost-table tbody tr.total-row td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #fff;
+  border-bottom: 0;
+  font-size: .98rem;
+  font-weight: 750;
+}
+.honda-triumph-analysis .mba-cost-table .currency-note {
+  padding: .8rem 1.25rem;
+  background: #fafbfd;
+  color: var(--muted);
+  font-size: .75rem;
+}
+.honda-triumph-analysis .mba-cost-table .source-note {
+  margin: .9rem .15rem 0;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.65;
+}
+.honda-triumph-analysis .mba-cost-table .source-note strong { color: #344054; font-weight: 700; }
+.honda-triumph-analysis .mba-cost-table a {
+  color: #344f73;
+  text-decoration: underline;
+  text-decoration-color: #b7c5d7;
+  text-underline-offset: 2px;
+}
+
+.honda-triumph-analysis .mba-ca-formula {
+  --ink: #17243a;
+  --muted: #667085;
+  --line: #e1e7ef;
+  --accent: #b9c7d8;
+  max-width: 920px;
+  margin: 1.5rem auto;
+  color: var(--ink);
+  font-family: var(--font-reading), Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.honda-triumph-analysis .mba-ca-formula * { box-sizing: border-box; }
+.honda-triumph-analysis .mba-ca-formula .formula-card {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.25rem, 4vw, 2.25rem);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: radial-gradient(ellipse at 95% 0%, rgba(185,199,216,.18), transparent 42%), #fff;
+  box-shadow: 0 12px 32px rgba(23, 36, 58, .07);
+}
+.honda-triumph-analysis .mba-ca-formula .eyebrow {
+  margin: 0 0 .55rem;
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 750;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.honda-triumph-analysis .mba-ca-formula h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  font-weight: 650;
+  letter-spacing: -.02em;
+}
+.honda-triumph-analysis .mba-ca-formula .formula-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 1.25rem;
+  padding: 1.4rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f7f9fc;
+  overflow-x: auto;
+}
+.honda-triumph-analysis .mba-ca-formula .formula {
+  display: inline-flex;
+  align-items: center;
+  gap: .22em;
+  white-space: nowrap;
+  color: var(--ink);
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: clamp(1.35rem, 4vw, 2.15rem);
+  letter-spacing: -.035em;
+  line-height: 1.5;
+}
+.honda-triumph-analysis .mba-ca-formula .ca-symbol {
+  padding: .08em .2em;
+  border-radius: 6px;
+  background: #e7edf5;
+  font-weight: 700;
+}
+.honda-triumph-analysis .mba-ca-formula .group {
+  display: inline-flex;
+  align-items: center;
+  gap: .1em;
+  padding: .15em .28em;
+  border-bottom: 2px solid var(--accent);
+}
+.honda-triumph-analysis .mba-ca-formula sub { position: relative; bottom: -.05em; font-size: .58em; letter-spacing: 0; }
+.honda-triumph-analysis .mba-ca-formula .definitions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .7rem;
+}
+.honda-triumph-analysis .mba-ca-formula .definition {
+  padding: .85rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255,255,255,.82);
+}
+.honda-triumph-analysis .mba-ca-formula .definition strong { display: block; margin-bottom: .18rem; color: var(--ink); font-size: .88rem; }
+.honda-triumph-analysis .mba-ca-formula .definition span { color: var(--muted); font-size: .82rem; line-height: 1.5; }
+.honda-triumph-analysis .mba-ca-formula .note { margin: 1rem 0 0; color: var(--muted); font-size: .78rem; line-height: 1.6; }
+
+.honda-triumph-analysis .mba-ca-calculation {
+  --ink: #17243a;
+  --muted: #667085;
+  --line: #e1e7ef;
+  --soft: #f4f7fb;
+  --accent: #b9c7d8;
+  max-width: 920px;
+  margin: 1.5rem auto;
+  color: var(--ink);
+  font-family: var(--font-reading), Inter, ui-sans-serif, system-ui, sans-serif;
+}
+.honda-triumph-analysis .mba-ca-calculation * { box-sizing: border-box; }
+.honda-triumph-analysis .mba-ca-calculation .panel {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(23, 36, 58, .07);
+}
+.honda-triumph-analysis .mba-ca-calculation .heading {
+  padding: 1.4rem 1.5rem 1.2rem;
+  background: var(--ink);
+  border-bottom: 3px solid var(--accent);
+  color: #fff;
+}
+.honda-triumph-analysis .mba-ca-calculation .eyebrow { margin: 0 0 .4rem; color: #bdc9d8; font-size: .7rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+.honda-triumph-analysis .mba-ca-calculation h2 { margin: 0; color: #fff; font-size: clamp(1.15rem, 2.5vw, 1.5rem); font-weight: 650; letter-spacing: -.025em; }
+.honda-triumph-analysis .mba-ca-calculation .body { padding: clamp(1rem, 3vw, 1.5rem); }
+.honda-triumph-analysis .mba-ca-calculation .step { padding: 1rem 1.05rem; margin-bottom: .8rem; border: 1px solid var(--line); border-radius: 11px; background: #fff; }
+.honda-triumph-analysis .mba-ca-calculation .step:last-of-type { margin-bottom: 0; }
+.honda-triumph-analysis .mba-ca-calculation .step-label { margin: 0 0 .5rem; color: var(--muted); font-size: .7rem; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }
+.honda-triumph-analysis .mba-ca-calculation .equation { overflow-x: auto; color: var(--ink); font-family: "Times New Roman", Georgia, serif; font-size: clamp(1.02rem, 2.5vw, 1.3rem); line-height: 1.7; font-variant-numeric: tabular-nums; }
+.honda-triumph-analysis .mba-ca-calculation .result { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; padding: 1rem 1.1rem; border-radius: 11px; background: var(--ink); color: #fff; }
+.honda-triumph-analysis .mba-ca-calculation .result-label { color: #d2d9e3; font-size: .82rem; line-height: 1.45; }
+.honda-triumph-analysis .mba-ca-calculation .result-number { flex-shrink: 0; color: #fff; font-size: clamp(1.45rem, 4vw, 2rem); font-weight: 750; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.honda-triumph-analysis .mba-ca-calculation .note { margin: 1rem .1rem 0; color: var(--muted); font-size: .78rem; line-height: 1.65; }
+.honda-triumph-analysis .mba-ca-calculation .note strong { color: #344054; }
+
+.honda-triumph-analysis[lang="fa"] .mba-cost-table,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula,
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation { font-family: var(--font-persian), Tahoma, sans-serif; }
+.honda-triumph-analysis[lang="fa"] .mba-cost-table,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula,
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation { direction: rtl; text-align: right; }
+.honda-triumph-analysis[lang="fa"] .mba-cost-table .table-heading,
+.honda-triumph-analysis[lang="fa"] .mba-cost-table .currency-note,
+.honda-triumph-analysis[lang="fa"] .mba-cost-table .source-note,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula .eyebrow,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula h2,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula .definition,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula .note,
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .heading,
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .step-label,
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .result-label,
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .note { text-align: right; }
+.honda-triumph-analysis[lang="fa"] .mba-cost-table thead th { text-align: center; }
+.honda-triumph-analysis[lang="fa"] .mba-cost-table thead th:first-child,
+.honda-triumph-analysis[lang="fa"] .mba-cost-table tbody th { text-align: right; }
+.honda-triumph-analysis[lang="fa"] .mba-cost-table tbody td { direction: ltr; text-align: center; }
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula .formula-wrap,
+.honda-triumph-analysis[lang="fa"] .mba-ca-formula .formula { direction: ltr; }
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .equation { direction: ltr; text-align: left; }
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .result { direction: rtl; }
+.honda-triumph-analysis[lang="fa"] .mba-ca-calculation .result-number { direction: ltr; }
+
+@media (max-width: 600px) {
+  .honda-triumph-analysis .mba-cost-table .table-heading { padding: 1.15rem 1rem; }
+  .honda-triumph-analysis .mba-cost-table tbody th,
+  .honda-triumph-analysis .mba-cost-table tbody td,
+  .honda-triumph-analysis .mba-cost-table thead th { padding: .72rem .8rem; }
+  .honda-triumph-analysis .mba-cost-table table { font-size: .82rem; }
+  .honda-triumph-analysis .mba-cost-table thead th:first-child { min-width: 185px; }
+}
+@media (max-width: 520px) {
+  .honda-triumph-analysis .mba-ca-formula .definitions { grid-template-columns: 1fr; }
+  .honda-triumph-analysis .mba-ca-formula .formula-wrap { justify-content: flex-start; }
+}
+@media (max-width: 500px) {
+  .honda-triumph-analysis .mba-ca-calculation .heading { padding: 1.15rem 1rem; }
+  .honda-triumph-analysis .mba-ca-calculation .result { align-items: flex-start; flex-direction: column; gap: .35rem; }
+}
+

@@ -8,6 +8,7 @@ import { activePhase, phases } from '@/lib/phases';
 import { topics } from '@/lib/topics';
 import PersianLabLibrary from '@/components/PersianLabLibrary';
 import SqlCodeBlock from '@/components/SqlCodeBlock';
+import HondaTriumphAnalysis from '@/components/HondaTriumphAnalysis';
 import { faCategories, faEntrySummary, faEntryTitle, faEssaySummaries, faEssayTitles, faPhases, faSourceNames, faTopics } from '@/lib/persian';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
@@ -488,6 +489,9 @@ async function FaPage({ path }: { path: string[] }) {
             <p className="fa-original-note">{entry.category === 'interviews' ? 'نسخهٔ فارسی این گفت‌وگو هنوز آماده نیست؛ فعلاً متن انگلیسی در دسترس است.' : 'متن کامل این یادداشت فعلاً به زبان اصلی، انگلیسی، در دسترس است.'}</p>
             <div className="prose-lab fa-original-content" dir="ltr" lang="en" dangerouslySetInnerHTML={{ __html: entry.contentHtml }} />
           </>
+        )}
+        {entry.slug === 'honda-vs-triumph-quantifying-competitive-advantage' && persianContent && (
+          <HondaTriumphAnalysis locale="fa" />
         )}
         {relatedSources.length > 0 && (
           <section className="mt-10 border-t border-rule pt-6 dark:border-dark-rule" dir="rtl">
