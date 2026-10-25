@@ -3,6 +3,7 @@ title: "Tropicana and the Carton Customers Knew by Heart"
 date: "2026-09-02"
 code: "MBA·LAB·15"
 category: "cases"
+logo: "/images/case-logos/tropicana.png"
 journeyPhase: "phase-1"
 topics: ["strategy", "marketing"]
 summary: "A case on Tropicana's 2009 packaging redesign, worked cold, and what it shows about how much of a product's value lives in the way customers recognize it."

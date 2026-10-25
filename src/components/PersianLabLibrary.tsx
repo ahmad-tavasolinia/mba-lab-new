@@ -13,6 +13,7 @@ type PersianLabItem = {
   summary: string;
   searchText: string;
   topics: PersianTopic[];
+  logo?: string;
 };
 
 export default function PersianLabLibrary({
@@ -79,17 +80,33 @@ export default function PersianLabLibrary({
       ) : (
         <div className="fa-entry-list fa-library-results" aria-live="polite">
           {filtered.map((item) => (
-            <Link key={item.href} href={item.href} className="fa-entry-card">
-              <span className="fa-meta">
-                <bdi dir="ltr">{item.code}</bdi>
-                <time>{item.date}</time>
-              </span>
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
-              <span className="fa-entry-topics">
-                {item.topics.map((topic) => (
-                  <span key={topic.slug} className="fa-entry-topic">{topic.name}</span>
-                ))}
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`fa-entry-card${item.logo ? ' fa-case-result-card' : ''}`}
+            >
+              {item.logo && (
+                <span className="fa-case-logo-tile" aria-hidden="true">
+                  <img
+                    src={item.logo}
+                    alt=""
+                    className={item.logo.endsWith('/ferrari.png') ? 'is-ferrari' : undefined}
+                    loading="lazy"
+                  />
+                </span>
+              )}
+              <span className={item.logo ? 'fa-case-result-content' : undefined}>
+                <span className="fa-meta">
+                  <bdi dir="ltr">{item.code}</bdi>
+                  <time>{item.date}</time>
+                </span>
+                <h3>{item.title}</h3>
+                <p>{item.summary}</p>
+                <span className="fa-entry-topics">
+                  {item.topics.map((topic) => (
+                    <span key={topic.slug} className="fa-entry-topic">{topic.name}</span>
+                  ))}
+                </span>
               </span>
             </Link>
           ))}

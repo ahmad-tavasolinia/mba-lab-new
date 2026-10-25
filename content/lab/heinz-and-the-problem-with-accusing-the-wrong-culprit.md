@@ -3,6 +3,7 @@ title: "Heinz and the Problem With Accusing the Wrong Culprit"
 date: "2026-08-22"
 code: "MBA·LAB·04"
 category: "cases"
+logo: "/images/case-logos/heinz.png"
 journeyPhase: "phase-1"
 topics: ["strategy"]
 summary: "A case on Heinz's 'Ketchup Fraud' campaign, which named a real problem but, in my read, aimed at the wrong cause and measured attention instead of the behavior it wanted to change."

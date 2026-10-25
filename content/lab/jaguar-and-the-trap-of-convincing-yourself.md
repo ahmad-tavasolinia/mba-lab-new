@@ -3,6 +3,7 @@ title: "Jaguar and the Trap of Convincing Yourself"
 date: "2026-08-22"
 code: "MBA·LAB·05"
 category: "cases"
+logo: "/images/case-logos/jaguar.png"
 journeyPhase: "phase-1"
 topics: ["marketing"]
 summary: "A case on Jaguar's 2024 rebrand video, where I used my own reaction as a member of the target audience and then dropped a fix of mine that repeated the problem I had diagnosed."

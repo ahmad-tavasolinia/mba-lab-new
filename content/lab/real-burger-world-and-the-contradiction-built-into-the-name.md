@@ -3,6 +3,7 @@ title: "Real Burger World and the Contradiction Built Into the Name"
 date: "2026-08-22"
 code: "MBA·LAB·09"
 category: "cases"
+logo: "/images/case-logos/real-burger-world.png"
 journeyPhase: "phase-1"
 topics: ["entrepreneurship", "strategy"]
 summary: "A case on a startup burger chain whose founding promise of 'real' food conflicted with running a fast, profitable operation, and whose founders may have been too attached to the original idea to follow what was working."

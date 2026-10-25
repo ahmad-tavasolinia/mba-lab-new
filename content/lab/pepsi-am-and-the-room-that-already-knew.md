@@ -3,6 +3,7 @@ title: "Pepsi A.M. and the Room That Already Knew"
 date: "2026-08-22"
 code: "MBA·LAB·07"
 category: "cases"
+logo: "/images/case-logos/pepsi.png"
 journeyPhase: "phase-1"
 topics: ["strategy"]
 summary: "A case on Pepsi's failed morning cola, where my early call was right in direction but too absolute, and a confident voice in the room stood in for an argument."

@@ -3,6 +3,7 @@ title: "Ferrari's Bet Against Its Own Roadmap"
 date: "2026-08-22"
 code: "MBA·LAB·03"
 category: "cases"
+logo: "/images/case-logos/ferrari.png"
 journeyPhase: "phase-1"
 topics: ["strategy"]
 summary: "A case on Ferrari's electric target, where the useful question was not how fast to go electric but whether electric was what Ferrari's customers wanted at all."

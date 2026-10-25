@@ -3,6 +3,7 @@ title: "Netflix in India and the Wallet That Only Fits One Subscription"
 date: "2026-09-08"
 code: "MBA·LAB·16"
 category: "cases"
+logo: "/images/case-logos/netflix.png"
 journeyPhase: "phase-1"
 topics: ["strategy", "finance"]
 summary: "A case on Netflix entering India, where one ratio, 2.4 services consumed against 1.1 paid for, ruled out price competition and left content as the remaining lever."

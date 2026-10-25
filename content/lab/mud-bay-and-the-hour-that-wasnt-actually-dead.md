@@ -3,6 +3,7 @@ title: "Mud Bay and the Hour That Wasn't Actually Dead"
 date: "2026-08-23"
 code: "MBA·LAB·11"
 category: "cases"
+logo: "/images/case-logos/mud-bay.png"
 journeyPhase: "phase-1"
 topics: ["strategy", "finance"]
 summary: "A case on a proposed store-hours cut, where the key question was what that last hour of revenue represented."

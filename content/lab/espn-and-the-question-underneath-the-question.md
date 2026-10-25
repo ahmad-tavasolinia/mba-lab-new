@@ -3,6 +3,7 @@ title: "ESPN and the Question Underneath the Question"
 date: "2026-08-22"
 code: "MBA·LAB·02"
 category: "cases"
+logo: "/images/case-logos/espn.svg"
 journeyPhase: "phase-1"
 topics: ["strategy"]
 summary: "A case on ESPN's choice between protecting cable and accelerating into streaming, where my position got sharper under pressure but my analogy did not."

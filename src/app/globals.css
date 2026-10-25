@@ -2228,6 +2228,40 @@ html[data-theme="light"] .lab-library-more:hover {
 .fa-library-results .fa-entry-topics { margin-top: 14px; }
 .fa-library-empty { margin: 0; padding: 28px 0; color: var(--site-muted); line-height: 2; }
 
+.case-card-logo,
+.fa-case-logo-tile {
+  display: flex;
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 7px;
+  border: 1px solid var(--site-rule);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.case-card-logo-image,
+.fa-case-logo-tile img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.case-card-logo-image.is-ferrari { object-fit: cover; }
+.fa-case-logo-tile img.is-ferrari { object-fit: cover; }
+.fa-case-result-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: start;
+  gap: 20px;
+  direction: ltr;
+}
+.fa-case-result-content { display: block; min-width: 0; direction: rtl; text-align: right; }
+
 .fa-about-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
@@ -2289,6 +2323,9 @@ html[data-theme="light"] .lab-library-more:hover {
 @media (max-width: 560px) {
   .fa-source-card { grid-template-columns: 72px minmax(0, 1fr); gap: 14px; }
   .fa-source-logo { width: 72px; padding: 6px; }
+  .case-card-logo,
+  .fa-case-logo-tile { width: 72px; height: 72px; flex-basis: 72px; padding: 6px; }
+  .fa-case-result-card { grid-template-columns: 72px minmax(0, 1fr); gap: 14px; }
 }
 
 .fa-category-list > section {

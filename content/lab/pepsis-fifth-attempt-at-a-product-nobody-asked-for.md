@@ -3,6 +3,7 @@ title: "Pepsi's Fifth Attempt at a Product Nobody Asked For"
 date: "2026-08-22"
 code: "MBA·LAB·08"
 category: "cases"
+logo: "/images/case-logos/pepsi.png"
 journeyPhase: "phase-1"
 topics: ["marketing"]
 summary: "A case on the launch of Pepsi Next, where strong early numbers measured trial and I briefly lost a sound framework before applying my own trial-versus-repeat distinction."

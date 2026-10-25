@@ -13,6 +13,7 @@ export interface LabEntryFrontmatter {
   title: string;
   date: string;
   code: string; // e.g. "MBA·STRAT·04"
+  logo?: string;
   journeyPhase: PhaseSlug; // where this entry falls in the pre-MBA / during / post-MBA journey
   category: CategorySlug; // Cases, Essays, or Projects, the "key" this entry lives under
   topics: TopicSlug[];

@@ -431,6 +431,7 @@ async function FaPage({ path }: { path: string[] }) {
       summary: faEntrySummary(entry.slug, entry.summary),
       searchText: `${faEntryTitle(entry.slug, entry.title)} ${faEntrySummary(entry.slug, entry.summary)} ${entry.topics.map((slug) => faTopics[slug]?.name ?? slug).join(' ')}`,
       topics: entry.topics.map((slug) => ({ slug, name: faTopics[slug]?.name ?? slug })),
+      logo: entry.category === 'cases' ? entry.logo : undefined,
     }));
     return <PageFrame eyebrow="کارگاه مدیریت کسب‌وکار" title={faCategories[category.slug].name} intro={faCategories[category.slug].description}><PersianLabLibrary items={libraryItems} topicOptions={topicOptions} /></PageFrame>;
   }

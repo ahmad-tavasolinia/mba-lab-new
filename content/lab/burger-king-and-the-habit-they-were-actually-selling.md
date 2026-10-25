@@ -3,6 +3,7 @@ title: "Burger King and the Habit They Were Actually Selling"
 date: "2026-08-22"
 code: "MBA·LAB·01"
 category: "cases"
+logo: "/images/case-logos/burger-king.png"
 journeyPhase: "phase-1"
 topics: ["strategy"]
 summary: "A case on Burger King's one-cent Whopper promotion, where the lasting result came from the physical redirect and not from the discount or the publicity."

@@ -3,6 +3,7 @@ title: "Old Spice and the Answer That Was Already on the Table"
 date: "2026-08-22"
 code: "MBA·LAB·06"
 category: "cases"
+logo: "/images/case-logos/old-spice.png"
 journeyPhase: "phase-1"
 topics: ["strategy"]
 summary: "A case on Old Spice's 'Hello, ladies' ad, where I rejected one weak explanation correctly but skipped a good one that was already on the table."
