@@ -377,17 +377,22 @@ async function FaPage({ path }: { path: string[] }) {
             const faSource = faSourceNames[source.slug];
             const outputCount = labEntries.filter((entry) => source.outputs.includes(entry.slug)).length;
             return (
-              <article className="fa-entry-card fa-source-card" key={source.slug}>
-                <span className="fa-meta">{source.institution}</span>
-                <h2><Link href={`/fa/courses/${source.slug}`}>{faSource?.course ?? source.course}</Link></h2>
-                <p>{(source.author ?? source.instructor) && <>{source.author ?? source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p>
-                {source.publication && <p className="fa-meta">{source.publication}</p>}
-                <p>{faSource?.why ?? source.why}</p>
-                <div className="fa-source-actions">
-                  <Link href={`/fa/courses/${source.slug}`} className="fa-inline-link">
-                    {outputCount.toLocaleString('fa-IR')} یادداشت مرتبط · دیدن خروجی‌ها ←
-                  </Link>
-                  {source.courseUrl && <a className="fa-inline-link" href={source.courseUrl} target="_blank" rel="noreferrer">رفتن به منبع اصلی ←</a>}
+              <article className="fa-entry-card fa-source-card" key={source.slug} dir="ltr">
+                <Link href={`/fa/courses/${source.slug}`} className="fa-source-logo" aria-label={`رفتن به ${faSource?.course ?? source.course}`}>
+                  {source.logo ? <img src={basePath + source.logo} alt="" loading="lazy" decoding="async" /> : <span>{source.institution.slice(0, 1)}</span>}
+                </Link>
+                <div className="fa-source-copy" dir="rtl">
+                  <span className="fa-meta">{source.institution}</span>
+                  <h2><Link href={`/fa/courses/${source.slug}`}>{faSource?.course ?? source.course}</Link></h2>
+                  <p>{(source.author ?? source.instructor) && <>{source.author ?? source.instructor} · </>}{faTopics[source.subject]?.name ?? source.subject}</p>
+                  {source.publication && <p className="fa-meta">{source.publication}</p>}
+                  <p>{faSource?.why ?? source.why}</p>
+                  <div className="fa-source-actions">
+                    <Link href={`/fa/courses/${source.slug}`} className="fa-inline-link">
+                      {outputCount.toLocaleString('fa-IR')} یادداشت مرتبط · دیدن خروجی‌ها ←
+                    </Link>
+                    {source.courseUrl && <a className="fa-inline-link" href={source.courseUrl} target="_blank" rel="noreferrer">رفتن به منبع اصلی ←</a>}
+                  </div>
                 </div>
               </article>
             );

@@ -56,31 +56,41 @@ export default async function CoursesPage() {
                 <Link
                   key={s.slug}
                   href={`/courses/${s.slug}`}
-                  className="group block border-t border-rule py-5 first:border-t-0 dark:border-dark-rule"
+                  className="group grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-3 border-t border-rule py-5 first:border-t-0 dark:border-dark-rule sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-5"
+                  style={{ direction: 'ltr' }}
                 >
-                  <span className="font-mono text-[11px] uppercase tracking-widest text-gold">
-                    {s.institution}
-                  </span>
-                  <h2 className="mt-1.5 font-serif text-2xl font-medium text-ink transition-colors group-hover:text-gold dark:text-dark-ink">
-                    {s.course}
-                  </h2>
-                  <p className="mt-1 text-sm text-ink/50 dark:text-dark-soft/70">
-                    {topic?.name}
-                    {s.author || s.instructor ? ` · ${s.author ?? s.instructor}` : ''}
-                  </p>
-                  {s.publication && (
-                    <p className="mt-1 text-xs text-ink/40 dark:text-dark-soft/60">
-                      {s.publication}
+                  <div className="flex aspect-square w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded border border-rule bg-white p-1.5 sm:w-24 sm:p-2 dark:border-dark-rule">
+                    {s.logo ? (
+                      <img src={basePath + s.logo} alt="" loading="lazy" decoding="async" className="h-full w-full object-contain" />
+                    ) : (
+                      <span className="font-serif text-2xl text-ink/40">{s.institution.slice(0, 1)}</span>
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    <span className="font-mono text-[11px] uppercase tracking-widest text-gold">
+                      {s.institution}
+                    </span>
+                    <h2 className="mt-1.5 font-serif text-2xl font-medium text-ink transition-colors group-hover:text-gold dark:text-dark-ink">
+                      {s.course}
+                    </h2>
+                    <p className="mt-1 text-sm text-ink/50 dark:text-dark-soft/70">
+                      {topic?.name}
+                      {s.author || s.instructor ? ` · ${s.author ?? s.instructor}` : ''}
                     </p>
-                  )}
-                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
-                    {s.why}
-                  </p>
-                  {outputs.length > 0 && (
-                    <p className="mt-2 text-xs text-ink/40 dark:text-dark-soft/50">
-                      {outputs.length} related MBA Lab {outputs.length === 1 ? 'entry' : 'entries'}
+                    {s.publication && (
+                      <p className="mt-1 text-xs text-ink/40 dark:text-dark-soft/60">
+                        {s.publication}
+                      </p>
+                    )}
+                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-dark-soft">
+                      {s.why}
                     </p>
-                  )}
+                    {outputs.length > 0 && (
+                      <p className="mt-2 text-xs text-ink/40 dark:text-dark-soft/50">
+                        {outputs.length} related MBA Lab {outputs.length === 1 ? 'entry' : 'entries'}
+                      </p>
+                    )}
+                  </div>
                 </Link>
               );
             })}

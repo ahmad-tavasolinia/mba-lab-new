@@ -1,5 +1,6 @@
 ---
 institution: "Harvard Business Review"
+logo: "/library/source-logos/harvard-business-review.png"
 course: "Note on Marketing Strategy"
 author: "Robert J. Dolan"
 publication: "Harvard Business School Publishing, October 29, 2007"

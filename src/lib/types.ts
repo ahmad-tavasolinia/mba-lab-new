@@ -51,6 +51,7 @@ export interface Essay extends EssayFrontmatter {
 
 export interface SourceFrontmatter {
   institution: string;
+  logo?: string;
   course: string;
   courseUrl?: string;
   instructor?: string;

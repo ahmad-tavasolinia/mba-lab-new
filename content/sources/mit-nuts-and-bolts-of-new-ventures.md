@@ -1,5 +1,6 @@
 ---
 institution: "MIT OpenCourseWare"
+logo: "/library/source-logos/mit.png"
 course: "Nuts and Bolts of New Ventures"
 courseUrl: "https://ocw.mit.edu/courses/15-393-nuts-and-bolts-of-new-ventures-january-iap-2025/"
 instructor: "Joseph Hadzima"

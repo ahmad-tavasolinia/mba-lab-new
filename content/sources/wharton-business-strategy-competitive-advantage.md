@@ -1,5 +1,6 @@
 ---
 institution: "The Wharton School, University of Pennsylvania"
+logo: "/library/source-logos/wharton.png"
 course: "Business Strategy from Wharton: Competitive Advantage"
 courseUrl: "https://www.edx.org/learn/business-strategy/the-wharton-school-of-the-university-of-pennsylvania-business-strategy-from-wharton-competitive-advantage"
 instructor: "Nicolaj Siggelkow"

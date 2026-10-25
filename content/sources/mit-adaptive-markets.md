@@ -1,5 +1,6 @@
 ---
 institution: "MIT OpenCourseWare"
+logo: "/library/source-logos/mit.png"
 course: "Adaptive Markets: Financial Market Dynamics and Human Behavior"
 courseUrl: "https://ocw.mit.edu/courses/15-481x-adaptive-markets-financial-market-dynamics-and-human-behavior-fall-2022/"
 instructor: "Prof. Andrew Lo"
