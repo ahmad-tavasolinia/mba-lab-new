@@ -52,6 +52,7 @@ export default async function CoursesPage() {
             {sources.map((s) => {
               const outputs = labEntries.filter((e) => s.outputs.includes(e.slug));
               const topic = getTopic(s.subject);
+              const isHarvardReview = s.logo?.includes('harvard-business-review') ?? false;
               return (
                 <Link
                   key={s.slug}
@@ -59,9 +60,9 @@ export default async function CoursesPage() {
                   className="group grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-3 border-t border-rule py-5 first:border-t-0 dark:border-dark-rule sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-5"
                   style={{ direction: 'ltr' }}
                 >
-                  <div className="flex aspect-square w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded border border-rule bg-white p-1.5 sm:w-24 sm:p-2 dark:border-dark-rule">
+                  <div className={`flex aspect-square w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded border border-rule bg-white sm:w-24 ${isHarvardReview ? 'p-0' : 'p-1.5 sm:p-2'} dark:border-dark-rule`}>
                     {s.logo ? (
-                      <img src={basePath + s.logo} alt="" loading="lazy" decoding="async" className="h-full w-full object-contain" />
+                      <img src={basePath + s.logo} alt="" loading="lazy" decoding="async" className={isHarvardReview ? 'h-[140%] w-[140%] max-w-none flex-none object-contain' : 'h-full w-full object-contain'} />
                     ) : (
                       <span className="font-serif text-2xl text-ink/40">{s.institution.slice(0, 1)}</span>
                     )}

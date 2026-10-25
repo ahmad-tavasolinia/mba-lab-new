@@ -376,9 +376,10 @@ async function FaPage({ path }: { path: string[] }) {
           {sources.map((source) => {
             const faSource = faSourceNames[source.slug];
             const outputCount = labEntries.filter((entry) => source.outputs.includes(entry.slug)).length;
+            const isHarvardReview = source.logo?.includes('harvard-business-review') ?? false;
             return (
               <article className="fa-entry-card fa-source-card" key={source.slug} dir="ltr">
-                <Link href={`/fa/courses/${source.slug}`} className="fa-source-logo" aria-label={`رفتن به ${faSource?.course ?? source.course}`}>
+                <Link href={`/fa/courses/${source.slug}`} className={`fa-source-logo${isHarvardReview ? ' is-hbr' : ''}`} aria-label={`رفتن به ${faSource?.course ?? source.course}`}>
                   {source.logo ? <img src={basePath + source.logo} alt="" loading="lazy" decoding="async" /> : <span>{source.institution.slice(0, 1)}</span>}
                 </Link>
                 <div className="fa-source-copy" dir="rtl">
