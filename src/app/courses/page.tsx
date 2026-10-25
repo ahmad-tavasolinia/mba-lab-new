@@ -57,7 +57,7 @@ export default async function CoursesPage() {
                 <Link
                   key={s.slug}
                   href={`/courses/${s.slug}`}
-                  className="group grid grid-cols-[4.5rem_minmax(0,1fr)] items-start gap-3 border-t border-rule py-5 first:border-t-0 dark:border-dark-rule sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-5"
+                  className="group grid grid-cols-[4.5rem_minmax(0,1fr)] items-center gap-3 border-t border-rule py-5 first:border-t-0 dark:border-dark-rule sm:grid-cols-[6rem_minmax(0,1fr)] sm:gap-5"
                   style={{ direction: 'ltr' }}
                 >
                   <div className={`flex aspect-square w-[4.5rem] shrink-0 items-center justify-center overflow-hidden rounded border border-rule bg-white sm:w-24 ${isHarvardReview ? 'p-0' : 'p-1.5 sm:p-2'} dark:border-dark-rule`}>
